@@ -2,6 +2,7 @@
 layout: default
 title: Python Indeed
 ---
+
 <header class="masthead" style="background-image: url('assets/img/4357116.jpg')">
     <div class="container position-relative px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
@@ -14,22 +15,23 @@ title: Python Indeed
         </div>
     </div>
 </header>
-<!-- Main Content-->
+{% include algolia.html %}
+<!-- Main Content-->    
+
 <div class="container px-4 px-lg-5">
     <div class="row gx-4 gx-lg-5 justify-content-center">
         <div class="col-md-10 col-lg-8 col-xl-7">
             <!-- Post preview-->
-            {% for post in site.posts %}
+            {% for post in site.posts limit: 5 %}
             <div class="post-preview">
                 <p class="post-meta">
                     <i class="bi bi-github"></i> 
-                    {% assign repo-url = post.github-repo | split: "/" %}
-
-                    <a href="{{ post.github-repo }}" class="git-link">speakpython / {{ repo-url.last|downcase }}</a>
+                    <a href="https://github.com/speakpython/speakpythonBlog/blob/master/{{ post.path }}" class="git-link">
+                        speakpython / {{ post.categories }} / {{ post.title | replace: " ", "-" | downcase }}</a>
                 </p>
                 <a href="{{ post.url }}">
-                    <h2 class="post-title">{{ post.title }}</h2>
-                    <h3 class="post-subtitle">{{ post.sub-title }}</h3>
+                    <h2 class="post-title">{{ post.heading }}</h2>
+                    <h3 class="post-subtitle mb-4">{{ post.excerpt | truncate:50 }}</h3>
                 </a>
                 <p class="post-meta">
                     Posted by
@@ -40,7 +42,6 @@ title: Python Indeed
             <!-- Divider-->
             <hr class="my-4" />
             {% endfor %}
-            
             <!-- Pager-->
             <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Older Posts →</a></div>
         </div>

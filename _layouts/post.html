@@ -5,12 +5,15 @@ layout: page
 <div class="post-heading">
     <div class="subheading fs-6 edit-button">
         <i class="bi bi-github"></i>
-        <i><a href="{{page.github-repo}}" style="color: white; padding-left: 5px;">Edit this page on github</a></i>
+        <i><a href="https://github.com/speakpython/speakpythonBlog/blob/master/{{ page.path }}" style="color: white; padding-left: 5px;">Improve this page</a></i>
     </div>
-    <h2 class="h1">{{ page.title }}</h2>
+    <h2 class="h1">{{ page.heading }}</h2>
     <h2 class="pt-2 subheading fs-5">
-        {% for tag in page.tags %}
-            #{{ tag }} 
+        #{{page.categories}}
+        {% for tag in page.keywords %}
+            {% if tag != page.categories.last %} 
+                #{{tag}}
+            {% endif %}
         {% endfor %}
     </h2>
     <span class="meta">

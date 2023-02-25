@@ -1,9 +1,7 @@
 ---
 layout: post
-title: Water Jug Problem - Artificial Intelligence with Python
-tags: ['problem-solving', 'artifical-intelligence']
-sub-title:  Problems look mighty small from 150 miles up
-github-repo: https://github.com/speakpython/VimPandeyWebsite
+heading: Water Jug Problem - Artificial Intelligence with Python
+keywords: ['problem-solving']
 author: 'Dev Anand'
 ---
 

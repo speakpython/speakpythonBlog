@@ -11294,3 +11294,33 @@ header.masthead .site-heading .h1 {
   border-radius: 12px;
   box-shadow: 1px 1px 0px 0px lightgrey;
 }
+
+.giscus-frame{
+  margin-top: 2rem;
+  overflow: auto;
+}
+
+.post-subtitle > p{
+  margin: 0;
+}
+
+.search-button{
+  position: fixed;
+  bottom: 0;
+  z-index: 100;
+  right: 0;
+  margin: 2rem;
+}
+
+.offcanvas-header{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid #80808054;
+  font-style: italic;
+  background-color: white;
+} 
+
+.offcanvas-body::-webkit-scrollbar {
+  display: none;
+}
