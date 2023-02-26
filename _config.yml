@@ -9,6 +9,6 @@ algolia:
   index_name:     'speak-python-blog'
   search_only_api_key: '4104367f37aef2197ceb3f463f984bd0'
 
-destination: ./docs
+destination: ./_site
 baseurl: /speakpythonBlog
 url: https://speakpython.github.io
