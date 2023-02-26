@@ -1,0 +1,47 @@
+---
+layout: default
+title: All Posts
+---
+
+<header class="masthead" style="background-image: url('assets/img/library-books.jpg')">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="page-heading">
+                    <h1>All Posts</h1>
+                    {% for category in site.categories limit: 5 %}
+                    <a href="#{{ category | first }}" class="text-decoration-none">
+                        <span class="badge bg-transparent border border-1" style="margin: 0px 4px 4px 0px"># {{ category | first }}</span>
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Main Content-->
+<main class="mb-4">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                {% for category in site.categories %}
+                    <p class="fst-italic" id = "{{ category | first }}">
+                        <a href="#{{ category | first }}" class="text-decoration-none">
+                            <i class="bi bi-bookmarks"></i>
+                            {{ category | first }}
+                        </a>
+                    </p>
+                    <div class="post-preview">
+                        {% for post in category.last %}
+                        <a href="{{ post.url }}">
+                            <h5 class="post-title fs-2">{{ post.heading }}</h5>
+                            <h5 class="post-subtitle mb-4">{{ post.excerpt | truncate:80 }}</h5>
+                        </a>
+                        {% endfor %}
+                    </div>
+                <hr class="my-4" />
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</main>

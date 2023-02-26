@@ -38,8 +38,24 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto py-4 py-lg-0">
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/">Home</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/about.html">About us</a></li>
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="https://speakpython.codes" target="_blank">Live Classes</a></li>
+                        <li class="nav-item dropdown"><a class="nav-link px-lg-3 py-3 py-lg-4 dropdown-toggle" data-bs-toggle="dropdown">Categories</a>
+                            <ul class="dropdown-menu" style="left: -8rem;">
+                                
+                                    <li>
+                                        <a class="dropdown-item" href="/all-posts.html#string-formatting">
+                                            <i class="bi bi-bookmarks"></i>
+                                            String   formatting</a>
+                                    </li>
+                                
+                                    <li>
+                                        <a class="dropdown-item" href="/all-posts.html#artificial-intelligence">
+                                            <i class="bi bi-bookmarks"></i>
+                                            Artificial   intelligence</a>
+                                    </li>
+                                
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -58,20 +74,7 @@
                 </div>
             </div>
         </div>
-        <!-- Main Content-->
-        <header class="masthead" style="background-image: url('assets/img/4357116.jpg')">
-    <div class="container position-relative px-4 px-lg-5">
-        <div class="row gx-4 gx-lg-5 justify-content-center">
-            <div class="col-md-10 col-lg-8 col-xl-7">
-                <div class="site-heading">
-                    <h1>Python Indeed</h1>
-                    <span class="subheading">Trending approaches with Python</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.6.0/dist/instantsearch.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.6.0/dist/instantsearch.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.6.0/dist/instantsearch.min.css">
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.6.0/dist/instantsearch-theme-algolia.min.css">
@@ -179,31 +182,26 @@ searchBtn.addEventListener('click', () => {
 }
 </style>
 
+        <!-- Main Content-->
+        <header class="masthead" style="background-image: url('assets/img/4357116.jpg')">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="site-heading">
+                    <h1>Python Indeed</h1>
+                    <span class="subheading">Trending approaches with Python</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
 <!-- Main Content-->    
 
 <div class="container px-4 px-lg-5">
     <div class="row gx-4 gx-lg-5 justify-content-center">
         <div class="col-md-10 col-lg-8 col-xl-7">
             <!-- Post preview-->
-            
-            <div class="post-preview">
-                <p class="post-meta">
-                    <i class="bi bi-github"></i> 
-                    <a href="https://github.com/speakpython/speakpythonBlog/blob/master/artificial-intelligence/_posts/2023-02-25-new-water-jug-problem-copy.md" class="git-link">
-                        speakpython / artificial-intelligence / new-water-jug-problem-copy</a>
-                </p>
-                <a href="/artificial-intelligence/2023/02/25/new-water-jug-problem-copy.html">
-                    <h2 class="post-title">Water Jug Problem - Artificial Intelligence with Python</h2>
-                    <h3 class="post-subtitle mb-4"><p>A Chinese tale tells of some men sent to har...</h3>
-                </a>
-                <p class="post-meta">
-                    Posted by
-                    <a href="#!">Dev Anand</a>
-                    on 25 February 2023
-                </p>
-            </div>
-            <!-- Divider-->
-            <hr class="my-4" />
             
             <div class="post-preview">
                 <p class="post-meta">
@@ -224,8 +222,27 @@ searchBtn.addEventListener('click', () => {
             <!-- Divider-->
             <hr class="my-4" />
             
+            <div class="post-preview">
+                <p class="post-meta">
+                    <i class="bi bi-github"></i> 
+                    <a href="https://github.com/speakpython/speakpythonBlog/blob/master/string-formatting/_posts/2023-02-15-string-slices.md" class="git-link">
+                        speakpython / string-formatting / string-slices</a>
+                </p>
+                <a href="/string-formatting/2023/02/15/string-slices.html">
+                    <h2 class="post-title">String Jug Problem - Artificial Intelligence with Python</h2>
+                    <h3 class="post-subtitle mb-4"><p>A Chinese tale tells of some men sent to har...</h3>
+                </a>
+                <p class="post-meta">
+                    Posted by
+                    <a href="#!">Dev Anand</a>
+                    on 15 February 2023
+                </p>
+            </div>
+            <!-- Divider-->
+            <hr class="my-4" />
+            
             <!-- Pager-->
-            <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Older Posts →</a></div>
+            <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="/all-posts.html">All Posts →</a></div>
         </div>
     </div>
 </div>

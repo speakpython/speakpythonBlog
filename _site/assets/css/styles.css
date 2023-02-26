@@ -11324,3 +11324,12 @@ header.masthead .site-heading .h1 {
 .offcanvas-body::-webkit-scrollbar {
   display: none;
 }
+
+.dropdown-menu{
+  left: -8rem;
+  padding: 1rem 1.5rem;
+  border: 7px solid #0085A1;
+  border-radius: 0;
+  font-size: 18px;
+  text-align: start;
+}

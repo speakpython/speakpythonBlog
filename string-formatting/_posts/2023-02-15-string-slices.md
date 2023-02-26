@@ -1,6 +1,6 @@
 ---
 layout: post
-heading: Water Jug Problem - Artificial Intelligence with Python
+heading: String Jug Problem - Artificial Intelligence with Python
 keywords: ['problem-solving']
 author: 'Dev Anand'
 ---

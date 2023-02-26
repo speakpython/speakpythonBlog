@@ -38,8 +38,18 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto py-4 py-lg-0">
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/">Home</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/about.html">About us</a></li>
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="https://speakpython.codes" target="_blank">Live Classes</a></li>
+                        <li class="nav-item dropdown"><a class="nav-link px-lg-3 py-3 py-lg-4 dropdown-toggle" data-bs-toggle="dropdown">Categories</a>
+                            <ul class="dropdown-menu" style="left: -8rem;">
+                                {% for category in site.categories %}
+                                    <li>
+                                        <a class="dropdown-item" href="/all-posts.html#{{ category | first }}">
+                                            <i class="bi bi-bookmarks"></i>
+                                            {{ category | first | split: "-" | array_to_sentence_string: ' ' | capitalize }}</a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -58,6 +68,7 @@
                 </div>
             </div>
         </div>
+        {% include algolia.html %}
         <!-- Main Content-->
         {{ content }}
         <!-- Footer-->

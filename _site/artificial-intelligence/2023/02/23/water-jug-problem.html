@@ -38,8 +38,24 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto py-4 py-lg-0">
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/">Home</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/about.html">About us</a></li>
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="https://speakpython.codes" target="_blank">Live Classes</a></li>
+                        <li class="nav-item dropdown"><a class="nav-link px-lg-3 py-3 py-lg-4 dropdown-toggle" data-bs-toggle="dropdown">Categories</a>
+                            <ul class="dropdown-menu" style="left: -8rem;">
+                                
+                                    <li>
+                                        <a class="dropdown-item" href="/all-posts.html#string-formatting">
+                                            <i class="bi bi-bookmarks"></i>
+                                            String   formatting</a>
+                                    </li>
+                                
+                                    <li>
+                                        <a class="dropdown-item" href="/all-posts.html#artificial-intelligence">
+                                            <i class="bi bi-bookmarks"></i>
+                                            Artificial   intelligence</a>
+                                    </li>
+                                
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -58,6 +74,114 @@
                 </div>
             </div>
         </div>
+        <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.6.0/dist/instantsearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.6.0/dist/instantsearch.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.6.0/dist/instantsearch-theme-algolia.min.css">
+
+<script>
+const search = instantsearch({
+  appId: 'GEH0OW83KH',
+  apiKey: '4104367f37aef2197ceb3f463f984bd0',
+  indexName: 'speak-python-blog'
+});
+
+const hitTemplate = function(hit) {
+  let date = '';
+  if (hit.date) {
+    date = moment.unix(hit.date).format('MMM D, YYYY');
+  }
+
+  let url = `${hit.url}#${hit.anchor}`;
+
+  const title = hit._highlightResult.title.value;
+
+  let breadcrumbs = '';
+  if (hit._highlightResult.headings) {
+    breadcrumbs = hit._highlightResult.headings.map(match => {
+      return `<span class="post-breadcrumb">${match.value}</span>`
+    }).join(' > ')
+  }
+
+  const content = hit._highlightResult.html.value;
+
+  return `
+    <div class="post-item">
+      <span class="post-meta">${date}</span>
+      <h2><a class="post-link" href="${url}">${title}</a></h2>
+      <a href="${url}" class="post-breadcrumbs">${breadcrumbs}</a>
+      <div class="post-snippet">${content}</div>
+    </div>
+  `;
+}
+
+
+search.addWidget(
+  instantsearch.widgets.searchBox({
+    container: '#search-searchbar',
+    placeholder: 'Search into posts...',
+    poweredBy: true // This is required if you're on the free Community plan
+  })
+);
+
+search.addWidget(
+  instantsearch.widgets.hits({
+    container: '#search-hits',
+    templates: {
+      item: hitTemplate
+    }
+  })
+);
+
+const searchBtn = document.getElementById('search-btn');
+searchBtn.addEventListener('click', () => {
+  search.start();
+  console.log("Search is Active")
+
+});
+
+</script>
+
+<style>
+.ais-search-box {
+  max-width: 100%;
+  margin-bottom: 15px;
+}
+.post-item {
+  margin-bottom: 30px;
+}
+.post-link .ais-Highlight {
+  color: #111;
+  font-style: normal;
+  text-decoration: underline;
+}
+.post-breadcrumbs {
+  color: #424242;
+  display: block;
+}
+.post-breadcrumb {
+  font-size: 18px;
+  color: #424242;
+}
+.post-breadcrumb .ais-Highlight {
+  font-weight: bold;
+  font-style: normal;
+}
+.post-snippet .ais-Highlight {
+  color: #2a7ae2;
+  font-style: normal;
+  font-weight: bold;
+}
+.post-snippet img {
+  display: none;
+}
+
+#search-searchbar{
+  position: sticky;
+  top: 0;
+}
+</style>
+
         <!-- Main Content-->
         <!-- Page Header-->
 <header class="masthead">
@@ -141,16 +265,16 @@ Take a look at the source for this post to get an idea about how it works.</p>
                 <hr class="my-4" />
                 <div class="d-flex justify-content-between gap-2 mb-4">
                     
-                    <a class="btn  opacity-0 disabled d-none d-md-block  w-100 text-end" href="\" class="px-3">
+                    <a class="btn  btn-primary  w-100 text-end" href="/string-formatting/2023/02/15/string-slices.html" class="px-3">
                         <div class="d-flex justify-content-between gap-2">
                             <i class="bi bi-chevron-double-left"></i>
-                            
+                            String Slices
                         </div>
                     </a>
                     
-                    <a class="btn  btn-primary  w-100 text-end" href="/artificial-intelligence/2023/02/25/new-water-jug-problem-copy.html" class="px-3">
+                    <a class="btn  opacity-0 disabled d-none d-md-block  w-100 text-end" href="\" class="px-3">
                         <div class="d-flex justify-content-between gap-2">
-                        New Water Jug Problem Copy
+                        
                         <i class="bi bi-chevron-double-right"></i>
                         </div>
                     </a>
