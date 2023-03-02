@@ -31,7 +31,7 @@ title: Python Indeed
                 </p>
                 <a href="{{ post.url }}">
                     <h2 class="post-title">{{ post.heading }}</h2>
-                    <h3 class="post-subtitle mb-4">{{ post.excerpt | truncate:50 }}</h3>
+                    <h3 class="post-subtitle mb-4">{{ post.excerpt | strip_html | truncate:50 }}</h3>
                 </a>
                 <p class="post-meta">
                     Posted by

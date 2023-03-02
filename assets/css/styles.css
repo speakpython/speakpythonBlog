@@ -11212,6 +11212,7 @@ header.masthead .post-heading .subheading {
   font-size: 1rem;
   font-weight: 600;
   margin: 0.75rem 0 2rem;
+  line-height: 1.4rem;
   font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 header.masthead .post-heading .meta {
@@ -11237,7 +11238,8 @@ header.masthead .site-heading .h1 {
     font-size: 3.5rem;
   }
   header.masthead .post-heading .subheading {
-    font-size: 1.875rem;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
   }
 
   header.masthead .page-heading .subheading,
@@ -11300,6 +11302,14 @@ header.masthead .site-heading .subheading {
   box-shadow: 1px 1px 0px 0px lightgrey;
 }
 
+.contribution-footer{
+  width: 75%;
+}
+
+.git-contribute{
+  border: 2px solid #007891;
+}
+
 .giscus-frame{
   margin-top: 2rem;
   overflow: auto;
@@ -11339,6 +11349,29 @@ header.masthead .site-heading .subheading {
   text-align: start;
 }
 
+.content-credit{
+  font-size: 1.2rem;
+  font-style: italic;
+  font-family: 'Quintessential';
+  text-align: end;
+  color: #484848;
+}
+
+.content-credit > a:hover {
+  text-decoration: underline;
+}
+
+.code-level{
+  font-family: arial;
+  border-left: 0.3rem solid white;
+  margin-left: 5px;
+  background-color: brown;
+  width: fit-content;
+  padding: 0.2rem 0.8rem;
+  font-size: 1.3rem;
+}
+
+
 @media (max-width: 480px) {
   .search-button{
     margin: 1rem;
@@ -11354,4 +11387,19 @@ header.masthead .site-heading .subheading {
     padding-top: 8rem;
     padding-bottom: 4rem;
   }
+  .content-credit{
+    font-size: 1rem;
+  }
+  .contribution-footer{
+    font-size: 1.2rem;
+    width: 100%;
+  }
+  .contribution-footer > p{
+    font-size: 13px !important;
+  }
+
+  .code-level{
+    font-size: 1rem;
+  }
 }
+

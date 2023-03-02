@@ -1,0 +1,13 @@
+.row p{
+    margin: 1rem 0rem;
+}
+ul, li{
+    margin: 0;
+}
+.row li a{
+    color: #0085A1;
+    font-style: italic;
+}
+.row li a:hover{
+    text-decoration: underline;
+}

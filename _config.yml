@@ -8,3 +8,6 @@ algolia:
   application_id: 'GEH0OW83KH'
   index_name:     'speak-python-blog'
   search_only_api_key: '4104367f37aef2197ceb3f463f984bd0'
+
+external_link:
+  wikipedia: 'https://en.wikipedia.org/wiki/Main_Page'
