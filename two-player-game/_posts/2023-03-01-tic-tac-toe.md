@@ -26,7 +26,7 @@ Note: In this module both players are human.
 
 Before you start exploring each modules you must have 
 
--  clear understanding - [how tic-tac-toe works]('https://en.wikipedia.org/wiki/Tic-tac-toe')
+-  clear understanding - [how tic-tac-toe works](https://en.wikipedia.org/wiki/Tic-tac-toe)
 -  basics of python programming - as always!
 
 

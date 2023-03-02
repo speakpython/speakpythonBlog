@@ -11,3 +11,12 @@ ul, li{
 .row li a:hover{
     text-decoration: underline;
 }
+
+footer .row  a{
+    color: black;
+    font-style: normal;
+}
+
+footer ul{
+    margin-bottom: 16px;
+}
