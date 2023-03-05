@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>String Slices | Speak Python</title>
+        <title>Best First Search | Speak Python</title>
         <link rel="icon" type="image/x-icon" href="http://localhost:4000/assets/favicon.ico" />
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
@@ -204,10 +204,14 @@ searchBtn.addEventListener('click', () => {
         <i class="bi bi-github"></i>
         <i><a href="#git-conribution" style="color: white; padding-left: 5px;">Improve this page</a></i>
     </div>
-    <h2 class="h1">String Jug Problem - Artificial Intelligence with Python</h2>
-    <p class="fst mb-0 code-level"><i class="bi bi--square" style="vertical-align: middle;"></i>  </p>
+    <h2 class="h1">Best-first search (BFS)</h2>
+    <p class="fst mb-0 code-level"><i class="bi bi-6-square" style="vertical-align: middle;"></i> Intermediate Level </p>
     <h2 class="subheading">
-        #string-formatting
+        #artificial-intelligence
+        
+             
+                #search-algorithm
+            
         
              
                 #problem-solving
@@ -216,32 +220,32 @@ searchBtn.addEventListener('click', () => {
     </h2>
     <span class="meta">
         Posted by
-        <a data-bs-toggle="collapse" href="#collapseAuthor" role="button" aria-expanded="false" aria-controls="collapseAuthor"></a>
-        on 15 February 2023
+        <a data-bs-toggle="collapse" href="#collapseAuthor" role="button" aria-expanded="false" aria-controls="collapseAuthor">Dev Anand</a>
+        on 04 March 2023
     </span>
     <div class="card mt-4 collapse" style="max-width: 38rem;border-left: 0.4rem solid #0085A1;" id="collapseAuthor">
         <div class="row g-0">
           <div class="col-md-2 py-3 px-3 d-none d-md-block">
-            <img src="" class="img-fluid rounded-circle" alt="">
+            <img src="https://avatars.githubusercontent.com/u/58429743?v=4" class="img-fluid rounded-circle" alt="dev3058">
           </div>
           <div class="col">
             <div class="card-body text-dark py-2">
                 <div class="row d-md-none">
                     <div class="col-3 p-2">
-                        <img src="" class="img-fluid rounded-circle" alt="">
+                        <img src="https://avatars.githubusercontent.com/u/58429743?v=4" class="img-fluid rounded-circle" alt="dev3058">
                     </div>
                     <div class="col">
-                        <p class="card-text fs-6 mt-2"></p>
+                        <p class="card-text fs-6 mt-2">Hi, my name is Dev and I'm a python developer with a passion for building scalable and performant web applications. </p>
                     </div>
                 </div>
-              <p class="card-text fs-6 mt-2 d-none d-md-block"></p>
+              <p class="card-text fs-6 mt-2 d-none d-md-block">Hi, my name is Dev and I'm a python developer with a passion for building scalable and performant web applications. </p>
             </div>
           </div>
           <div class="col-md-2">
             <div class="card-text p-3 p-md-0 pt-0">
                 <ul class="list-inline fs-6 text-end">
                     <li class="list-inline-item m-md-2">
-                        <a href="">
+                        <a href="https://twitter.com/dev3058">
                             <span class="fa-stack fa-lg">
                                 <i class="fas fa-circle fa-stack-2x"></i>
                                 <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
@@ -249,7 +253,7 @@ searchBtn.addEventListener('click', () => {
                         </a>
                     </li>
                     <li class="list-inline-item m-md-2">
-                        <a href="">
+                        <a href="https://github.com/dev3058">
                             <span class="fa-stack fa-lg">
                                 <i class="fas fa-circle fa-stack-2x"></i>
                                 <i class="fab fa-github fa-stack-1x fa-inverse"></i>
@@ -272,31 +276,206 @@ searchBtn.addEventListener('click', () => {
     <div class="container px-3 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
-                <p>A Chinese tale tells of some men sent to harm a young girl who, upon seeing her beauty, become her protectors rather than her violators. That’s how I felt seeing the Earth for the first time. I could not help but love and cherish her.</p>
+                <p>Implementing basic approaches of Best-first search (Informed Search) by using <code class="language-plaintext highlighter-rouge">heapq</code> module of python.</p>
 
-<h2 id="heres-the-code">Here’s the code</h2>
+<p><br />
+<img src="https://d1m75rqqgidzqn.cloudfront.net/wp-data/2019/12/18153623/shutterstock_178143896.jpg" alt="'Water Jug Image'" /></p>
+
+<p><br /></p>
+<h2 id="best-first-search-bfs">Best-first Search (BFS)</h2>
+
+<p>Best-first search is a class of <code class="language-plaintext highlighter-rouge">search algorithms</code>, which explores a graph by expanding the most promising node chosen according to a specified rule.</p>
+
+<p>Judea Pearl described the best-first search as estimating the promise of node <code class="language-plaintext highlighter-rouge">n</code> by a heuristic evaluation function 
+<code class="language-plaintext highlighter-rouge">f(n)</code>.</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">Note:</span> <span class="n">In</span> <span class="k">this</span> <span class="n">module</span> <span class="n">we</span> <span class="n">will</span> <span class="n">use</span> <span class="n">pre</span><span class="o">-</span><span class="n">defined</span> <span class="n">f</span><span class="p">(</span><span class="n">n</span><span class="p">).</span>
+</code></pre></div></div>
+
+<hr />
+
+<p>It’s must that you should have all the basic ideas about</p>
+
+<ul>
+  <li><a href="https://iq.opengenus.org/best-first-search/">how best-first search algorithm works</a></li>
+  <li>basics of python programming - as always!</li>
+</ul>
+
+<p><br /></p>
+
+<blockquote>
+  <p>Problem domain and solution…</p>
+</blockquote>
+
+<h3 id="understanding-problem">Understanding problem</h3>
+<p>As per given graph we need to move from <code class="language-plaintext highlighter-rouge">S</code> to <code class="language-plaintext highlighter-rouge">G</code>. Start node i.e. <code class="language-plaintext highlighter-rouge">S</code> having heruistic value as <code class="language-plaintext highlighter-rouge">h(8)</code>.</p>
+
+<p><img src="../../../image/bfs-problem-domain-1.png" alt="'bfs-problem-domain-1'" /></p>
+
+<p><br /></p>
+
+<h3 id="possible-solution">Possible solution</h3>
+<p>By using the given heruistic function we have maintained a <code class="language-plaintext highlighter-rouge">priority queue</code> as per BFS algorithm.</p>
+
+<p><img src="../../../image/bfs-problem-domain-1-solution.png" alt="'bfs-problem-domain-1'" /></p>
+
+<p>Hence the best path as per BFS is <code class="language-plaintext highlighter-rouge">S -&gt; C -&gt; G</code>.</p>
+
+<p><br /></p>
+
+<blockquote>
+  <p>Keep calm coding begins….</p>
+</blockquote>
+
+<h2 id="understanding-modules">Understanding modules</h2>
+<hr />
+<p><br /></p>
+
+<h3 id="graph-relations-and-heuristic">Graph relations and heuristic</h3>
+<p>As per given graph define a dictionary with all the connected nodes inside a list as value to the parent node (key).</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">graph_relation</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">"S"</span><span class="p">:</span> <span class="p">[</span><span class="s">"A"</span><span class="p">,</span> <span class="s">"B"</span><span class="p">,</span> <span class="s">"C"</span><span class="p">],</span>
+    <span class="s">"A"</span><span class="p">:</span> <span class="p">[</span><span class="s">"D"</span><span class="p">,</span> <span class="s">"E"</span><span class="p">,</span> <span class="s">"G"</span><span class="p">],</span>
+    <span class="s">"B"</span><span class="p">:</span> <span class="p">[</span><span class="s">"G"</span><span class="p">],</span>
+    <span class="s">"C"</span><span class="p">:</span> <span class="p">[</span><span class="s">"G"</span><span class="p">],</span>
+    <span class="s">"D"</span><span class="p">:</span> <span class="p">[</span><span class="s">""</span><span class="p">],</span>
+    <span class="s">"E"</span><span class="p">:</span> <span class="p">[</span><span class="s">""</span><span class="p">],</span>
+    <span class="s">"G"</span><span class="p">:</span> <span class="p">[</span><span class="s">""</span><span class="p">],</span>
+<span class="p">}</span>
+
+<span class="n">heuristic</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">"S"</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+    <span class="s">"A"</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+    <span class="s">"B"</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+    <span class="s">"C"</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="s">"D"</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
+    <span class="s">"E"</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
+    <span class="s">"G"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h3 id="required-library">Required library</h3>
+<p>We will use only two predefined methods of <code class="language-plaintext highlighter-rouge">heapq</code>,</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">heapq</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">heapq.heappop()</code></li>
+</ul>
+
+<p>The heappop method pops and returns the smallest element of the given heap.</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">heapq.heappush()</code></li>
+</ul>
+
+<p>This function adds an element to the heap without altering the current heap.</p>
+
+<p><br /></p>
+<h3 id="bfs-function">BFS function</h3>
+<p>Inside <code class="language-plaintext highlighter-rouge">best_first_search()</code> function we are maintaining,</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">que</code> - a list, having tuples, consisting current node and its <code class="language-plaintext highlighter-rouge">h()</code> value.</li>
+  <li><code class="language-plaintext highlighter-rouge">came_from</code> - a dict used to track the nodes which are already visited.</li>
+</ul>
+
+<p><br /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">best_first_search</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">goal</span><span class="p">,</span> <span class="n">heuristic</span><span class="p">):</span>
+    <span class="s">"""
+    graph: Dict having Tree Structure.
+    start: Starting Node of the Tree.
+    goal: Node to Search.
+    heuristic: List of heuristic cost.
+    """</span>
+    <span class="n">que</span> <span class="o">=</span> <span class="p">[(</span><span class="n">heuristic</span><span class="p">[</span><span class="n">start</span><span class="p">],</span> <span class="n">start</span><span class="p">)]</span>
+    <span class="n">came_from</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">came_from</span><span class="p">[</span><span class="n">start</span><span class="p">]</span> <span class="o">=</span> <span class="bp">None</span>
+    
+    <span class="k">while</span> <span class="n">que</span><span class="p">:</span>
+        <span class="n">_</span><span class="p">,</span> <span class="n">peak_node</span> <span class="o">=</span> <span class="n">heapq</span><span class="p">.</span><span class="n">heappop</span><span class="p">(</span><span class="n">que</span><span class="p">)</span>
+        
+        <span class="k">if</span> <span class="n">peak_node</span> <span class="o">==</span> <span class="n">goal</span><span class="p">:</span>
+            <span class="k">break</span>
+            
+        <span class="k">for</span> <span class="n">neighbor</span> <span class="ow">in</span> <span class="n">graph</span><span class="p">[</span><span class="n">peak_node</span><span class="p">]:</span>
+            <span class="k">if</span> <span class="n">neighbor</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">came_from</span><span class="p">:</span>
+                <span class="n">heapq</span><span class="p">.</span><span class="n">heappush</span><span class="p">(</span><span class="n">que</span><span class="p">,</span> <span class="p">(</span><span class="n">heuristic</span><span class="p">[</span><span class="n">neighbor</span><span class="p">],</span> <span class="n">neighbor</span><span class="p">))</span>
+                <span class="n">came_from</span><span class="p">[</span><span class="n">neighbor</span><span class="p">]</span> <span class="o">=</span> <span class="n">peak_node</span>
+    
+    <span class="k">return</span> <span class="n">came_from</span>
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h3 id="function-calling">Function calling</h3>
+
+<p>Calling the <code class="language-plaintext highlighter-rouge">mbest_first_searchain()</code> function with required args.
+<br /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">start_node</span> <span class="o">=</span> <span class="s">'S'</span>
+<span class="n">goal_node</span> <span class="o">=</span> <span class="s">'G'</span>
+<span class="n">came_from</span> <span class="o">=</span> <span class="n">best_first_search</span><span class="p">(</span><span class="n">graph_relation</span><span class="p">,</span> <span class="n">start_node</span><span class="p">,</span> <span class="n">goal_node</span><span class="p">,</span> <span class="n">heuristic</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">came_from</span><span class="p">)</span>
+</code></pre></div></div>
+
+<blockquote>
+  <blockquote>
+    <p>how a node visited another node - this data is traced by <code class="language-plaintext highlighter-rouge">came_from</code> dict.</p>
+  </blockquote>
+</blockquote>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="s">'S'</span><span class="p">:</span> <span class="bp">None</span><span class="p">,</span> <span class="s">'A'</span><span class="p">:</span> <span class="s">'S'</span><span class="p">,</span> <span class="s">'B'</span><span class="p">:</span> <span class="s">'S'</span><span class="p">,</span> <span class="s">'C'</span><span class="p">:</span> <span class="s">'S'</span><span class="p">,</span> <span class="s">'G'</span><span class="p">:</span> <span class="s">'C'</span><span class="p">}</span> <span class="c1">#Output
+</span></code></pre></div></div>
+
+<p><br /></p>
+
+<h3 id="backtracking">Backtracking</h3>
+<p>In order to have the optimal path (somehow), we need to backtrack the <code class="language-plaintext highlighter-rouge">came_from</code> starting from the <code class="language-plaintext highlighter-rouge">goal_node</code></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">node</span> <span class="o">=</span> <span class="n">goal_node</span>
+<span class="n">path</span> <span class="o">=</span> <span class="p">[</span><span class="n">node</span><span class="p">]</span>
+
+<span class="k">while</span> <span class="n">node</span> <span class="o">!=</span> <span class="n">start_node</span><span class="p">:</span>
+    <span class="n">node</span> <span class="o">=</span> <span class="n">came_from</span><span class="p">[</span><span class="n">node</span><span class="p">]</span>
+    <span class="n">path</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+    
+<span class="n">path</span><span class="p">.</span><span class="n">reverse</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"BFS path from"</span><span class="p">,</span><span class="n">start_node</span><span class="p">,</span><span class="s">"to"</span><span class="p">,</span><span class="n">goal_node</span><span class="p">,</span><span class="s">":"</span><span class="p">,</span><span class="n">path</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">BFS</span> <span class="n">path</span> <span class="k">from</span> <span class="n">S</span> <span class="n">to</span> <span class="n">G</span> <span class="p">:</span> <span class="p">[</span><span class="s">'S'</span><span class="p">,</span> <span class="s">'C'</span><span class="p">,</span> <span class="s">'G'</span><span class="p">]</span> <span class="c1">#Output
+</span></code></pre></div></div>
+
 
                 <div class="container p-0 my-4 mt-5">
                     <div class="content-credit">
                         
-                            Thanks to 
+                            Special thanks to 
                         
+                        
+                            <a href="https://en.wikipedia.org/wiki/Main_Page" class="font-dark">Wikipedia</a>
                             
                     </div>
                 </div>
                 <hr class="my-4" />
                 <div class="d-flex justify-content-between gap-2 mb-4">
                     
-                    <a class="btn  opacity-0 disabled d-none d-md-block  w-100 text-end" href="\" class="px-3">
+                    <a class="btn  btn-primary  w-100 text-end" href="/two-player-game/2023/03/01/tic-tac-toe-human-vs-human.html" class="px-3">
                         <div class="d-flex justify-content-between gap-2">
                             <i class="bi bi-chevron-double-left"></i>
-                            
+                            Tic Tac Toe Human Vs Human
                         </div>
                     </a>
                     
-                    <a class="btn  btn-primary  w-100 text-end" href="/artificial-intelligence/2023/02/23/water-jug-problem.html" class="px-3">
+                    <a class="btn  opacity-0 disabled d-none d-md-block  w-100 text-end" href="\" class="px-3">
                         <div class="d-flex justify-content-between gap-2">
-                        Water Jug Problem
+                        
                         <i class="bi bi-chevron-double-right"></i>
                         </div>
                     </a>
@@ -326,7 +505,7 @@ searchBtn.addEventListener('click', () => {
 
                     <div class="fs-6 edit-button git-contribute mt-4">
                         <svg aria-hidden="true" focusable="false" role="img" class="octicon mr-1" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom;overflow:visible"><path d="M1.5 3.25a2.25 2.25 0 113 2.122v5.256a2.251 2.251 0 11-1.5 0V5.372A2.25 2.25 0 011.5 3.25zm5.677-.177L9.573.677A.25.25 0 0110 .854V2.5h1A2.5 2.5 0 0113.5 5v5.628a2.251 2.251 0 11-1.5 0V5a1 1 0 00-1-1h-1v1.646a.25.25 0 01-.427.177L7.177 3.427a.25.25 0 010-.354zM3.75 2.5a.75.75 0 100 1.5.75.75 0 000-1.5zm0 9.5a.75.75 0 100 1.5.75.75 0 000-1.5zm8.25.75a.75.75 0 101.5 0 .75.75 0 00-1.5 0z"></path></svg>
-                        <i><a href="https://github.com/speakpython/speakpythonBlog/blob/gh-pages/string-formatting/_posts/2023-02-15-string-slices.md" style="padding-left: 5px;font-family: 'Arial'; font-style: normal;">Make a contribution</a></i>
+                        <i><a href="https://github.com/speakpython/speakpythonBlog/blob/gh-pages/artificial-intelligence/_posts/2023-03-04-best-first-search.md" style="padding-left: 5px;font-family: 'Arial'; font-style: normal;">Make a contribution</a></i>
                     </div>
 
                 </div>

@@ -3,7 +3,23 @@ collections:
 
 kramdown:
   input: GFM
-  
+
+author:
+  dev3058:
+      name: 'Dev Anand'
+      role: 'Admin'
+      profile_pic: 'https://avatars.githubusercontent.com/u/58429743?v=4'
+      about: "Hi, my name is Dev and I'm a python developer with a passion for building scalable and performant web applications. "
+      git_handler: 'https://github.com/dev3058'
+      twitter_handler: 'https://twitter.com/dev3058'
+      
+post_level:
+  2: "Junior's Tutorial"
+  4: "Beginner's friendly"
+  6: "Intermediate Level"
+  8: "Developer Level"
+
+
 algolia:
   application_id: 'GEH0OW83KH'
   index_name:     'speak-python-blog'

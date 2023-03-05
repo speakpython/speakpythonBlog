@@ -2,9 +2,9 @@
 layout: post
 heading: Tic-Tac-Toe, Human vs Human
 keywords: ['problem-solving', 'fun-with-python']
-author: 'Dev Anand'
+author_id: 'dev3058'
 credits: ['wikipedia']
-level: Beginner's friendly
+level: 4
 ---
 
 Create a complete `three-by-three` Tic-Tac-Toe, two player game using basics of python. 
@@ -15,7 +15,9 @@ Create a complete `three-by-three` Tic-Tac-Toe, two player game using basics of 
 <br/>
 ## What is Tic-Tac-Toe
 
-Tic-tac-toe, noughts and crosses, or Xs and Os is a paper-and-pencil game for `two players` who take turns marking the spaces in a `three-by-three grid` with X or O. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row is the winner. 
+Tic-tac-toe, noughts and crosses, or Xs and Os is a paper-and-pencil game for `two players` who take turns marking the spaces in a `three-by-three grid` with X or O. 
+
+The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row is the winner. 
 
 
 ```cpp

@@ -1,3 +1,42 @@
+/* LIGHTBOX BACKGROUND */
+.zoomD {
+    transition: all ease-in-out 0.4s;
+    cursor: zoom-in;
+  }
+
+#lb-back {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1500;
+    visibility: hidden;
+    opacity: 0;
+    transition: all ease-in-out 0.4s;
+    /* ease | ease-in | ease-out | linear
+ transition: transform ease-in-out 0.5s; */
+ 
+  }
+  #lb-back.show {
+    visibility: visible;
+    opacity: 1;
+  }
+  /* LIGHTBOX IMAGE */
+  #lb-img {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+  }
+  #lb-img img {
+    width: 75%;
+    height: 75%;
+    padding: 5rem;
+    cursor: zoom-out; 
+  }
+
 .row p{
     margin: 1rem 0rem;
 }
@@ -17,6 +56,17 @@ footer .row  a{
     font-style: normal;
 }
 
+footer .row  a:hover{
+    color: #0085A1
+}
 footer ul{
     margin-bottom: 16px;
+}
+
+@media (max-width: 480px) {
+    #lb-img img {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+      }
 }

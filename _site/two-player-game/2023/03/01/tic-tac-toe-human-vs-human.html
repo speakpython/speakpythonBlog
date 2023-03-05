@@ -5,9 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Tic Tac Toe | Speak Python</title>
+        <title>Tic Tac Toe Human Vs Human | Speak Python</title>
         <link rel="icon" type="image/x-icon" href="http://localhost:4000/assets/favicon.ico" />
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
@@ -58,7 +57,7 @@
                                     <li>
                                         <a class="dropdown-item" href="/all-posts.html#two-player-game">
                                             <i class="bi bi-bookmarks"></i>
-                                            Two, player,   game</a>
+                                            Two player   game</a>
                                     </li>
                                 
                             </ul>
@@ -119,6 +118,7 @@ const hitTemplate = function(hit) {
       <a href="${url}" class="post-breadcrumbs">${breadcrumbs}</a>
       <div class="post-snippet">${content}</div>
     </div>
+    <hr class="my-4" />
   `;
 }
 
@@ -192,6 +192,9 @@ searchBtn.addEventListener('click', () => {
         <!-- Main Content-->
         <!-- Page Header-->
 <link href="http://localhost:4000/assets/css/readme.css" rel="stylesheet" />
+<div id="lb-back">
+    <div id="lb-img"></div>
+</div>
 <header class="masthead">
     <div class="container position-relative px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
@@ -202,7 +205,7 @@ searchBtn.addEventListener('click', () => {
         <i><a href="#git-conribution" style="color: white; padding-left: 5px;">Improve this page</a></i>
     </div>
     <h2 class="h1">Tic-Tac-Toe, Human vs Human</h2>
-    <p class="fst-italic mb-0 code-level">Level: Beginner's friendly</p>
+    <p class="fst mb-0 code-level"><i class="bi bi-4-square" style="vertical-align: middle;"></i> Beginner's friendly </p>
     <h2 class="subheading">
         #two-player-game
         
@@ -217,9 +220,51 @@ searchBtn.addEventListener('click', () => {
     </h2>
     <span class="meta">
         Posted by
-        <a href="#!">Dev Anand</a>
+        <a data-bs-toggle="collapse" href="#collapseAuthor" role="button" aria-expanded="false" aria-controls="collapseAuthor">Dev Anand</a>
         on 01 March 2023
     </span>
+    <div class="card mt-4 collapse" style="max-width: 38rem;border-left: 0.4rem solid #0085A1;" id="collapseAuthor">
+        <div class="row g-0">
+          <div class="col-md-2 py-3 px-3 d-none d-md-block">
+            <img src="https://avatars.githubusercontent.com/u/58429743?v=4" class="img-fluid rounded-circle" alt="dev3058">
+          </div>
+          <div class="col">
+            <div class="card-body text-dark py-2">
+                <div class="row d-md-none">
+                    <div class="col-3 p-2">
+                        <img src="https://avatars.githubusercontent.com/u/58429743?v=4" class="img-fluid rounded-circle" alt="dev3058">
+                    </div>
+                    <div class="col">
+                        <p class="card-text fs-6 mt-2">Hi, my name is Dev and I'm a python developer with a passion for building scalable and performant web applications. </p>
+                    </div>
+                </div>
+              <p class="card-text fs-6 mt-2 d-none d-md-block">Hi, my name is Dev and I'm a python developer with a passion for building scalable and performant web applications. </p>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="card-text p-3 p-md-0 pt-0">
+                <ul class="list-inline fs-6 text-end">
+                    <li class="list-inline-item m-md-2">
+                        <a href="https://twitter.com/dev3058">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item m-md-2">
+                        <a href="https://github.com/dev3058">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+          </div>
+        </div>
+      </div>
 </div>
 
             </div>
@@ -228,7 +273,7 @@ searchBtn.addEventListener('click', () => {
 </header>
 <!-- Post Content-->
 <article class="mb-4">
-    <div class="container px-4 px-lg-5">
+    <div class="container px-3 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
                 <p>Create a complete <code class="language-plaintext highlighter-rouge">three-by-three</code> Tic-Tac-Toe, two player game using basics of python.</p>
@@ -239,7 +284,9 @@ searchBtn.addEventListener('click', () => {
 <p><br /></p>
 <h2 id="what-is-tic-tac-toe">What is Tic-Tac-Toe</h2>
 
-<p>Tic-tac-toe, noughts and crosses, or Xs and Os is a paper-and-pencil game for <code class="language-plaintext highlighter-rouge">two players</code> who take turns marking the spaces in a <code class="language-plaintext highlighter-rouge">three-by-three grid</code> with X or O. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row is the winner.</p>
+<p>Tic-tac-toe, noughts and crosses, or Xs and Os is a paper-and-pencil game for <code class="language-plaintext highlighter-rouge">two players</code> who take turns marking the spaces in a <code class="language-plaintext highlighter-rouge">three-by-three grid</code> with X or O.</p>
+
+<p>The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row is the winner.</p>
 
 <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">Note:</span> <span class="n">In</span> <span class="k">this</span> <span class="n">module</span> <span class="n">both</span> <span class="n">players</span> <span class="n">are</span> <span class="n">human</span><span class="p">.</span>
 </code></pre></div></div>
@@ -400,9 +447,9 @@ searchBtn.addEventListener('click', () => {
                         </div>
                     </a>
                     
-                    <a class="btn  opacity-0 disabled d-none d-md-block  w-100 text-end" href="\" class="px-3">
+                    <a class="btn  btn-primary  w-100 text-end" href="/artificial-intelligence/2023/03/04/best-first-search.html" class="px-3">
                         <div class="d-flex justify-content-between gap-2">
-                        
+                        Best First Search
                         <i class="bi bi-chevron-double-right"></i>
                         </div>
                     </a>
@@ -432,7 +479,7 @@ searchBtn.addEventListener('click', () => {
 
                     <div class="fs-6 edit-button git-contribute mt-4">
                         <svg aria-hidden="true" focusable="false" role="img" class="octicon mr-1" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom;overflow:visible"><path d="M1.5 3.25a2.25 2.25 0 113 2.122v5.256a2.251 2.251 0 11-1.5 0V5.372A2.25 2.25 0 011.5 3.25zm5.677-.177L9.573.677A.25.25 0 0110 .854V2.5h1A2.5 2.5 0 0113.5 5v5.628a2.251 2.251 0 11-1.5 0V5a1 1 0 00-1-1h-1v1.646a.25.25 0 01-.427.177L7.177 3.427a.25.25 0 010-.354zM3.75 2.5a.75.75 0 100 1.5.75.75 0 000-1.5zm0 9.5a.75.75 0 100 1.5.75.75 0 000-1.5zm8.25.75a.75.75 0 101.5 0 .75.75 0 00-1.5 0z"></path></svg>
-                        <i><a href="https://github.com/speakpython/speakpythonBlog/blob/gh-pages/two-player-game/_posts/2023-03-01-tic-tac-toe.md" style="padding-left: 5px;font-family: 'Arial'; font-style: normal;">Make a contribution</a></i>
+                        <i><a href="https://github.com/speakpython/speakpythonBlog/blob/gh-pages/two-player-game/_posts/2023-03-01-tic-tac-toe-human-vs-human.md" style="padding-left: 5px;font-family: 'Arial'; font-style: normal;">Make a contribution</a></i>
                     </div>
 
                 </div>
@@ -440,6 +487,7 @@ searchBtn.addEventListener('click', () => {
         </div>
     </div>
 </article>
+<script src="http://localhost:4000/assets/js/readme.js"></script>
 
         <!-- Footer-->
         

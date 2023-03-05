@@ -7,7 +7,6 @@
         <meta name="author" content="" />
         <title>Water Jug Problem | Speak Python</title>
         <link rel="icon" type="image/x-icon" href="http://localhost:4000/assets/favicon.ico" />
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
@@ -58,7 +57,7 @@
                                     <li>
                                         <a class="dropdown-item" href="/all-posts.html#two-player-game">
                                             <i class="bi bi-bookmarks"></i>
-                                            Two, player,   game</a>
+                                            Two player   game</a>
                                     </li>
                                 
                             </ul>
@@ -119,6 +118,7 @@ const hitTemplate = function(hit) {
       <a href="${url}" class="post-breadcrumbs">${breadcrumbs}</a>
       <div class="post-snippet">${content}</div>
     </div>
+    <hr class="my-4" />
   `;
 }
 
@@ -192,6 +192,9 @@ searchBtn.addEventListener('click', () => {
         <!-- Main Content-->
         <!-- Page Header-->
 <link href="http://localhost:4000/assets/css/readme.css" rel="stylesheet" />
+<div id="lb-back">
+    <div id="lb-img"></div>
+</div>
 <header class="masthead">
     <div class="container position-relative px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
@@ -202,7 +205,7 @@ searchBtn.addEventListener('click', () => {
         <i><a href="#git-conribution" style="color: white; padding-left: 5px;">Improve this page</a></i>
     </div>
     <h2 class="h1">Water Jug Problem - Artificial Intelligence with Python</h2>
-    <p class="fst-italic mb-0 code-level">Level: </p>
+    <p class="fst mb-0 code-level"><i class="bi bi--square" style="vertical-align: middle;"></i>  </p>
     <h2 class="subheading">
         #artificial-intelligence
         
@@ -213,9 +216,51 @@ searchBtn.addEventListener('click', () => {
     </h2>
     <span class="meta">
         Posted by
-        <a href="#!">Dev Anand</a>
+        <a data-bs-toggle="collapse" href="#collapseAuthor" role="button" aria-expanded="false" aria-controls="collapseAuthor"></a>
         on 23 February 2023
     </span>
+    <div class="card mt-4 collapse" style="max-width: 38rem;border-left: 0.4rem solid #0085A1;" id="collapseAuthor">
+        <div class="row g-0">
+          <div class="col-md-2 py-3 px-3 d-none d-md-block">
+            <img src="" class="img-fluid rounded-circle" alt="">
+          </div>
+          <div class="col">
+            <div class="card-body text-dark py-2">
+                <div class="row d-md-none">
+                    <div class="col-3 p-2">
+                        <img src="" class="img-fluid rounded-circle" alt="">
+                    </div>
+                    <div class="col">
+                        <p class="card-text fs-6 mt-2"></p>
+                    </div>
+                </div>
+              <p class="card-text fs-6 mt-2 d-none d-md-block"></p>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="card-text p-3 p-md-0 pt-0">
+                <ul class="list-inline fs-6 text-end">
+                    <li class="list-inline-item m-md-2">
+                        <a href="">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item m-md-2">
+                        <a href="">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+          </div>
+        </div>
+      </div>
 </div>
 
             </div>
@@ -224,7 +269,7 @@ searchBtn.addEventListener('click', () => {
 </header>
 <!-- Post Content-->
 <article class="mb-4">
-    <div class="container px-4 px-lg-5">
+    <div class="container px-3 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
                 <p>A Chinese tale tells of some men sent to harm a young girl who, upon seeing her beauty, become her protectors rather than her violators. That’s how I felt seeing the Earth for the first time. I could not help but love and cherish her.</p>
@@ -291,9 +336,9 @@ Take a look at the source for this post to get an idea about how it works.</p>
                         </div>
                     </a>
                     
-                    <a class="btn  btn-primary  w-100 text-end" href="/two-player-game/2023/03/01/tic-tac-toe.html" class="px-3">
+                    <a class="btn  btn-primary  w-100 text-end" href="/two-player-game/2023/03/01/tic-tac-toe-human-vs-human.html" class="px-3">
                         <div class="d-flex justify-content-between gap-2">
-                        Tic Tac Toe
+                        Tic Tac Toe Human Vs Human
                         <i class="bi bi-chevron-double-right"></i>
                         </div>
                     </a>
@@ -331,6 +376,7 @@ Take a look at the source for this post to get an idea about how it works.</p>
         </div>
     </div>
 </article>
+<script src="http://localhost:4000/assets/js/readme.js"></script>
 
         <!-- Footer-->
         

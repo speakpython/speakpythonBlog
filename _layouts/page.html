@@ -4,6 +4,9 @@ layout: default
 
 <!-- Page Header-->
 <link href="{{ '/assets/css/readme.css' | prepend: site.url }}" rel="stylesheet" />
+<div id="lb-back">
+    <div id="lb-img"></div>
+</div>
 <header class="masthead">
     <div class="container position-relative px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
@@ -15,7 +18,7 @@ layout: default
 </header>
 <!-- Post Content-->
 <article class="mb-4">
-    <div class="container px-4 px-lg-5">
+    <div class="container px-3 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
                 {{ page.content }}
@@ -27,7 +30,7 @@ layout: default
                             Thanks to 
                         {% endif %}
                         {% for credit in page.credits %}
-                            <a href="{{ site.external_link.[credit] }}" class="font-dark">{{credit | capitalize}}</a>
+                            <a href="{{ site.external_link[credit] }}" class="font-dark">{{credit | capitalize}}</a>
                         {% endfor %}    
                     </div>
                 </div>
@@ -81,3 +84,4 @@ layout: default
         </div>
     </div>
 </article>
+<script src="{{ '/assets/js/readme.js' | prepend: site.url }}"></script>
