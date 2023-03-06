@@ -151,7 +151,7 @@ def main():
 
 <br/>
 
-### Runing and testing
+### Example testing
 
 Calling the `main()` function in order to start the game.
 <br/>

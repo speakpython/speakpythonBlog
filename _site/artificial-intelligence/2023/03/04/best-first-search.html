@@ -13,7 +13,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Quintessential&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-        <link href="http://localhost:4000/assets/css/styles.css" rel="stylesheet" />   
+        <link href="http://localhost:4000/assets/css/styles.css" rel="stylesheet" />
+        <script src="http://localhost:4000/assets/js/jquery-3.6.3.min.js"></script>   
     </head>
     <body>
         <button class="btn btn-primary search-button" id="search-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
@@ -49,15 +50,15 @@
                                     </li>
                                 
                                     <li>
-                                        <a class="dropdown-item" href="/all-posts.html#artificial-intelligence">
-                                            <i class="bi bi-bookmarks"></i>
-                                            Artificial   intelligence</a>
-                                    </li>
-                                
-                                    <li>
                                         <a class="dropdown-item" href="/all-posts.html#two-player-game">
                                             <i class="bi bi-bookmarks"></i>
                                             Two player   game</a>
+                                    </li>
+                                
+                                    <li>
+                                        <a class="dropdown-item" href="/all-posts.html#artificial-intelligence">
+                                            <i class="bi bi-bookmarks"></i>
+                                            Artificial   intelligence</a>
                                     </li>
                                 
                             </ul>
@@ -279,7 +280,7 @@ searchBtn.addEventListener('click', () => {
                 <p>Implementing basic approaches of Best-first search (Informed Search) by using <code class="language-plaintext highlighter-rouge">heapq</code> module of python.</p>
 
 <p><br />
-<img src="https://d1m75rqqgidzqn.cloudfront.net/wp-data/2019/12/18153623/shutterstock_178143896.jpg" alt="'Water Jug Image'" /></p>
+<img src="https://www.fnr.lu/wp-content/uploads/2020/01/1_3u0f1sqBMUS-kLmVhs40kw.jpeg" alt="'Water Jug Image'" /></p>
 
 <p><br /></p>
 <h2 id="best-first-search-bfs">Best-first Search (BFS)</h2>
@@ -332,7 +333,7 @@ searchBtn.addEventListener('click', () => {
 <p><br /></p>
 
 <h3 id="graph-relations-and-heuristic">Graph relations and heuristic</h3>
-<p>As per given graph define a dictionary with all the connected nodes inside a list as value to the parent node (key).</p>
+<p>The code defines two dictionaries <code class="language-plaintext highlighter-rouge">graph_relation</code> and <code class="language-plaintext highlighter-rouge">heuristic</code>.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">graph_relation</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s">"S"</span><span class="p">:</span> <span class="p">[</span><span class="s">"A"</span><span class="p">,</span> <span class="s">"B"</span><span class="p">,</span> <span class="s">"C"</span><span class="p">],</span>
@@ -354,6 +355,18 @@ searchBtn.addEventListener('click', () => {
     <span class="s">"G"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
 <span class="p">}</span>
 </code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">graph_relation</code> represents a graph where each key represents a node and its corresponding value represents a list of nodes that are adjacent to it.</li>
+</ul>
+
+<p>For example, the key “S” has adjacent nodes “A”, “B”, and “C”. Nodes “D”, “E”, and “G” have no adjacent nodes, so their lists are empty strings.</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">heuristic</code> represents a heuristic function that assigns a numerical value to each node representing its estimated distance from the goal node.</li>
+</ul>
+
+<p>A lower heuristic value indicates that the node is closer to the goal node. In this example, the goal node is “G”.</p>
 
 <p><br /></p>
 
@@ -415,7 +428,7 @@ searchBtn.addEventListener('click', () => {
 
 <h3 id="function-calling">Function calling</h3>
 
-<p>Calling the <code class="language-plaintext highlighter-rouge">mbest_first_searchain()</code> function with required args.
+<p>Calling the <code class="language-plaintext highlighter-rouge">best_first_search()</code> function with required args.
 <br /></p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">start_node</span> <span class="o">=</span> <span class="s">'S'</span>
@@ -473,9 +486,9 @@ searchBtn.addEventListener('click', () => {
                         </div>
                     </a>
                     
-                    <a class="btn  opacity-0 disabled d-none d-md-block  w-100 text-end" href="\" class="px-3">
+                    <a class="btn  btn-primary  w-100 text-end" href="/artificial-intelligence/2023/03/06/water-jug-problem.html" class="px-3">
                         <div class="d-flex justify-content-between gap-2">
-                        
+                        Water Jug Problem
                         <i class="bi bi-chevron-double-right"></i>
                         </div>
                     </a>
@@ -557,6 +570,5 @@ searchBtn.addEventListener('click', () => {
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
         <!-- Core theme JS-->
         <script src="http://localhost:4000/assets/js/scripts.js"></script>
-        <script src="http://localhost:4000/assets/js/jquery-3.6.3.min.js"></script>
     </body>
 </html>

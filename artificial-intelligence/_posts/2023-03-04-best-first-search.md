@@ -10,7 +10,7 @@ level: 6
 Implementing basic approaches of Best-first search (Informed Search) by using `heapq` module of python.
 
 <br/>
-!['Water Jug Image'](https://d1m75rqqgidzqn.cloudfront.net/wp-data/2019/12/18153623/shutterstock_178143896.jpg)
+!['Water Jug Image'](https://www.fnr.lu/wp-content/uploads/2020/01/1_3u0f1sqBMUS-kLmVhs40kw.jpeg)
 
 <br/>
 ## Best-first Search (BFS)
@@ -59,7 +59,7 @@ Hence the best path as per BFS is `S -> C -> G`.
 <hr><br/>
 
 ### Graph relations and heuristic
-As per given graph define a dictionary with all the connected nodes inside a list as value to the parent node (key).
+The code defines two dictionaries `graph_relation` and `heuristic`.
 
 ```python
 graph_relation = {
@@ -82,6 +82,16 @@ heuristic = {
     "G": 0,
 }
 ```
+
+
+- `graph_relation` represents a graph where each key represents a node and its corresponding value represents a list of nodes that are adjacent to it. 
+
+For example, the key "S" has adjacent nodes "A", "B", and "C". Nodes "D", "E", and "G" have no adjacent nodes, so their lists are empty strings.
+
+- `heuristic` represents a heuristic function that assigns a numerical value to each node representing its estimated distance from the goal node. 
+
+A lower heuristic value indicates that the node is closer to the goal node. In this example, the goal node is "G".
+
 
 <br/>
 
@@ -139,7 +149,7 @@ def best_first_search(graph, start, goal, heuristic):
 
 ### Function calling
 
-Calling the `mbest_first_searchain()` function with required args.
+Calling the `best_first_search()` function with required args.
 <br/>
 
 ```python

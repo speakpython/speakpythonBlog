@@ -13,7 +13,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Quintessential&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-        <link href="http://localhost:4000/assets/css/styles.css" rel="stylesheet" />   
+        <link href="http://localhost:4000/assets/css/styles.css" rel="stylesheet" />
+        <script src="http://localhost:4000/assets/js/jquery-3.6.3.min.js"></script>   
     </head>
     <body>
         <button class="btn btn-primary search-button" id="search-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
@@ -49,15 +50,15 @@
                                     </li>
                                 
                                     <li>
-                                        <a class="dropdown-item" href="/all-posts.html#artificial-intelligence">
-                                            <i class="bi bi-bookmarks"></i>
-                                            Artificial   intelligence</a>
-                                    </li>
-                                
-                                    <li>
                                         <a class="dropdown-item" href="/all-posts.html#two-player-game">
                                             <i class="bi bi-bookmarks"></i>
                                             Two player   game</a>
+                                    </li>
+                                
+                                    <li>
+                                        <a class="dropdown-item" href="/all-posts.html#artificial-intelligence">
+                                            <i class="bi bi-bookmarks"></i>
+                                            Artificial   intelligence</a>
                                     </li>
                                 
                             </ul>
@@ -201,12 +202,12 @@ searchBtn.addEventListener('click', () => {
                         <span class="badge bg-transparent border border-1" style="margin: 0px 4px 4px 0px"># string-formatting</span>
                     </a>
                     
-                    <a href="#artificial-intelligence" class="text-decoration-none">
-                        <span class="badge bg-transparent border border-1" style="margin: 0px 4px 4px 0px"># artificial-intelligence</span>
-                    </a>
-                    
                     <a href="#two-player-game" class="text-decoration-none">
                         <span class="badge bg-transparent border border-1" style="margin: 0px 4px 4px 0px"># two-player-game</span>
+                    </a>
+                    
+                    <a href="#artificial-intelligence" class="text-decoration-none">
+                        <span class="badge bg-transparent border border-1" style="margin: 0px 4px 4px 0px"># artificial-intelligence</span>
                     </a>
                     
                 </div>
@@ -236,27 +237,6 @@ searchBtn.addEventListener('click', () => {
                     </div>
                 <hr class="my-4" />
                 
-                    <p class="fst-italic" id = "artificial-intelligence">
-                        <a href="#artificial-intelligence" class="text-decoration-none text-muted ">
-                            <i class="bi bi-bookmarks"></i>
-                            artificial-intelligence
-                        </a>
-                    </p>
-                    <div class="post-preview">
-                        
-                        <a href="/artificial-intelligence/2023/03/04/best-first-search.html">
-                            <h5 class="post-title fs-2">Best-first search (BFS)</h5>
-                            <h5 class="post-subtitle mb-4">Implementing basic approaches of Best-first search (Informed Search) by using...</h5>
-                        </a>
-                        
-                        <a href="/artificial-intelligence/2023/02/23/water-jug-problem.html">
-                            <h5 class="post-title fs-2">Water Jug Problem - Artificial Intelligence with Python</h5>
-                            <h5 class="post-subtitle mb-4">A Chinese tale tells of some men sent to harm a young girl who, upon seeing h...</h5>
-                        </a>
-                        
-                    </div>
-                <hr class="my-4" />
-                
                     <p class="fst-italic" id = "two-player-game">
                         <a href="#two-player-game" class="text-decoration-none text-muted ">
                             <i class="bi bi-bookmarks"></i>
@@ -268,6 +248,27 @@ searchBtn.addEventListener('click', () => {
                         <a href="/two-player-game/2023/03/01/tic-tac-toe-human-vs-human.html">
                             <h5 class="post-title fs-2">Tic-Tac-Toe, Human vs Human</h5>
                             <h5 class="post-subtitle mb-4">Create a complete three-by-three Tic-Tac-Toe, two player game using basics of...</h5>
+                        </a>
+                        
+                    </div>
+                <hr class="my-4" />
+                
+                    <p class="fst-italic" id = "artificial-intelligence">
+                        <a href="#artificial-intelligence" class="text-decoration-none text-muted ">
+                            <i class="bi bi-bookmarks"></i>
+                            artificial-intelligence
+                        </a>
+                    </p>
+                    <div class="post-preview">
+                        
+                        <a href="/artificial-intelligence/2023/03/06/water-jug-problem.html">
+                            <h5 class="post-title fs-2">Water Jug Problem</h5>
+                            <h5 class="post-subtitle mb-4">Let’s start learning about the water jug problem with a practical implementat...</h5>
+                        </a>
+                        
+                        <a href="/artificial-intelligence/2023/03/04/best-first-search.html">
+                            <h5 class="post-title fs-2">Best-first search (BFS)</h5>
+                            <h5 class="post-subtitle mb-4">Implementing basic approaches of Best-first search (Informed Search) by using...</h5>
                         </a>
                         
                     </div>
@@ -320,6 +321,5 @@ searchBtn.addEventListener('click', () => {
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
         <!-- Core theme JS-->
         <script src="http://localhost:4000/assets/js/scripts.js"></script>
-        <script src="http://localhost:4000/assets/js/jquery-3.6.3.min.js"></script>
     </body>
 </html>
