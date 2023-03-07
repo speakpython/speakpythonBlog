@@ -23,3 +23,13 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 })
 
+
+function moveUpDown(){
+    const topDownBtn = document.getElementById('top-down-btn');
+    var top  = window.pageYOffset || document.documentElement.scrollTop;
+    console.log(top)
+    if (top < 800) 
+        topDownBtn.href = "#bottom-footer";
+    else
+        topDownBtn.href = "#top-header";
+}
