@@ -30,7 +30,7 @@ Note: In this module we will use pre-defined f(n).
 It's must that you should have all the basic ideas about 
 
 -  [how best-first search algorithm works](https://iq.opengenus.org/best-first-search/)
--  basics of python programming - as always!
+-  __basics of python__ programming - as always!
 
 
 <br/>
@@ -38,6 +38,7 @@ It's must that you should have all the basic ideas about
 > Problem domain and solution... 
 
 ### Understanding problem
+
 As per given graph we need to move from `S` to `G`. Start node i.e. `S` having heruistic value as `h(8)`.
 
 !['bfs-problem-domain-1'](../../../image/bfs-problem-domain-1.png)
@@ -45,6 +46,7 @@ As per given graph we need to move from `S` to `G`. Start node i.e. `S` having h
 <br/>
 
 ### Possible solution
+
 By using the given heruistic function we have maintained a `priority queue` as per BFS algorithm.
 
 !['bfs-problem-domain-1'](../../../image/bfs-problem-domain-1-solution.png)
@@ -55,10 +57,12 @@ Hence the best path as per BFS is `S -> C -> G`.
 
 > Keep calm coding begins....
 
-## Understanding modules
+## BFS using Python
+
 <hr><br/>
 
 ### Graph relations and heuristic
+
 The code defines two dictionaries `graph_relation` and `heuristic`.
 
 ```python
@@ -86,16 +90,17 @@ heuristic = {
 
 - `graph_relation` represents a graph where each key represents a node and its corresponding value represents a list of nodes that are adjacent to it. 
 
-For example, the key "S" has adjacent nodes "A", "B", and "C". Nodes "D", "E", and "G" have no adjacent nodes, so their lists are empty strings.
+For example, the key __S__ has adjacent nodes __A__, __B__, and __C__. Nodes __D__, __E__, and __G__ have no adjacent nodes, so their lists are empty strings.
 
 - `heuristic` represents a heuristic function that assigns a numerical value to each node representing its estimated distance from the goal node. 
 
-A lower heuristic value indicates that the node is closer to the goal node. In this example, the goal node is "G".
+A lower heuristic value indicates that the node is closer to the goal node. In this example, the goal node is __G__.
 
 
 <br/>
 
 ### Required library
+
 We will use only two predefined methods of `heapq`,
 
 ```python
@@ -104,11 +109,11 @@ import heapq
 
 - `heapq.heappop()`
 
-The heappop method pops and returns the smallest element of the given heap.
+The heappop method __pops__ and returns the smallest element of the given heap.
 
 - `heapq.heappush()`
 
-This function adds an element to the heap without altering the current heap.
+This function __adds__ an element to the heap without altering the current heap.
 
 <br/>
 ### BFS function
@@ -149,7 +154,7 @@ def best_first_search(graph, start, goal, heuristic):
 
 ### Function calling
 
-Calling the `best_first_search()` function with required args.
+Calling the `best_first_search()` function with required __args__.
 <br/>
 
 ```python
@@ -168,7 +173,8 @@ print(came_from)
 <br/>
 
 ### Backtracking
-In order to have the optimal path (somehow), we need to backtrack the `came_from` starting from the `goal_node`
+
+In order to have the __optimal__ path _(somehow)_, we need to backtrack the `came_from` starting from the `goal_node`
 
 ```python
 node = goal_node

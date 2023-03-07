@@ -17,18 +17,27 @@
         <script src="http://localhost:4000/assets/js/jquery-3.6.3.min.js"></script>   
     </head>
     <body>
-        <button class="btn btn-primary search-button" id="search-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-            <div class="row">
-                <div class="col-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                      </svg>
+        <div class="btn-group search-button p-0" role="group" aria-label="Basic example">
+            <button class="btn btn-primary " id="search-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                <div class="row">
+                    <div class="col-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                        </svg>
+                    </div>
+                    <div class="col-9 d-md-block d-none">
+                        Search
+                    </div>
                 </div>
-                <div class="col-9">
-                    Search
-                </div>
-            </div>
-        </button>  <!-- Navigation-->
+            </button>  
+            <a class="btn btn-primary active" id="search-btn" type="button" href="#top-header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-down-up" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M11.5 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L11 2.707V14.5a.5.5 0 0 0 .5.5zm-7-14a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V1.5a.5.5 0 0 1 .5-.5z"/>
+                  </svg>
+            </a>  
+        </div>
+            
+        <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
             <div class="container px-4 px-lg-5">
                 <a class="navbar-brand" href="/index.html">Speak Python</a>
@@ -196,7 +205,7 @@ searchBtn.addEventListener('click', () => {
 <div id="lb-back">
     <div id="lb-img"></div>
 </div>
-<header class="masthead">
+<header class="masthead" id="top-header">
     <div class="container position-relative px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
@@ -314,7 +323,7 @@ searchBtn.addEventListener('click', () => {
   <p>Keep calm coding begins….</p>
 </blockquote>
 
-<h2 id="understanding-modules">Understanding modules</h2>
+<h2 id="water-jug-and-python">Water Jug and Python</h2>
 <hr />
 
 <p><br /></p>
@@ -426,6 +435,7 @@ searchBtn.addEventListener('click', () => {
 
 <p><img src="../../../image/water-jug-problem-solution.png" alt="'water-jug-problem-solution'" /></p>
 
+                
                 <div class="container p-0 my-4 mt-5">
                     <div class="content-credit">
                         
@@ -436,6 +446,7 @@ searchBtn.addEventListener('click', () => {
                             
                     </div>
                 </div>
+                
                 <hr class="my-4" />
                 <div class="d-flex justify-content-between gap-2 mb-4">
                     
@@ -446,9 +457,9 @@ searchBtn.addEventListener('click', () => {
                         </div>
                     </a>
                     
-                    <a class="btn  opacity-0 disabled d-none d-md-block  w-100 text-end" href="\" class="px-3">
+                    <a class="btn  btn-primary  w-100 text-end" href="/two-player-game/2023/03/07/hangman-word-game.html" class="px-3">
                         <div class="d-flex justify-content-between gap-2">
-                        
+                        Hangman Word Game
                         <i class="bi bi-chevron-double-right"></i>
                         </div>
                     </a>
@@ -504,7 +515,7 @@ searchBtn.addEventListener('click', () => {
                                 </a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="#!">
+                                <a href="https://www.facebook.com/speakpython.codes/" target="_blank">
                                     <span class="fa-stack fa-lg">
                                         <i class="fas fa-circle fa-stack-2x"></i>
                                         <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
@@ -512,7 +523,7 @@ searchBtn.addEventListener('click', () => {
                                 </a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="#!">
+                                <a href="https://github.com/speakpython" target="_blank">
                                     <span class="fa-stack fa-lg">
                                         <i class="fas fa-circle fa-stack-2x"></i>
                                         <i class="fab fa-github fa-stack-1x fa-inverse"></i>
@@ -520,7 +531,7 @@ searchBtn.addEventListener('click', () => {
                                 </a>
                             </li>
                         </ul>
-                        <div class="small text-center text-muted fst-italic">Copyright &copy; Speak Python 2023</div>
+                        <div class="small text-center text-muted fst-italic">Copyright &copy; <a href="https://speakpython.codes" target="_blank" class="text-grey">speakpython.codes</a> 2023</div>
                     </div>
                 </div>
             </div>

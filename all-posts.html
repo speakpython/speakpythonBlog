@@ -34,7 +34,7 @@ title: All Posts
                     <div class="post-preview">
                         {% for post in category.last %}
                         <a href="{{ post.url }}">
-                            <h5 class="post-title fs-2">{{ post.heading }}</h5>
+                            <h5 class="post-title fs-2">{{ post.heading }} <sup><i class="bi bi-{{post.level}}-square" style="color:#0085A1"></i></sup></h5>
                             <h5 class="post-subtitle mb-4">{{ post.excerpt | strip_html | truncate:80 }}</h5>
                         </a>
                         {% endfor %}

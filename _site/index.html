@@ -17,18 +17,27 @@
         <script src="http://localhost:4000/assets/js/jquery-3.6.3.min.js"></script>   
     </head>
     <body>
-        <button class="btn btn-primary search-button" id="search-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-            <div class="row">
-                <div class="col-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                      </svg>
+        <div class="btn-group search-button p-0" role="group" aria-label="Basic example">
+            <button class="btn btn-primary " id="search-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                <div class="row">
+                    <div class="col-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                        </svg>
+                    </div>
+                    <div class="col-9 d-md-block d-none">
+                        Search
+                    </div>
                 </div>
-                <div class="col-9">
-                    Search
-                </div>
-            </div>
-        </button>  <!-- Navigation-->
+            </button>  
+            <a class="btn btn-primary active" id="search-btn" type="button" href="#top-header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-down-up" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M11.5 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L11 2.707V14.5a.5.5 0 0 0 .5.5zm-7-14a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V1.5a.5.5 0 0 1 .5-.5z"/>
+                  </svg>
+            </a>  
+        </div>
+            
+        <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
             <div class="container px-4 px-lg-5">
                 <a class="navbar-brand" href="/index.html">Speak Python</a>
@@ -214,6 +223,23 @@ searchBtn.addEventListener('click', () => {
             <div class="post-preview">
                 <p class="post-meta">
                     <i class="bi bi-github"></i> 
+                    <a href="https://github.com/speakpython/speakpythonBlog/blob/gh-pages/two-player-game/_posts/2023-03-07-hangman-word-game.md" class="git-link">
+                        speakpython / two-player-game / hangman-word-game</a>
+                </p>
+                <a href="/two-player-game/2023/03/07/hangman-word-game.html">
+                    <h2 class="post-title">Hangman - classic word game</h2>
+                    <h3 class="post-subtitle mb-4">Are you interested in creating a fun and intera...</h3>
+                </a>
+                <p class="post-meta">
+                    Posted by Dev Anand on 07 March 2023
+                </p>
+            </div>
+            <!-- Divider-->
+            <hr class="my-4" />
+            
+            <div class="post-preview">
+                <p class="post-meta">
+                    <i class="bi bi-github"></i> 
                     <a href="https://github.com/speakpython/speakpythonBlog/blob/gh-pages/artificial-intelligence/_posts/2023-03-06-water-jug-problem.md" class="git-link">
                         speakpython / artificial-intelligence / water-jug-problem</a>
                 </p>
@@ -252,7 +278,7 @@ searchBtn.addEventListener('click', () => {
                         speakpython / two-player-game / tic-tac-toe-human-vs-human</a>
                 </p>
                 <a href="/two-player-game/2023/03/01/tic-tac-toe-human-vs-human.html">
-                    <h2 class="post-title">Tic-Tac-Toe, Human vs Human</h2>
+                    <h2 class="post-title">Tic-tac-toe, Human vs Human</h2>
                     <h3 class="post-subtitle mb-4">Create a complete three-by-three Tic-Tac-Toe, t...</h3>
                 </a>
                 <p class="post-meta">
@@ -300,7 +326,7 @@ searchBtn.addEventListener('click', () => {
                                 </a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="#!">
+                                <a href="https://www.facebook.com/speakpython.codes/" target="_blank">
                                     <span class="fa-stack fa-lg">
                                         <i class="fas fa-circle fa-stack-2x"></i>
                                         <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
@@ -308,7 +334,7 @@ searchBtn.addEventListener('click', () => {
                                 </a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="#!">
+                                <a href="https://github.com/speakpython" target="_blank">
                                     <span class="fa-stack fa-lg">
                                         <i class="fas fa-circle fa-stack-2x"></i>
                                         <i class="fab fa-github fa-stack-1x fa-inverse"></i>
@@ -316,7 +342,7 @@ searchBtn.addEventListener('click', () => {
                                 </a>
                             </li>
                         </ul>
-                        <div class="small text-center text-muted fst-italic">Copyright &copy; Speak Python 2023</div>
+                        <div class="small text-center text-muted fst-italic">Copyright &copy; <a href="https://speakpython.codes" target="_blank" class="text-grey">speakpython.codes</a> 2023</div>
                     </div>
                 </div>
             </div>

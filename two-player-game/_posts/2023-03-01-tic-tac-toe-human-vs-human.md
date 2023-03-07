@@ -1,10 +1,10 @@
 ---
 layout: post
-heading: Tic-Tac-Toe, Human vs Human
+heading: Tic-tac-toe, Human vs Human
 keywords: ['problem-solving', 'fun-with-python']
 author_id: 'dev3058'
 credits: ['wikipedia']
-level: 4
+level: 5
 ---
 
 Create a complete `three-by-three` Tic-Tac-Toe, two player game using basics of python. 
@@ -13,7 +13,7 @@ Create a complete `three-by-three` Tic-Tac-Toe, two player game using basics of 
 !['Water Jug Image'](https://www.rd.com/wp-content/uploads/2019/10/tic-tac-toe-scaled.jpg)
 
 <br/>
-## What is Tic-Tac-Toe
+## What is Tic-tac-toe
 
 Tic-tac-toe, noughts and crosses, or Xs and Os is a paper-and-pencil game for `two players` who take turns marking the spaces in a `three-by-three grid` with X or O. 
 
@@ -36,12 +36,14 @@ Before you start exploring each modules you must have
 
 > Keep calm coding begins....
 
-## Understanding modules
+## Tic-tac-toe in Python
 <hr>
+<br />
 
 ### Grid box pattern 
-To represent 3 X 3 grid structure we have created `game_grid()` function.
-<br/>
+
+The `game_grid(value)` function takes a list value containing the current state of the Tic-Tac-Toe game board as input.
+
 
 ```python
 def game_grid(value):  
@@ -58,10 +60,20 @@ def game_grid(value):
     print('\t|______|______|_____|')
     print("\n") 
 ```
+
+- The function prints the __Tic-Tac-Toe game board__ using __ASCII__ art to display the current state of the game. 
+
+- The function prints a __3x3__ grid with lines and pipes using the values in the value list to represent the __Xs__ and __Os__ on the board.
+
+- The value list contains 9 elements representing the 9 positions on the Tic-Tac-Toe board.
+
+
 <br/>
 
+
+
 ### Possible winning patterns
-These are all the possible moves which guarranty the player's success.
+The code defines a list called `wining_pattern` which contains sub-lists of all the possible winning combinations in a Tic-Tac-Toe game. 
 <br/>
 
 ```python
@@ -107,6 +119,11 @@ def check_wining(moves):
             return True 
     return False 
 ```
+
+- The function `check_wining(moves)` takes a list moves as input, which contains the positions of the moves made by a player on the board. 
+
+- The function checks if any of the sub-lists in wining_pattern is a subset of moves, which means the player has achieved a winning combination. If a winning combination is found, the function returns `True`, otherwise it returns `False`.
+
 <br/>
 
 ### Driver code [🧠 Brain]
@@ -160,3 +177,6 @@ Calling the `main()` function in order to start the game.
 main() #calling driver code to start the game!
 ```
 !['image'](../../../image/tic-tac-toe-code-output.png)
+
+<hr/>
+_Related: [Tic-tac-toe Machine vs Human](tic-tac-toe-machine-vs-human.md)_

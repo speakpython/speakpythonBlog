@@ -17,18 +17,27 @@
         <script src="http://localhost:4000/assets/js/jquery-3.6.3.min.js"></script>   
     </head>
     <body>
-        <button class="btn btn-primary search-button" id="search-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-            <div class="row">
-                <div class="col-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                      </svg>
+        <div class="btn-group search-button p-0" role="group" aria-label="Basic example">
+            <button class="btn btn-primary " id="search-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                <div class="row">
+                    <div class="col-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                        </svg>
+                    </div>
+                    <div class="col-9 d-md-block d-none">
+                        Search
+                    </div>
                 </div>
-                <div class="col-9">
-                    Search
-                </div>
-            </div>
-        </button>  <!-- Navigation-->
+            </button>  
+            <a class="btn btn-primary active" id="search-btn" type="button" href="#top-header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-down-up" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M11.5 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L11 2.707V14.5a.5.5 0 0 0 .5.5zm-7-14a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V1.5a.5.5 0 0 1 .5-.5z"/>
+                  </svg>
+            </a>  
+        </div>
+            
+        <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
             <div class="container px-4 px-lg-5">
                 <a class="navbar-brand" href="/index.html">Speak Python</a>
@@ -196,7 +205,7 @@ searchBtn.addEventListener('click', () => {
 <div id="lb-back">
     <div id="lb-img"></div>
 </div>
-<header class="masthead">
+<header class="masthead" id="top-header">
     <div class="container position-relative px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
@@ -299,7 +308,7 @@ searchBtn.addEventListener('click', () => {
 
 <ul>
   <li><a href="https://iq.opengenus.org/best-first-search/">how best-first search algorithm works</a></li>
-  <li>basics of python programming - as always!</li>
+  <li><strong>basics of python</strong> programming - as always!</li>
 </ul>
 
 <p><br /></p>
@@ -309,6 +318,7 @@ searchBtn.addEventListener('click', () => {
 </blockquote>
 
 <h3 id="understanding-problem">Understanding problem</h3>
+
 <p>As per given graph we need to move from <code class="language-plaintext highlighter-rouge">S</code> to <code class="language-plaintext highlighter-rouge">G</code>. Start node i.e. <code class="language-plaintext highlighter-rouge">S</code> having heruistic value as <code class="language-plaintext highlighter-rouge">h(8)</code>.</p>
 
 <p><img src="../../../image/bfs-problem-domain-1.png" alt="'bfs-problem-domain-1'" /></p>
@@ -316,6 +326,7 @@ searchBtn.addEventListener('click', () => {
 <p><br /></p>
 
 <h3 id="possible-solution">Possible solution</h3>
+
 <p>By using the given heruistic function we have maintained a <code class="language-plaintext highlighter-rouge">priority queue</code> as per BFS algorithm.</p>
 
 <p><img src="../../../image/bfs-problem-domain-1-solution.png" alt="'bfs-problem-domain-1'" /></p>
@@ -328,11 +339,13 @@ searchBtn.addEventListener('click', () => {
   <p>Keep calm coding begins….</p>
 </blockquote>
 
-<h2 id="understanding-modules">Understanding modules</h2>
+<h2 id="bfs-using-python">BFS using Python</h2>
+
 <hr />
 <p><br /></p>
 
 <h3 id="graph-relations-and-heuristic">Graph relations and heuristic</h3>
+
 <p>The code defines two dictionaries <code class="language-plaintext highlighter-rouge">graph_relation</code> and <code class="language-plaintext highlighter-rouge">heuristic</code>.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">graph_relation</span> <span class="o">=</span> <span class="p">{</span>
@@ -360,17 +373,18 @@ searchBtn.addEventListener('click', () => {
   <li><code class="language-plaintext highlighter-rouge">graph_relation</code> represents a graph where each key represents a node and its corresponding value represents a list of nodes that are adjacent to it.</li>
 </ul>
 
-<p>For example, the key “S” has adjacent nodes “A”, “B”, and “C”. Nodes “D”, “E”, and “G” have no adjacent nodes, so their lists are empty strings.</p>
+<p>For example, the key <strong>S</strong> has adjacent nodes <strong>A</strong>, <strong>B</strong>, and <strong>C</strong>. Nodes <strong>D</strong>, <strong>E</strong>, and <strong>G</strong> have no adjacent nodes, so their lists are empty strings.</p>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">heuristic</code> represents a heuristic function that assigns a numerical value to each node representing its estimated distance from the goal node.</li>
 </ul>
 
-<p>A lower heuristic value indicates that the node is closer to the goal node. In this example, the goal node is “G”.</p>
+<p>A lower heuristic value indicates that the node is closer to the goal node. In this example, the goal node is <strong>G</strong>.</p>
 
 <p><br /></p>
 
 <h3 id="required-library">Required library</h3>
+
 <p>We will use only two predefined methods of <code class="language-plaintext highlighter-rouge">heapq</code>,</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">heapq</span>
@@ -380,13 +394,13 @@ searchBtn.addEventListener('click', () => {
   <li><code class="language-plaintext highlighter-rouge">heapq.heappop()</code></li>
 </ul>
 
-<p>The heappop method pops and returns the smallest element of the given heap.</p>
+<p>The heappop method <strong>pops</strong> and returns the smallest element of the given heap.</p>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">heapq.heappush()</code></li>
 </ul>
 
-<p>This function adds an element to the heap without altering the current heap.</p>
+<p>This function <strong>adds</strong> an element to the heap without altering the current heap.</p>
 
 <p><br /></p>
 <h3 id="bfs-function">BFS function</h3>
@@ -428,7 +442,7 @@ searchBtn.addEventListener('click', () => {
 
 <h3 id="function-calling">Function calling</h3>
 
-<p>Calling the <code class="language-plaintext highlighter-rouge">best_first_search()</code> function with required args.
+<p>Calling the <code class="language-plaintext highlighter-rouge">best_first_search()</code> function with required <strong>args</strong>.
 <br /></p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">start_node</span> <span class="o">=</span> <span class="s">'S'</span>
@@ -449,7 +463,8 @@ searchBtn.addEventListener('click', () => {
 <p><br /></p>
 
 <h3 id="backtracking">Backtracking</h3>
-<p>In order to have the optimal path (somehow), we need to backtrack the <code class="language-plaintext highlighter-rouge">came_from</code> starting from the <code class="language-plaintext highlighter-rouge">goal_node</code></p>
+
+<p>In order to have the <strong>optimal</strong> path <em>(somehow)</em>, we need to backtrack the <code class="language-plaintext highlighter-rouge">came_from</code> starting from the <code class="language-plaintext highlighter-rouge">goal_node</code></p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">node</span> <span class="o">=</span> <span class="n">goal_node</span>
 <span class="n">path</span> <span class="o">=</span> <span class="p">[</span><span class="n">node</span><span class="p">]</span>
@@ -466,6 +481,7 @@ searchBtn.addEventListener('click', () => {
 </span></code></pre></div></div>
 
 
+                
                 <div class="container p-0 my-4 mt-5">
                     <div class="content-credit">
                         
@@ -476,6 +492,7 @@ searchBtn.addEventListener('click', () => {
                             
                     </div>
                 </div>
+                
                 <hr class="my-4" />
                 <div class="d-flex justify-content-between gap-2 mb-4">
                     
@@ -544,7 +561,7 @@ searchBtn.addEventListener('click', () => {
                                 </a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="#!">
+                                <a href="https://www.facebook.com/speakpython.codes/" target="_blank">
                                     <span class="fa-stack fa-lg">
                                         <i class="fas fa-circle fa-stack-2x"></i>
                                         <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
@@ -552,7 +569,7 @@ searchBtn.addEventListener('click', () => {
                                 </a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="#!">
+                                <a href="https://github.com/speakpython" target="_blank">
                                     <span class="fa-stack fa-lg">
                                         <i class="fas fa-circle fa-stack-2x"></i>
                                         <i class="fab fa-github fa-stack-1x fa-inverse"></i>
@@ -560,7 +577,7 @@ searchBtn.addEventListener('click', () => {
                                 </a>
                             </li>
                         </ul>
-                        <div class="small text-center text-muted fst-italic">Copyright &copy; Speak Python 2023</div>
+                        <div class="small text-center text-muted fst-italic">Copyright &copy; <a href="https://speakpython.codes" target="_blank" class="text-grey">speakpython.codes</a> 2023</div>
                     </div>
                 </div>
             </div>

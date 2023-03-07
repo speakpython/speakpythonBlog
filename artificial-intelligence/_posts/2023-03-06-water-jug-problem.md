@@ -40,7 +40,7 @@ For e.g. Greatest common divisor of 5 and 3 is 1 and 1 is divisible by 3 hence w
 <br/>
 > Keep calm coding begins....
 
-## Understanding modules
+## Water Jug and Python
 <hr>
 <br/>
 
