@@ -7,6 +7,18 @@ em, strong{
     cursor: zoom-in;
   }
 
+h1, h2, h3, h4, h5, h6{
+  padding-top: 1rem;
+}
+
+.post-heading > h2{
+  padding: 0;
+}
+
+img{
+  margin: 1rem 0rem;
+}
+
 #lb-back {
     position: fixed;
     top: 0;
@@ -282,4 +294,3 @@ footer ul{
 #selectionSharerPopunder-inner a.tweet {
   background-position: 0px 2px;
 }
-

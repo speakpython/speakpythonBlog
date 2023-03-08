@@ -9,10 +9,9 @@ level: 5
 
 Create a complete `three-by-three` Tic-Tac-Toe, two player game using basics of python. The game requires basic programming concepts such as variables, conditionals, loops, and functions.
 
-<br/>
-!['Water Jug Image'](https://www.rd.com/wp-content/uploads/2019/10/tic-tac-toe-scaled.jpg)
+!['tic-tac-toe-image'](https://www.rd.com/wp-content/uploads/2019/10/tic-tac-toe-scaled.jpg)
 
-<br/>
+
 ## What is Tic-tac-toe
 
 Tic-tac-toe, noughts and crosses, or Xs and Os is a paper-and-pencil game for `two players` who take turns marking the spaces in a `three-by-three grid` with X or O. 
@@ -38,7 +37,7 @@ Before you start exploring each modules you must have
 
 ## Tic-tac-toe in Python
 <hr>
-<br />
+
 
 ### Grid box pattern 
 
@@ -67,10 +66,7 @@ def game_grid(value):
 
 - The value list contains 9 elements representing the 9 positions on the Tic-Tac-Toe board.
 
-
 <br/>
-
-
 
 ### Possible winning patterns
 The code defines a list called `wining_pattern` which contains sub-lists of all the possible winning combinations in a Tic-Tac-Toe game. 

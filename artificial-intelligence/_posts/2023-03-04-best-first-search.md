@@ -9,10 +9,8 @@ level: 6
 
 Implementing basic approaches of Best-first search (Informed Search) by using `heapq` module of python.
 
-<br/>
-!['Water Jug Image'](https://www.fnr.lu/wp-content/uploads/2020/01/1_3u0f1sqBMUS-kLmVhs40kw.jpeg)
+!['bfs-image'](https://www.fnr.lu/wp-content/uploads/2020/01/1_3u0f1sqBMUS-kLmVhs40kw.jpeg)
 
-<br/>
 ## Best-first Search (BFS)
 
 Best-first search is a class of `search algorithms`, which explores a graph by expanding the most promising node chosen according to a specified rule.
@@ -59,7 +57,7 @@ Hence the best path as per BFS is `S -> C -> G`.
 
 ## BFS using Python
 
-<hr><br/>
+<hr>
 
 ### Graph relations and heuristic
 

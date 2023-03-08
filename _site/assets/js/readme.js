@@ -145,6 +145,9 @@
       var text = self.htmlSelection.replace(/<p[^>]*>/ig,'\n').replace(/<\/p>|  /ig,'').trim();
       console.log(text.replace(/<[^>]*>/g, ''))
       navigator.clipboard.writeText(text.replace(/<[^>]*>/g, ''));
+      self.hide();
+      window.getSelection().empty();
+      return true;
     };
   
     this.shareEmail = function(e) {
@@ -241,8 +244,6 @@
   })(jQuery);
   
   $('p').selectionSharer();
-  $('li').selectionSharer();
-  $('pre').selectionSharer();
   
 
 const image_list = document.getElementsByTagName("img")
@@ -279,4 +280,10 @@ window.addEventListener("load", function() {
     document.getElementById("lb-back").addEventListener("click", function() {
       this.classList.remove("show");
     });
+});
+
+$(':header[id]').each(function() {
+  var anchor = document.createElement('a')
+  anchor.href = '#' + this.id
+  $(this).wrapInner(anchor)
 });

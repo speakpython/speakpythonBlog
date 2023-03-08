@@ -9,11 +9,7 @@ level: 4
 
 Are you interested in creating a fun and interactive game in Python? If so, let's dive into building a Hangman game!
 
-<br/>
-
 !['Hangman'](https://www.rd.com/wp-content/uploads/2017/08/Here-Is-The-Hardest-Word-To-Guess-in-Hangman-According-To-Science-ft.jpg)
-
-<br />
 
 ## About Hangman
 Hangman is a __word guessing game__ where one player thinks of a word and the other player(s) try to guess it by suggesting letters. 
@@ -29,9 +25,8 @@ Hangman is a __word guessing game__ where one player thinks of a word and the ot
 ## Hangman in Python
 
 <hr>
-<br/>
 
-### Required library and expected input.
+### Puzzle hint and answer
 
 This code sets up the puzzle answer and hint for the Hangman game, which will be used later in the game to generate the puzzle and provide hints to the user.
 

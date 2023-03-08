@@ -9,11 +9,8 @@ level: 6
 
 Let's start learning about the `water jug` problem with a practical implementation!
 
-<br/>
-
 !['Water Jug Image'](https://boxofnotes.com/wp-content/uploads/2022/11/Water-Jug-Problem-in-Artificial-Intelligence.jpg)
 
-<br/>
 
 ## About Water Jug problem
 
@@ -42,7 +39,6 @@ For e.g. Greatest common divisor of 5 and 3 is 1 and 1 is divisible by 3 hence w
 
 ## Water Jug and Python
 <hr>
-<br/>
 
 ### Problem defination 
 
