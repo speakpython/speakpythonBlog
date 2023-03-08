@@ -55,12 +55,6 @@
                             <ul class="dropdown-menu" style="left: -8rem;">
                                 
                                     <li>
-                                        <a class="dropdown-item" href="/all-posts.html#string-formatting">
-                                            <i class="bi bi-bookmarks"></i>
-                                            String   formatting</a>
-                                    </li>
-                                
-                                    <li>
                                         <a class="dropdown-item" href="/all-posts.html#two-player-game">
                                             <i class="bi bi-bookmarks"></i>
                                             Two player   game</a>
@@ -203,7 +197,7 @@ searchBtn.addEventListener('click', () => {
 
         <!-- Main Content-->
         <!-- Page Header-->
-<header class="masthead" style="background-image: url('assets/img/python-back.png')">
+<header class="masthead" style="background-image: url('assets/img/python-back.png')" id="top-header">
     <div class="container position-relative px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
@@ -236,12 +230,13 @@ searchBtn.addEventListener('click', () => {
                     <hr />
                     <div class="mt-5" id="maillist">
                         <h4 class="maillist-promotion">Never Miss an Educational Opportunity Again</h4>
-<form name="speakpython-blog" method="POST" data-netlify="true">
+                        <form name="speakpython-blog" method="POST" data-netlify="true" data-netlify-recaptcha="true">
 <div class="row p-md-1">
     <div class="col-md-9 p-2">
         <input class="w-100" type="email" required name="email" placeholder="Join Our Mailing List for Exclusive Updates" style="width: 100%;max-height:3.5rem;padding: 1.5rem 1rem;font-family: Ubuntu;font-size: 1rem;">
     </div>
     <div class="col-md-3 p-2">
+        <div data-netlify-recaptcha="true"></div>
         <button class="btn btn-primary w-100" type="submit">Subscribe</button>
     </div>
 </div>

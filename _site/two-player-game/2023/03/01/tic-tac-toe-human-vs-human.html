@@ -55,12 +55,6 @@
                             <ul class="dropdown-menu" style="left: -8rem;">
                                 
                                     <li>
-                                        <a class="dropdown-item" href="/all-posts.html#string-formatting">
-                                            <i class="bi bi-bookmarks"></i>
-                                            String   formatting</a>
-                                    </li>
-                                
-                                    <li>
                                         <a class="dropdown-item" href="/all-posts.html#two-player-game">
                                             <i class="bi bi-bookmarks"></i>
                                             Two player   game</a>
@@ -490,10 +484,10 @@ searchBtn.addEventListener('click', () => {
                 <hr class="my-4" />
                 <div class="d-flex justify-content-between gap-2 mb-4">
                     
-                    <a class="btn  btn-primary  w-100 text-end" href="/string-formatting/2023/02/15/string-slices.html" class="px-3">
+                    <a class="btn  opacity-0 disabled d-none d-md-block  w-100 text-end" href="\" class="px-3">
                         <div class="d-flex justify-content-between gap-2">
                             <i class="bi bi-chevron-double-left"></i>
-                            String Slices
+                            
                         </div>
                     </a>
                     
@@ -523,13 +517,14 @@ searchBtn.addEventListener('click', () => {
                     async>
                 </script>
                 <div class="mt-5 mb-3" id="maillist">
-                    <h4 class="maillist-promotion">Never Miss an Educational Opportunity Again</h4>
-<form name="speakpython-blog" method="POST" data-netlify="true">
+                    <h4 class="maillist-promotion">Unlock the full potential of Python programming</h4>
+                    <form name="speakpython-blog" method="POST" data-netlify="true" data-netlify-recaptcha="true">
 <div class="row p-md-1">
     <div class="col-md-9 p-2">
-        <input class="w-100" type="email" required name="email" placeholder="Join Our Mailing List for Exclusive Updates" style="width: 100%;max-height:3.5rem;padding: 1.5rem 1rem;font-family: Ubuntu;font-size: 1rem;">
+        <input class="w-100" type="email" required name="email" placeholder="Subscribe to our blog for expert tips and code snippets!" style="width: 100%;max-height:3.5rem;padding: 1.5rem 1rem;font-family: Ubuntu;font-size: 1rem;">
     </div>
     <div class="col-md-3 p-2">
+        <div data-netlify-recaptcha="true"></div>
         <button class="btn btn-primary w-100" type="submit">Subscribe</button>
     </div>
 </div>

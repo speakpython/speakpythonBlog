@@ -3,7 +3,7 @@ layout: default
 title: Python Training
 ---
 <!-- Page Header-->
-<header class="masthead" style="background-image: url('assets/img/python-back.png')">
+<header class="masthead" style="background-image: url('assets/img/python-back.png')" id="top-header">
     <div class="container position-relative px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
@@ -35,7 +35,8 @@ title: Python Training
                     </div>
                     <hr />
                     <div class="mt-5" id="maillist">
-                        {% include subscription-form.html %}
+                        <h4 class="maillist-promotion">Never Miss an Educational Opportunity Again</h4>
+                        {% include subscription-form.html placeholder-content = "Join Our Mailing List for Exclusive Updates" %}
                     </div>
                 </div>
             </div>
