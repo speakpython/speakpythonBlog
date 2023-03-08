@@ -1,3 +1,6 @@
+em, strong{
+  font-family: Ubuntu;
+}
 /* LIGHTBOX BACKGROUND */
 .zoomD {
     transition: all ease-in-out 0.4s;

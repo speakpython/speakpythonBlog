@@ -7,7 +7,7 @@ credits: ['wikipedia']
 level: 5
 ---
 
-Create a complete `three-by-three` Tic-Tac-Toe, two player game using basics of python. 
+Create a complete `three-by-three` Tic-Tac-Toe, two player game using basics of python. The game requires basic programming concepts such as variables, conditionals, loops, and functions.
 
 <br/>
 !['Water Jug Image'](https://www.rd.com/wp-content/uploads/2019/10/tic-tac-toe-scaled.jpg)
@@ -178,5 +178,13 @@ main() #calling driver code to start the game!
 ```
 !['image'](../../../image/tic-tac-toe-code-output.png)
 
+<br/>
+
+### Conclusion
+
 <hr/>
-_Related: [Tic-tac-toe Machine vs Human](tic-tac-toe-machine-vs-human.md)_
+
+Building a Tic Tac Toe game in Python is a great exercise for beginner programmers to practice their skills. Playing against another human player is a fun way to test the game and hone your strategy.
+
+Additionally, the game can be expanded to include more [advanced concepts such as AI algorithms for a single player mode](somelink). 
+

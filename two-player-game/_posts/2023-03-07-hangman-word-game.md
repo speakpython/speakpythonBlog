@@ -1,7 +1,7 @@
 ---
 layout: post
 heading: Hangman - classic word game
-keywords: ['problem-solving', 'fun-with-pyth']
+keywords: ['problem-solving', 'fun-with-python']
 author_id: 'dev3058'
 credits: []
 level: 4
@@ -55,7 +55,11 @@ hint = input('Any Hint : ')
 
 ### Random and Custom Puzzle design
 
-You can express the two ways of creating a puzzle for the Hangman game in your code by providing the user with the _option to either input their own word_ for the game or have the game _randomly select a word_ for them.
+You can express the two ways of creating a puzzle for the Hangman game in your code
+
+- by providing the user with the _option to either input their own word_ for the game 
+
+- or have the game _randomly select a word_ for them.
 
 <br/>
 
@@ -192,4 +196,13 @@ If it is, the code prints a message indicating that __Player 2__ won and Player 
 
 !['hangman-player-2'](../../../image/hangman-player-2.png)
 
+<br/>
+
+### Conclusion
+
+<hr/>
+
+Building a Hangman game in Python is an excellent exercise for beginner programmers to practice their skills. It's a fun way to test and improve one's vocabulary and spelling skills.
+
+Overall, building a Hangman game in Python is an enjoyable and educational experience for any programmer looking to improve their programming abilities.
 

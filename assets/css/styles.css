@@ -10849,11 +10849,11 @@ header.masthead .site-heading .h1 {
 header.masthead .page-heading .subheading,
 header.masthead .site-heading .subheading {
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: lighter;
   line-height: 1.1;
   display: block;
   margin-top: 0.625rem;
-  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Ubuntu", "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 header.masthead .post-heading h1, header.masthead .post-heading .h1 {
   font-size: 2rem;
@@ -11017,7 +11017,7 @@ header.masthead .site-heading .subheading {
 }
 
 .code-level{
-  font-family: arial;
+  font-family: "Ubuntu";
   border-left: 0.3rem solid white;
   margin-left: 5px;
   background-color: #62050d;
@@ -11026,6 +11026,10 @@ header.masthead .site-heading .subheading {
   font-size: 1.3rem;
 }
 
+.maillist-promotion{
+  font-size: 1.4rem;
+  font-weight: 100;
+}
 
 @media (max-width: 480px) {
   .search-button{
@@ -11056,5 +11060,22 @@ header.masthead .site-heading .subheading {
   .code-level{
     font-size: 1rem;
   }
+
+  .maillist-promotion{
+    font-size: 2.2rem
+  }
 }
 
+.event-planner{
+  margin: 4rem 0rem;
+}
+
+.google-calender{
+  background-color: #00404e;
+  height: 20rem;
+}
+
+.google-calender iframe{
+  width: 100%;
+  height: 20rem;
+}
