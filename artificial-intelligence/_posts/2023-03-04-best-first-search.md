@@ -5,6 +5,7 @@ keywords: ['search-algorithm', 'problem-solving']
 author_id: 'dev3058'
 credits: ['wikipedia']
 level: 6
+published: true
 ---
 
 Implementing basic approaches of Best-first search (Informed Search) by using `heapq` module of python.

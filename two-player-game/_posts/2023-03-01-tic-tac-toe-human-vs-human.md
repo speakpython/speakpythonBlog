@@ -5,6 +5,7 @@ keywords: ['problem-solving', 'fun-with-python']
 author_id: 'dev3058'
 credits: ['wikipedia']
 level: 5
+published: true
 ---
 
 Create a complete `three-by-three` Tic-Tac-Toe, two player game using basics of python. The game requires basic programming concepts such as variables, conditionals, loops, and functions.
@@ -118,7 +119,7 @@ def check_wining(moves):
 
 - The function `check_wining(moves)` takes a list moves as input, which contains the positions of the moves made by a player on the board. 
 
-- The function checks if any of the sub-lists in wining_pattern is a subset of moves, which means the player has achieved a winning combination. If a winning combination is found, the function returns `True`, otherwise it returns `False`.
+- The function checks if any of the sub-lists in `wining_pattern` is a _subset of moves_, which means the player has achieved a winning combination. If a _winning combination_ is found, the function returns `True`, otherwise it returns `False`.
 
 <br/>
 
@@ -172,7 +173,7 @@ Calling the `main()` function in order to start the game.
 ```python
 main() #calling driver code to start the game!
 ```
-!['image'](../../../image/tic-tac-toe-code-output.png)
+!['tic-tac-toe-code-output'](../../../image/tic-tac-toe-code-output.png)
 
 <br/>
 

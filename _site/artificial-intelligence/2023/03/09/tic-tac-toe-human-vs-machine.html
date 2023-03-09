@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Tic Tac Toe Human Vs Human - Speak Python</title>
+        <title>Tic Tac Toe Human Vs Machine - Speak Python</title>
         <link rel="icon" type="image/x-icon" href="http://localhost:4000/assets/favicon.ico" />
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
@@ -210,10 +210,10 @@ searchBtn.addEventListener('click', () => {
         <i class="bi bi-github"></i>
         <i><a href="#git-conribution" style="color: white; padding-left: 5px;">Improve this page</a></i>
     </div>
-    <h2 class="h1">Tic-tac-toe, Human vs Human</h2>
-    <p class="fst mb-0 code-level"><i class="bi bi-5-square" style="vertical-align: middle;"></i> Beginner's friendly </p>
+    <h2 class="h1">Tic-tac-toe, Human vs Machine (AI)</h2>
+    <p class="fst mb-0 code-level"><i class="bi bi-6-square" style="vertical-align: middle;"></i> Intermediate Level </p>
     <h2 class="subheading">
-        #two-player-game
+        #artificial-intelligence
         
              
                 #problem-solving
@@ -227,7 +227,7 @@ searchBtn.addEventListener('click', () => {
     <span class="meta">
         Posted by
         <a data-bs-toggle="collapse" href="#collapseAuthor" role="button" aria-expanded="false" aria-controls="collapseAuthor">Dev Anand</a>
-        on 01 March 2023
+        on 09 March 2023
     </span>
     <div class="card mt-4 collapse" style="max-width: 38rem;border-left: 0.4rem solid #0085A1;" id="collapseAuthor">
         <div class="row g-0">
@@ -282,27 +282,25 @@ searchBtn.addEventListener('click', () => {
     <div class="container px-3 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
-                <p>Create a complete <code class="language-plaintext highlighter-rouge">three-by-three</code> Tic-Tac-Toe, two player game using basics of python. The game requires basic programming concepts such as variables, conditionals, loops, and functions.</p>
+                <p>Ultimate challenge of human intelligence against artificial intelligence!</p>
 
-<p><img src="https://www.rd.com/wp-content/uploads/2019/10/tic-tac-toe-scaled.jpg" alt="'tic-tac-toe-image'" /></p>
+<p>Today, we will witness a battle of wits between a human and an <code class="language-plaintext highlighter-rouge">AI opponent</code> in one of the simplest yet most beloved games of all time: Tic-Tac-Toe.</p>
 
-<h2 id="what-is-tic-tac-toe">What is Tic-tac-toe</h2>
+<p><img src="https://i.ytimg.com/vi/w5Oftm3l2uQ/maxresdefault.jpg" alt="'tic-tac-toe-image'" /></p>
 
-<p>Tic-tac-toe, noughts and crosses, or Xs and Os is a paper-and-pencil game for <code class="language-plaintext highlighter-rouge">two players</code> who take turns marking the spaces in a <code class="language-plaintext highlighter-rouge">three-by-three grid</code> with X or O.</p>
+<h2 id="tic-tac-toe-and-ai">Tic-tac-toe and AI</h2>
 
-<p>The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row is the winner.</p>
+<p>Tic-Tac-Toe is a classic game that has been played by generations of children and adults alike. It’s a game that is easy to learn, but difficult to master.</p>
 
-<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">Note:</span> <span class="n">In</span> <span class="k">this</span> <span class="n">module</span> <span class="n">both</span> <span class="n">players</span> <span class="n">are</span> <span class="n">human</span><span class="p">.</span>
-</code></pre></div></div>
+<p>However, with the advent of AI (Artificial Intelligence), even the most skilled human players may find themselves struggling to keep up with their electronic counterparts.</p>
 
+<p><br /></p>
 <hr />
 
-<p>Before you start exploring each modules you must have</p>
+<p><em>It’s important to first gain experience by coding the game to play against a human opponent.</em></p>
 
-<ul>
-  <li>clear understanding - <a href="https://en.wikipedia.org/wiki/Tic-tac-toe">how tic-tac-toe works</a></li>
-  <li>basics of python programming - as always!</li>
-</ul>
+<p><strong>Related Article</strong>: <a href="/two-player-game/2023/03/01/tic-tac-toe-human-vs-human">Tic-tac-toe, Human vs Human</a>.</p>
+<hr />
 
 <p><br /></p>
 
@@ -365,18 +363,63 @@ searchBtn.addEventListener('click', () => {
 </code></pre></div></div>
 <p><br /></p>
 
-<h3 id="game-initialisation">Game initialisation</h3>
-<p>We have some global data structures (list) which we want to update each time the game starts. 
-<br /></p>
+<h3 id="variable-initialisation">Variable initialisation</h3>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">default_values</span> <span class="o">=</span> <span class="p">[</span><span class="s">' '</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">9</span><span class="p">)]</span> <span class="c1">#create a list of 9 single spaces 
-</span><span class="n">players_moves</span> <span class="o">=</span> <span class="p">{</span> 
-    <span class="s">'X_moves'</span><span class="p">:</span> <span class="p">[],</span> <span class="c1"># record palyer X's taken moves
-</span>    <span class="s">'O_moves'</span><span class="p">:</span> <span class="p">[]</span>  <span class="c1"># record palyer O's taken moves
-</span><span class="p">}</span>
-<span class="n">players</span> <span class="o">=</span> <span class="p">[</span><span class="s">'X'</span><span class="p">,</span> <span class="s">'O'</span><span class="p">]</span> <span class="c1"># signifies total number of players
-</span><span class="n">taken_move</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1"># records all the moves taken by both the players
-</span></code></pre></div></div>
+<p>These variables are used to keep track of the state of the game, including which positions on the board have been taken and by whom.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">taken_moves</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">default_values</span> <span class="o">=</span> <span class="p">[</span><span class="s">' '</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">9</span><span class="p">)]</span>
+<span class="n">players_moves</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">'X_moves'</span><span class="p">:</span> <span class="p">[],</span>
+    <span class="s">'O_moves'</span><span class="p">:</span> <span class="p">[]</span>
+<span class="p">}</span>
+<span class="n">players</span> <span class="o">=</span> <span class="p">[</span><span class="s">'X'</span><span class="p">,</span> <span class="s">'O'</span><span class="p">]</span>
+</code></pre></div></div>
+<blockquote>
+  <blockquote>
+    <p>notes to the code….</p>
+  </blockquote>
+</blockquote>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">taken_moves = []</code>, creates an empty list to keep track of the positions on the board that have already been taken by the players.</p>
+  </li>
+  <li>
+    <p>The second line, <code class="language-plaintext highlighter-rouge">default_values</code>, creates a list with 9 elements, each element initialized to a blank space character (‘ ‘). This represents the initial state of the game board.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">players_moves</code> is a dictionary that keeps track of the moves made by each player.</p>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<h3 id="update-game-board">Update Game Board</h3>
+
+<p>The <code class="language-plaintext highlighter-rouge">update_game</code> function updates the game state based on the player’s move and returns a visual representation of the updated game board.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">update_game</span><span class="p">(</span><span class="n">move</span><span class="p">,</span> <span class="n">player</span><span class="p">):</span>
+    <span class="n">taken_moves</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">move</span><span class="p">)</span>
+    <span class="n">players_moves</span><span class="p">[</span><span class="n">player</span> <span class="o">+</span> <span class="s">'_moves'</span><span class="p">].</span><span class="n">append</span><span class="p">(</span><span class="n">move</span><span class="p">)</span>
+    <span class="n">default_values</span><span class="p">[</span><span class="n">move</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">player</span>
+    <span class="k">return</span> <span class="n">game_grid</span><span class="p">(</span><span class="n">default_values</span><span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>The <code class="language-plaintext highlighter-rouge">update_game()</code> takes two arguments: <code class="language-plaintext highlighter-rouge">move</code>, which is the <strong>position</strong> on the board where the player has made their move, and <strong>player</strong>, which is either <code class="language-plaintext highlighter-rouge">X</code> or <code class="language-plaintext highlighter-rouge">O</code>, indicating which player made the move.</p>
+  </li>
+  <li>
+    <p>It first adds the move to the <code class="language-plaintext highlighter-rouge">taken_moves</code> list, which keeps track of all positions on the board that have been taken.</p>
+  </li>
+  <li>
+    <p>Next, the function appends the <code class="language-plaintext highlighter-rouge">move</code> to the list associated with the appropriate player in the <code class="language-plaintext highlighter-rouge">players_moves</code> dictionary.</p>
+  </li>
+  <li>
+    <p>Also, updates the <code class="language-plaintext highlighter-rouge">default_values</code> list to reflect the new move made by the player, replacing the blank space at the <code class="language-plaintext highlighter-rouge">move - 1</code> <strong>index</strong> with the player’s symbol (<code class="language-plaintext highlighter-rouge">X</code> or <code class="language-plaintext highlighter-rouge">O</code>).</p>
+  </li>
+</ul>
 
 <p><br /></p>
 
@@ -402,94 +445,234 @@ searchBtn.addEventListener('click', () => {
 
 <p><br /></p>
 
-<h3 id="driver-code--brain">Driver code [🧠 Brain]</h3>
-<p>Our <code class="language-plaintext highlighter-rouge">main()</code> function consists all the required logics,</p>
+<h2 id="how-machine-will-make-move">How machine will make move</h2>
+<hr />
+
+<h3 id="ai-first-move">AI First move</h3>
+<p>The <code class="language-plaintext highlighter-rouge">initial_move()</code> used to determine the first move made by the machine when playing tic-tac-toe against a human player.
+<br /></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">initial_move</span><span class="p">():</span>
+    <span class="c1">#Acquire Center
+</span>    <span class="k">if</span> <span class="mi">5</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">players_moves</span><span class="p">[</span><span class="s">'X_moves'</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="mi">5</span>
+    <span class="c1">#Acquire any corner
+</span>    <span class="k">return</span> <span class="n">random</span><span class="p">.</span><span class="n">choice</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">9</span><span class="p">])</span>
+</code></pre></div></div>
 
 <ul>
-  <li>which enables the palyers to take alternative moves.</li>
-  <li>prevents the overlapping of each moves.</li>
-  <li>avoid invalid or already taken moven.</li>
+  <li>
+    <p>The function first checks if the center position (position <strong>5</strong> on the board) is available. If it is, the function returns 5 as the machine’s first move.</p>
+  </li>
+  <li>
+    <p>If the center position is not available, the function randomly chooses <em>one of the four corner positions</em> (positions <strong>1, 3, 7, or 9</strong>).</p>
+  </li>
 </ul>
 
 <p><br /></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-    <span class="n">step</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">game_grid</span><span class="p">(</span><span class="n">default_values</span><span class="p">)</span>
-    <span class="k">while</span> <span class="n">step</span> <span class="o">&lt;</span> <span class="mi">9</span><span class="p">:</span>
-        
-        <span class="k">if</span> <span class="n">step</span> <span class="o">&gt;</span> <span class="mi">7</span><span class="p">:</span>
-            <span class="k">print</span><span class="p">(</span><span class="s">'Match tied!'</span><span class="p">)</span>
-            <span class="k">break</span>
-            
-        <span class="n">player</span> <span class="o">=</span> <span class="n">players</span><span class="p">[</span><span class="n">step</span> <span class="o">%</span> <span class="mi">2</span><span class="p">]</span>
-        
-        <span class="k">try</span><span class="p">:</span>
-            <span class="n">move</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="n">player</span> <span class="o">+</span> <span class="s">" : "</span><span class="p">))</span>
-            <span class="k">if</span> <span class="n">move</span> <span class="o">&lt;</span> <span class="mi">10</span> <span class="ow">and</span> <span class="n">move</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">taken_move</span><span class="p">:</span>
-                <span class="n">taken_move</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">move</span><span class="p">)</span>
-                <span class="n">players_moves</span><span class="p">[</span><span class="n">player</span> <span class="o">+</span> <span class="s">'_moves'</span><span class="p">].</span><span class="n">append</span><span class="p">(</span><span class="n">move</span><span class="p">)</span>
-                <span class="n">default_values</span><span class="p">[</span><span class="n">move</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">player</span>
-                <span class="n">game_grid</span><span class="p">(</span><span class="n">default_values</span><span class="p">)</span>
-                <span class="n">step</span> <span class="o">+=</span> <span class="mi">1</span>
-                <span class="k">if</span> <span class="n">check_wining</span><span class="p">(</span><span class="n">players_moves</span><span class="p">[</span><span class="n">player</span> <span class="o">+</span> <span class="s">'_moves'</span><span class="p">]):</span>
-                    <span class="k">print</span><span class="p">(</span><span class="n">player</span><span class="p">,</span> <span class="s">'Won!'</span><span class="p">)</span>
-                    <span class="k">break</span>
-                <span class="k">continue</span>
+<h3 id="ai-smart-move-">AI Smart move 🤓</h3>
 
-            <span class="k">print</span><span class="p">(</span><span class="s">'Invalid move, try again!</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
+<p>The <code class="language-plaintext highlighter-rouge">smart_move()</code> tries to find the best possible move for the player by analyzing the current state of the game and searching for potential winning slots.</p>
 
-        <span class="k">except</span> <span class="nb">ValueError</span><span class="p">:</span>
-            <span class="k">print</span><span class="p">(</span><span class="s">'Invalid move, try again!</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">smart_move</span><span class="p">(</span><span class="n">mine_move</span><span class="p">,</span> <span class="n">opp_moves</span><span class="p">):</span>
+    <span class="n">next_move</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">winning_pattern</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">mine_move</span> <span class="k">if</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">i</span><span class="p">]:</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">i</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">j</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">opp_moves</span><span class="p">:</span>
+                    <span class="n">next_move</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">next_move</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">next_move</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">next_move</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">return</span> <span class="bp">False</span>
 </code></pre></div></div>
+
+<ul>
+  <li>
+    <p>The function tries to find the <em>next best move for the player</em> by examining a <em>pre-defined winning_pattern</em> and looking for the next empty slot that the player could potentially use to win the game.</p>
+  </li>
+  <li>
+    <p>First, it checks each pattern in the <code class="language-plaintext highlighter-rouge">winning_pattern</code> list to see if the player has any moves in that pattern.</p>
+  </li>
+  <li>
+    <p>If not, it then checks each slot in the pattern to see if the <em>opponent has already taken</em> it. If the slot is still empty, the function adds it to the <code class="language-plaintext highlighter-rouge">next_move</code> list.</p>
+  </li>
+  <li>
+    <p>If there is only <em>one possible next move</em>, the function <strong>immediately</strong> returns that move. Otherwise, it clears the <code class="language-plaintext highlighter-rouge">next_move</code> list and moves on to the next pattern.</p>
+  </li>
+  <li>
+    <p>If no move is found, the function returns <code class="language-plaintext highlighter-rouge">False</code>.</p>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<h3 id="ai-winning-move-">AI Winning move 🏆</h3>
+<p>The <code class="language-plaintext highlighter-rouge">winning_move()</code> checks if there is a possible winning move for the player and returns that move if there is, otherwise returns <code class="language-plaintext highlighter-rouge">None</code>.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">winning_move</span><span class="p">():</span>
+    <span class="n">moves</span> <span class="o">=</span> <span class="n">smart_move</span><span class="p">(</span><span class="n">players_moves</span><span class="p">[</span><span class="s">'X_moves'</span><span class="p">],</span> <span class="n">players_moves</span><span class="p">[</span><span class="s">'O_moves'</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">moves</span> <span class="k">if</span> <span class="n">moves</span> <span class="k">else</span> <span class="bp">None</span>
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>It calls the <code class="language-plaintext highlighter-rouge">smart_move()</code> with the <code class="language-plaintext highlighter-rouge">X_moves</code> and <code class="language-plaintext highlighter-rouge">O_moves</code> lists from the <code class="language-plaintext highlighter-rouge">players_moves</code> dictionary as arguments.</p>
+  </li>
+  <li>
+    <p>If <code class="language-plaintext highlighter-rouge">smart_move</code> returns a move, <em>meaning there is a possible winning move</em> for the player, <code class="language-plaintext highlighter-rouge">winning_move</code> returns that move. Otherwise, it returns <code class="language-plaintext highlighter-rouge">None</code>.</p>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<h3 id="ai-random-edge-move">AI Random Edge move</h3>
+<p>The <code class="language-plaintext highlighter-rouge">random_edge_move()</code> returns the first available edge slot on the board, <em>starting from the top-left and moving clockwise</em>, if there is one.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">random_edge_move</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">]:</span>   
+        <span class="k">if</span> <span class="n">i</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">taken_moves</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">i</span>
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>It tries to find an empty slot by iterating over the list <code class="language-plaintext highlighter-rouge">[2,4,6,8]</code>, which represents the indices of the edge slots on the board.</p>
+  </li>
+  <li>
+    <p>If the index is not in the <code class="language-plaintext highlighter-rouge">taken_moves</code> list, which contains all the moves already made by both players, the function returns that index.</p>
+  </li>
+  <li>
+    <p>If there are no available edge slots, the function does not return anything.</p>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<h2 id="driver-code---ai-vs-human">Driver Code - AI vs Human</h2>
+<p>It plays a game between a human player (<strong>X</strong>) and the computer (<strong>O</strong>), using a combination of <a href="#ai-strategies"><em>pre-defined strategies and randomness</em></a> to determine the computer’s moves.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">step</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">game_grid</span><span class="p">(</span><span class="n">default_values</span><span class="p">)</span>
+<span class="k">while</span> <span class="n">step</span> <span class="o">&lt;</span> <span class="mi">9</span> <span class="ow">and</span> <span class="n">step</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+
+    <span class="k">if</span> <span class="n">step</span> <span class="o">&gt;=</span> <span class="mi">4</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">'Match tied!'</span><span class="p">)</span>
+        <span class="k">break</span>
+    
+    <span class="n">player</span> <span class="o">=</span> <span class="s">"X"</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">move</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="n">player</span> <span class="o">+</span> <span class="s">" : "</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">move</span> <span class="o">&lt;</span> <span class="mi">10</span> <span class="ow">and</span> <span class="n">move</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">taken_moves</span><span class="p">:</span>
+            <span class="n">step</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">update_game</span><span class="p">(</span><span class="n">move</span><span class="p">,</span><span class="n">player</span><span class="p">)</span>
+            <span class="n">winner</span> <span class="o">=</span> <span class="n">check_winning</span><span class="p">()</span> <span class="k">if</span> <span class="n">step</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="k">else</span> <span class="bp">None</span>
+            <span class="k">if</span> <span class="n">winner</span><span class="p">:</span>
+                <span class="k">print</span><span class="p">(</span><span class="n">winner</span><span class="p">,</span> <span class="s">'Won!'</span><span class="p">)</span>
+                <span class="k">break</span>
+            <span class="k">elif</span> <span class="n">step</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">O_move</span> <span class="o">=</span> <span class="n">initial_move</span><span class="p">()</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">O_move</span> <span class="o">=</span> <span class="n">winning_move</span><span class="p">()</span>
+                <span class="n">O_move</span> <span class="o">=</span> <span class="n">smart_move</span><span class="p">(</span><span class="n">players_moves</span><span class="p">[</span><span class="s">'O_moves'</span><span class="p">],</span> <span class="n">players_moves</span><span class="p">[</span><span class="s">'X_moves'</span><span class="p">])</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">O_move</span> <span class="k">else</span> <span class="n">O_move</span>
+                <span class="n">O_move</span> <span class="o">=</span> <span class="n">random_edge_move</span><span class="p">()</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">O_move</span> <span class="k">else</span> <span class="n">O_move</span>
+            <span class="k">print</span><span class="p">(</span><span class="s">"O (Python 🐍): "</span><span class="p">,</span><span class="n">O_move</span><span class="p">)</span>
+            <span class="n">player</span> <span class="o">=</span> <span class="s">"O"</span>
+            <span class="n">update_game</span><span class="p">(</span><span class="n">O_move</span><span class="p">,</span> <span class="n">player</span><span class="p">)</span>
+            <span class="n">winner</span> <span class="o">=</span> <span class="n">check_winning</span><span class="p">()</span> <span class="k">if</span> <span class="n">step</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="k">else</span> <span class="bp">None</span>
+            <span class="k">if</span> <span class="n">winner</span><span class="p">:</span>
+                <span class="k">print</span><span class="p">(</span><span class="n">winner</span><span class="p">,</span> <span class="s">'Won!'</span><span class="p">)</span>
+                <span class="k">break</span>
+            <span class="k">continue</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"Invalid move! - either your move is too high or already taken."</span><span class="p">)</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"Invalid move! - wrong input."</span><span class="p">)</span>
+</code></pre></div></div>
+
+<blockquote>
+  <blockquote>
+    <p>brief explanation….</p>
+  </blockquote>
+</blockquote>
+
+<ul>
+  <li>
+    <p>The code initializes the game grid and a counter for the number of steps taken so far (<code class="language-plaintext highlighter-rouge">step</code>).</p>
+  </li>
+  <li>
+    <p>It enters a loop that continues until either <em>9 steps have been taken</em> (i.e. the board is full) <em>or a winner has been determined</em>.</p>
+  </li>
+  <li>
+    <p>If 4 or more steps have been taken and there is no winner, the game is declared a <strong>tie</strong>.</p>
+  </li>
+  <li>
+    <p>The loop alternates between the human and computer player turns. For the human player, the code prompts the user for their move and updates the game board if the move is valid.</p>
+  </li>
+</ul>
+
+<p><br /></p>
+<hr />
+
+<h4 id="ai-strategies">AI strategies</h4>
+
+<p>For the computer player, [in sequence]</p>
+
+<ol>
+  <li>Use the <a href="#ai-winning-move-"><strong><code class="language-plaintext highlighter-rouge">winning_move()</code></strong></a> to find a potential winning move.</li>
+  <li>If there is no winning move, use the <a href="#ai-smart-move-"><strong><code class="language-plaintext highlighter-rouge">smart_move()</code></strong></a> to find a move that blocks the human player’s potential winning moves.</li>
+  <li>If there is no winning or blocking move, use the <a href="#ai-random-edge-move"><strong><code class="language-plaintext highlighter-rouge">random_edge_move()</code></strong></a> to make a random move on an edge slot.</li>
+</ol>
+
+<hr />
+
+<p><br /></p>
+
+<ul>
+  <li>
+    <p>If a valid move is found, the computer player updates the game board and prints its move.</p>
+  </li>
+  <li>
+    <p>After each move, the code checks if there is a winner. If there is, the loop is terminated and the winner is printed. Otherwise, the loop continues.</p>
+  </li>
+  <li>
+    <p>If the human player inputs an invalid move, the code prints an error message and continues the loop.</p>
+  </li>
+</ul>
 
 <p><br /></p>
 
 <h3 id="example-testing">Example testing</h3>
 
-<p>Calling the <code class="language-plaintext highlighter-rouge">main()</code> function in order to start the game.
-<br /></p>
+<ul>
+  <li><strong>X</strong> = Human Player</li>
+  <li><strong>O</strong> = AI (Computer)</li>
+</ul>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">main</span><span class="p">()</span> <span class="c1">#calling driver code to start the game!
-</span></code></pre></div></div>
-<p><img src="../../../image/tic-tac-toe-code-output.png" alt="'tic-tac-toe-code-output'" /></p>
-
-<p><br /></p>
+<p><img src="../../../image/tic-tac-toe-ai-code-output.png" alt="'tic-tac-toe-ai-code-output'" /></p>
 
 <h3 id="conclusion">Conclusion</h3>
 
-<hr />
+<p>In conclusion, playing tic-tac-toe against an AI opponent can be a fun and challenging experience. By combining pre-defined strategies and randomness, the AI can make smart and unpredictable moves that keep the game interesting.</p>
 
-<p>Building a Tic Tac Toe game in Python is a great exercise for beginner programmers to practice their skills. Playing against another human player is a fun way to test the game and hone your strategy.</p>
+<p>While it may be difficult to beat the AI, there are still opportunities for human players to outsmart it and win the game.</p>
 
-<p>Additionally, the game can be expanded to include more <a href="somelink">advanced concepts such as AI algorithms for a single player mode</a>.</p>
+<p><br /></p>
 
-
-                
-                <div class="container p-0 my-4 mt-5">
-                    <div class="content-credit">
-                        
-                            Special thanks to 
-                        
-                        
-                            <a href="https://en.wikipedia.org/wiki/Main_Page" class="font-dark">Wikipedia</a>
-                            
-                    </div>
-                </div>
                 
                 <hr class="my-4" />
                 <div class="d-flex justify-content-between gap-2 mb-4">
                     
-                    <a class="btn  opacity-0 disabled d-none d-md-block  w-100 text-end" href="\" class="px-3">
+                    <a class="btn  btn-primary  w-100 text-end" href="/two-player-game/2023/03/07/hangman-word-game.html" class="px-3">
                         <div class="d-flex justify-content-between gap-2">
                             <i class="bi bi-chevron-double-left"></i>
-                            
+                            Hangman Word Game
                         </div>
                     </a>
                     
-                    <a class="btn  btn-primary  w-100 text-end" href="/artificial-intelligence/2023/03/04/best-first-search.html" class="px-3">
+                    <a class="btn  opacity-0 disabled d-none d-md-block  w-100 text-end" href="\" class="px-3">
                         <div class="d-flex justify-content-between gap-2">
-                        Best First Search
+                        
                         <i class="bi bi-chevron-double-right"></i>
                         </div>
                     </a>
@@ -532,7 +715,7 @@ searchBtn.addEventListener('click', () => {
 
                     <div class="fs-6 edit-button git-contribute mt-4">
                         <svg aria-hidden="true" focusable="false" role="img" class="octicon mr-1" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom;overflow:visible"><path d="M1.5 3.25a2.25 2.25 0 113 2.122v5.256a2.251 2.251 0 11-1.5 0V5.372A2.25 2.25 0 011.5 3.25zm5.677-.177L9.573.677A.25.25 0 0110 .854V2.5h1A2.5 2.5 0 0113.5 5v5.628a2.251 2.251 0 11-1.5 0V5a1 1 0 00-1-1h-1v1.646a.25.25 0 01-.427.177L7.177 3.427a.25.25 0 010-.354zM3.75 2.5a.75.75 0 100 1.5.75.75 0 000-1.5zm0 9.5a.75.75 0 100 1.5.75.75 0 000-1.5zm8.25.75a.75.75 0 101.5 0 .75.75 0 00-1.5 0z"></path></svg>
-                        <i><a href="https://github.com/speakpython/speakpythonBlog/blob/gh-pages/two-player-game/_posts/2023-03-01-tic-tac-toe-human-vs-human.md" style="padding-left: 5px;font-family: 'Arial'; font-style: normal;">Make a contribution</a></i>
+                        <i><a href="https://github.com/speakpython/speakpythonBlog/blob/gh-pages/artificial-intelligence/_posts/2023-03-09-tic-tac-toe-human-vs-machine.md" style="padding-left: 5px;font-family: 'Arial'; font-style: normal;">Make a contribution</a></i>
                     </div>
 
                 </div>

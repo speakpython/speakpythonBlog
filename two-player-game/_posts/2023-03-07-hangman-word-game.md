@@ -5,6 +5,7 @@ keywords: ['problem-solving', 'fun-with-python']
 author_id: 'dev3058'
 credits: []
 level: 4
+published: true
 ---
 
 Are you interested in creating a fun and interactive game in Python? If so, let's dive into building a Hangman game!

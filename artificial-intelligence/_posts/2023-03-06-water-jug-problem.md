@@ -5,6 +5,7 @@ keywords: ['problem-solving']
 author_id: 'dev3058'
 credits: ['wikipedia']
 level: 6
+published: true
 ---
 
 Let's start learning about the `water jug` problem with a practical implementation!
