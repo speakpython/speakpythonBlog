@@ -11045,6 +11045,7 @@ header.masthead .site-heading .subheading {
   header.masthead{
     padding-top: 8rem;
     padding-bottom: 4rem;
+    margin-bottom: 1.70rem !important;
   }
   .content-credit{
     font-size: 1rem;
@@ -11064,6 +11065,7 @@ header.masthead .site-heading .subheading {
   .maillist-promotion{
     font-size: 2.2rem
   }
+
 }
 
 .event-planner{
