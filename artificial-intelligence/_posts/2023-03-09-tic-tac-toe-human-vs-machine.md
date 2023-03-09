@@ -87,7 +87,7 @@ wining_pattern = [
 ```
 <br/>
 
-### Variable initialisation
+### Variables initialisation
 
 These variables are used to keep track of the state of the game, including which positions on the board have been taken and by whom.
 
@@ -112,7 +112,7 @@ players = ['X', 'O']
 
 <br/>
 
-### Update Game Board 
+### Update Game state 
 
 The `update_game` function updates the game state based on the player's move and returns a visual representation of the updated game board.
 
@@ -152,7 +152,7 @@ def check_wining(moves):
 
 <br/>
 
-## How machine will make move
+## How machine will play
 <hr />
 
 ### AI First move
