@@ -19,6 +19,10 @@ img{
   margin: 1rem 0rem;
 }
 
+header.masthead:before {
+  opacity: 0.8;
+}
+
 #lb-back {
     position: fixed;
     top: 0;
