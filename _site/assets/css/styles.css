@@ -232,6 +232,8 @@ sup {
   font-size: 0.60em;
   line-height: 0;
   vertical-align: baseline;
+  font-family: 'Ubuntu';
+  font-weight: 100;
 }
 
 sub {

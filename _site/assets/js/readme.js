@@ -285,6 +285,14 @@ window.addEventListener("load", function() {
 $(':header[id]').each(function() {
   var anchor = document.createElement('a')
   anchor.href = '#' + this.id
-  this.innerHTML += `<span class='small text-dark internal-bookmark'> <i class="bi bi-bookmark"></i></span>`
+  this.innerHTML += `<span class='small text-dark internal-bookmark' title="Share link"> <i class="bi bi-bookmark"></i></span>`
   $(this).wrapInner(anchor)
 });
+
+$('.internal-bookmark').click(function() {
+  navigator.clipboard.writeText(this.parentNode.href);
+  this.innerHTML = ` <i class="bi bi-clipboard-check"></i> <sup>Copied</sup>`;
+  setTimeout(()=>{
+    this.innerHTML = ` <i class="bi bi-bookmark"></i>`;
+  }, 3500)
+})

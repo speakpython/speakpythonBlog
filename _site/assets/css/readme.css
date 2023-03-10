@@ -302,6 +302,7 @@ footer ul{
 
 .internal-bookmark{
   display: none;
+  text-underline-offset: white;
 }
 
 h2:hover .internal-bookmark, h3:hover .internal-bookmark, h4:hover .internal-bookmark{
@@ -310,14 +311,19 @@ h2:hover .internal-bookmark, h3:hover .internal-bookmark, h4:hover .internal-boo
 
 
 h2:target, h3:target, h4:target{
-  animation: showTarget 3s backwards;
+  animation: showTarget;
+  animation-duration: 8s;
+  animation-delay: 1s;
 }
 
 @keyframes showTarget {
-  to   { 
+  20%   { 
     text-decoration: underline;
     text-underline-offset: 0.5rem;
     color: #0085A1;
-    }
+  }
+  85%   { 
+    text-decoration: none;
+  }
 }
 
