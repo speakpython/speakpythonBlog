@@ -298,3 +298,26 @@ footer ul{
 #selectionSharerPopunder-inner a.tweet {
   background-position: 0px 2px;
 }
+
+
+.internal-bookmark{
+  display: none;
+}
+
+h2:hover .internal-bookmark, h3:hover .internal-bookmark, h4:hover .internal-bookmark{
+  display: inline;
+}
+
+
+h2:target, h3:target, h4:target{
+  animation: showTarget 3s backwards;
+}
+
+@keyframes showTarget {
+  to   { 
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+    color: #0085A1;
+    }
+}
+

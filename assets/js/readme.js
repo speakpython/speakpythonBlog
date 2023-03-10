@@ -285,5 +285,6 @@ window.addEventListener("load", function() {
 $(':header[id]').each(function() {
   var anchor = document.createElement('a')
   anchor.href = '#' + this.id
+  this.innerHTML += `<span class='small text-dark internal-bookmark'> <i class="bi bi-bookmark"></i></span>`
   $(this).wrapInner(anchor)
 });
