@@ -19,49 +19,7 @@ layout: page
     </h2>
     <span class="meta">
         Posted by
-        <a data-bs-toggle="collapse" href="#collapseAuthor" role="button" aria-expanded="false" aria-controls="collapseAuthor">{{ site.author[page.author_id].name }}</a>
+        <a href="#postAuthor" role="button">{{ site.author[page.author_id].name }}</a>
         on {{ page.date | date: "%d %B %Y" }}
     </span>
-    <div class="card mt-4 collapse" style="max-width: 38rem;border-left: 0.4rem solid #0085A1;" id="collapseAuthor">
-        <div class="row g-0">
-          <div class="col-md-2 py-3 px-3 d-none d-md-block">
-            <img src="{{ site.author[page.author_id].profile_pic }}" class="img-fluid rounded-circle" alt="{{ page.author_id }}">
-          </div>
-          <div class="col">
-            <div class="card-body text-dark py-2">
-                <div class="row d-md-none">
-                    <div class="col-3 p-2">
-                        <img src="{{ site.author[page.author_id].profile_pic }}" class="img-fluid rounded-circle" alt="{{ page.author_id }}">
-                    </div>
-                    <div class="col">
-                        <p class="card-text fs-6 mt-2">{{ site.author[page.author_id].about }}</p>
-                    </div>
-                </div>
-              <p class="card-text fs-6 mt-2 d-none d-md-block">{{ site.author[page.author_id].about }}</p>
-            </div>
-          </div>
-          <div class="col-md-2">
-            <div class="card-text p-3 p-md-0 pt-0">
-                <ul class="list-inline fs-6 text-end">
-                    <li class="list-inline-item m-md-2">
-                        <a href="{{ site.author[page.author_id].twitter_handler }}">
-                            <span class="fa-stack fa-lg">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                    <li class="list-inline-item m-md-2">
-                        <a href="{{ site.author[page.author_id].git_handler }}">
-                            <span class="fa-stack fa-lg">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-          </div>
-        </div>
-      </div>
 </div>
