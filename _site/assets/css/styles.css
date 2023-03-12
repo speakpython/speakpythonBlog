@@ -11033,6 +11033,18 @@ header.masthead .site-heading .subheading {
   font-weight: 100;
 }
 
+footer > .container{
+  width: 60%;
+}
+
+.bottom-nav{
+  margin-top: 1.5rem;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
 @media (max-width: 480px) {
   .search-button{
     margin: 1rem;
@@ -11073,6 +11085,20 @@ header.masthead .site-heading .subheading {
     margin: 0;
   }
 
+  footer{
+    background-color: white;
+    position: relative;
+    z-index: 110;
+  }
+
+  footer > .container{
+    width: 100%;
+  }
+
+  .bottom-nav{
+    font-size: 0.7rem;
+    margin-top: 1rem;
+  }
 }
 
 .event-planner{
