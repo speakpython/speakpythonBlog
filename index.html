@@ -15,7 +15,7 @@ title: Python Indeed
             <div class="post-preview">
                 <p class="post-meta">
                     <i class="bi bi-github"></i> 
-                    <a href="https://github.com/speakpython/speakpythonBlog/blob/gh-pages/{{ post.path }}" class="git-link">
+                    <a href="https://github.com/speakpython/{{ post.categories }}/tree/master/{{ post.title | replace: ' ', '-' | downcase }}" class="git-link">
                         speakpython / {{ post.categories }} / {{ post.title | replace: " ", "-" | downcase }}</a>
                 </p>
                 <a href="{{ post.url }}">

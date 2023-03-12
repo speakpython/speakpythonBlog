@@ -72,7 +72,7 @@ The code defines a list called `wining_pattern` which contains sub-lists of all 
 <br/>
 
 ```python
-wining_pattern = [
+winning_pattern = [
     
     [1,2,3],
     [4,5,6],
@@ -139,14 +139,13 @@ On the basis of taken steps, recorded inside `players_moves` dictionary, `check_
 <br/>
 
 ```python
-def check_wining(moves):
-    for i in wining_pattern:
-        if all(j in moves for j in i):
-            return True 
-    return False 
+def check_winning():
+    for player in players_moves:
+        for i in winning_pattern:
+            if all(j in players_moves[player] for j in i):
+                return player      
+    return False
 ```
-
-- The function `check_wining(moves)` takes a list moves as input, which contains the positions of the moves made by a player on the board. 
 
 - The function checks if any of the sub-lists in `wining_pattern` is a _subset of moves_, which means the player has achieved a winning combination. If a _winning combination_ is found, the function returns `True`, otherwise it returns `False`.
 
@@ -241,6 +240,7 @@ def random_edge_move():
 It plays a game between a human player (__X__) and the computer (__O__), using a combination of [_pre-defined strategies and randomness_](#ai-strategies) to determine the computer's moves.
 
 ```python
+import random
 step = 0
 game_grid(default_values)
 while step < 9 and step >= 0:

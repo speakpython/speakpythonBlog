@@ -216,7 +216,7 @@ searchBtn.addEventListener('click', () => {
                 <div class="post-heading">
     <div class="subheading fs-6 edit-button">
         <i class="bi bi-github"></i>
-        <i><a href="#git-conribution" style="color: white; padding-left: 5px;">Improve this page</a></i>
+        <i><a href="https://github.com/speakpython/artificial-intelligence/tree/master/water-jug-problem" style="color: white; padding-left: 5px;">Complete Source</a></i>
     </div>
     <h2 class="h1">Water Jug Problem</h2>
     <p class="fst mb-0 code-level"><i class="bi bi-6-square" style="vertical-align: middle;"></i> Intermediate Level </p>
@@ -302,6 +302,21 @@ searchBtn.addEventListener('click', () => {
 </code></pre></div></div>
 <p><br /></p>
 
+<h3 id="required-libraries">Required libraries</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">gcd</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
+</code></pre></div></div>
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">defaultdict</code> is a subclass of the built-in <code class="language-plaintext highlighter-rouge">dict</code> class, which provides a <em>default value for a nonexistent key</em> when accessed.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">gcd</code> is a function in the <code class="language-plaintext highlighter-rouge">math</code> module that calculates the <em>greatest common divisor</em> (GCD) of two or more integers.</p>
+  </li>
+</ul>
+
+<p><br /></p>
+
 <h3 id="possibility-check">Possibility check</h3>
 
 <p>Checking <a href="#whether-the-goal-is-reachable-or-not">whether the goal is reachable or not</a>.</p>
@@ -345,6 +360,16 @@ searchBtn.addEventListener('click', () => {
     <span class="k">else</span><span class="p">:</span>
         <span class="k">return</span> <span class="bp">False</span>
 </code></pre></div></div>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">visited</code> is a <code class="language-plaintext highlighter-rouge">defaultdict</code> object that is initialized with a default value of <code class="language-plaintext highlighter-rouge">False</code>. This means that when a key that does not exist in <code class="language-plaintext highlighter-rouge">visited</code> is accessed, instead of throwing a <code class="language-plaintext highlighter-rouge">KeyError</code>, it will return <code class="language-plaintext highlighter-rouge">False</code>.</p>
+  </li>
+  <li>
+    <p>The lambda function passed as an argument to <code class="language-plaintext highlighter-rouge">defaultdict</code> is used to specify the default value. In this case, the <code class="language-plaintext highlighter-rouge">lambda</code> function returns <code class="language-plaintext highlighter-rouge">False</code> for <em>any non-existing key</em>.</p>
+  </li>
+</ul>
+
 <blockquote>
   <blockquote>
     <p>No. 1, 2, 3 explanation…</p>

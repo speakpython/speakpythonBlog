@@ -58,6 +58,17 @@ aim = int(input("Your Goal: "))
 ```
 <br/>
 
+### Required libraries
+```python
+from math import gcd
+from collections import defaultdict
+```
+- `defaultdict` is a subclass of the built-in `dict` class, which provides a _default value for a nonexistent key_ when accessed.
+
+- `gcd` is a function in the `math` module that calculates the _greatest common divisor_ (GCD) of two or more integers.
+
+<br />
+
 ### Possibility check 
 
 Checking [whether the goal is reachable or not](#whether-the-goal-is-reachable-or-not). 
@@ -104,6 +115,11 @@ def waterJugSolver(amt1, amt2):
     else:
         return False
 ```
+
+- `visited` is a `defaultdict` object that is initialized with a default value of `False`. This means that when a key that does not exist in `visited` is accessed, instead of throwing a `KeyError`, it will return `False`.
+
+- The lambda function passed as an argument to `defaultdict` is used to specify the default value. In this case, the `lambda` function returns `False` for _any non-existing key_.
+
 >>No. 1, 2, 3 explanation...
 
 1. The function checks if the current amounts of liquid in the two jugs are equal to the desired amount of liquid, which is represented by the variable `aim`. If they are equal, the function prints the current amounts of liquid and the message "Goal State" and returns `True`.

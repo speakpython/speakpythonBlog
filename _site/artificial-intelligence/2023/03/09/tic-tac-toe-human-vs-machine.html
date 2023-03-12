@@ -216,7 +216,7 @@ searchBtn.addEventListener('click', () => {
                 <div class="post-heading">
     <div class="subheading fs-6 edit-button">
         <i class="bi bi-github"></i>
-        <i><a href="#git-conribution" style="color: white; padding-left: 5px;">Improve this page</a></i>
+        <i><a href="https://github.com/speakpython/artificial-intelligence/tree/master/tic-tac-toe-human-vs-machine" style="color: white; padding-left: 5px;">Complete Source</a></i>
     </div>
     <h2 class="h1">Tic-tac-toe, Human vs Machine (AI)</h2>
     <p class="fst mb-0 code-level"><i class="bi bi-6-square" style="vertical-align: middle;"></i> Intermediate Level </p>
@@ -314,7 +314,7 @@ searchBtn.addEventListener('click', () => {
 <p>The code defines a list called <code class="language-plaintext highlighter-rouge">wining_pattern</code> which contains sub-lists of all the possible winning combinations in a Tic-Tac-Toe game. 
 <br /></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">wining_pattern</span> <span class="o">=</span> <span class="p">[</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">winning_pattern</span> <span class="o">=</span> <span class="p">[</span>
     
     <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span>
     <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">],</span>
@@ -393,20 +393,16 @@ searchBtn.addEventListener('click', () => {
 <p>On the basis of taken steps, recorded inside <code class="language-plaintext highlighter-rouge">players_moves</code> dictionary, <code class="language-plaintext highlighter-rouge">check_wining</code> will decide the winner.
 <br /></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">check_wining</span><span class="p">(</span><span class="n">moves</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">wining_pattern</span><span class="p">:</span>
-        <span class="k">if</span> <span class="nb">all</span><span class="p">(</span><span class="n">j</span> <span class="ow">in</span> <span class="n">moves</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">i</span><span class="p">):</span>
-            <span class="k">return</span> <span class="bp">True</span> 
-    <span class="k">return</span> <span class="bp">False</span> 
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">check_winning</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">player</span> <span class="ow">in</span> <span class="n">players_moves</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">winning_pattern</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">all</span><span class="p">(</span><span class="n">j</span> <span class="ow">in</span> <span class="n">players_moves</span><span class="p">[</span><span class="n">player</span><span class="p">]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">i</span><span class="p">):</span>
+                <span class="k">return</span> <span class="n">player</span>      
+    <span class="k">return</span> <span class="bp">False</span>
 </code></pre></div></div>
 
 <ul>
-  <li>
-    <p>The function <code class="language-plaintext highlighter-rouge">check_wining(moves)</code> takes a list moves as input, which contains the positions of the moves made by a player on the board.</p>
-  </li>
-  <li>
-    <p>The function checks if any of the sub-lists in <code class="language-plaintext highlighter-rouge">wining_pattern</code> is a <em>subset of moves</em>, which means the player has achieved a winning combination. If a <em>winning combination</em> is found, the function returns <code class="language-plaintext highlighter-rouge">True</code>, otherwise it returns <code class="language-plaintext highlighter-rouge">False</code>.</p>
-  </li>
+  <li>The function checks if any of the sub-lists in <code class="language-plaintext highlighter-rouge">wining_pattern</code> is a <em>subset of moves</em>, which means the player has achieved a winning combination. If a <em>winning combination</em> is found, the function returns <code class="language-plaintext highlighter-rouge">True</code>, otherwise it returns <code class="language-plaintext highlighter-rouge">False</code>.</li>
 </ul>
 
 <p><br /></p>
@@ -519,7 +515,8 @@ searchBtn.addEventListener('click', () => {
 <h2 id="driver-code---ai-vs-human">Driver Code - AI vs Human</h2>
 <p>It plays a game between a human player (<strong>X</strong>) and the computer (<strong>O</strong>), using a combination of <a href="#ai-strategies"><em>pre-defined strategies and randomness</em></a> to determine the computer’s moves.</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">step</span> <span class="o">=</span> <span class="mi">0</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">random</span>
+<span class="n">step</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">game_grid</span><span class="p">(</span><span class="n">default_values</span><span class="p">)</span>
 <span class="k">while</span> <span class="n">step</span> <span class="o">&lt;</span> <span class="mi">9</span> <span class="ow">and</span> <span class="n">step</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
 
