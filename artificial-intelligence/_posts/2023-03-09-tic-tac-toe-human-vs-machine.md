@@ -135,7 +135,7 @@ def update_game(move, player):
 <br/>
 
 ### Decide winner 
-On the basis of taken steps, recorded inside `players_moves` dictionary, `check_wining` will decide the winner.
+On the basis of taken steps, recorded inside `players_moves` dictionary, `check_winning` will decide the winner.
 <br/>
 
 ```python
@@ -147,7 +147,7 @@ def check_winning():
     return False
 ```
 
-- The function checks if any of the sub-lists in `wining_pattern` is a _subset of moves_, which means the player has achieved a winning combination. If a _winning combination_ is found, the function returns `True`, otherwise it returns `False`.
+- The function checks if any of the sub-lists in `winning_pattern` is a _subset of moves_, which means the player has achieved a winning combination. If a _winning combination_ is found, the function returns `True`, otherwise it returns `False`.
 
 <br/>
 
