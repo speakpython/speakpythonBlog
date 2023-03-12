@@ -311,6 +311,7 @@ h2:hover .internal-bookmark, h3:hover .internal-bookmark, h4:hover .internal-boo
 
 
 h2:target, h3:target, h4:target, h5:target{
+  line-height: inherit;
   animation: showTarget;
   animation-duration: 8s;
   animation-delay: 1s;

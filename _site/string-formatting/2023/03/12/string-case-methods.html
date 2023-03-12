@@ -6,7 +6,7 @@
         <meta name="description" content="Welcome to Python Indeed! Here, we provide comprehensive tutorials on various aspects of Python programming language to help you learn and improve your skills." />
         <meta name="author" content="Speak Python" />
         <meta name="keywords" content="Speak Python, dev3058, Python programming, Python libraries, Python tutorials, Python syntax, Python functions, Python code snippets, Python data structures, Python web development, Python data science, Python machine learning, Python artificial intelligence, Python automation, Python frameworks, Python projects, Python tips and tricks, Python community, Python resources, speakpython.codes, support@speakpython.codes">
-        <title>Water Jug Problem - Speak Python</title>
+        <title>String Case Methods - Speak Python</title>
         <link rel="icon" type="image/x-icon" href="http://localhost:4000/assets/favicon.ico" />
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
@@ -218,20 +218,24 @@ searchBtn.addEventListener('click', () => {
         <i class="bi bi-github"></i>
         <i><a href="#git-conribution" style="color: white; padding-left: 5px;">Improve this page</a></i>
     </div>
-    <h2 class="h1">Water Jug Problem</h2>
-    <p class="fst mb-0 code-level"><i class="bi bi-6-square" style="vertical-align: middle;"></i> Intermediate Level </p>
+    <h2 class="h1">Text Case Manipulation Built-in and Custom</h2>
+    <p class="fst mb-0 code-level"><i class="bi bi-4-square" style="vertical-align: middle;"></i> Code for beginners </p>
     <h2 class="subheading">
-        #artificial-intelligence
+        #string-formatting
         
              
-                #problem-solving
+                #text-case-methods
+            
+        
+             
+                #custom-methods
             
         
     </h2>
     <span class="meta">
         Posted by
         <a href="#postAuthor" role="button">Dev Anand</a>
-        on 06 March 2023
+        on 12 March 2023
     </span>
 </div>
 
@@ -244,178 +248,210 @@ searchBtn.addEventListener('click', () => {
     <div class="container px-3 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
-                <p>Let’s start learning about the <code class="language-plaintext highlighter-rouge">water jug</code> problem with a practical implementation!</p>
+                <p>Today, we’ll explore how to add new text case manipulation methods, as well as how to use the built-in methods in Python for maximum efficiency.</p>
 
-<p><img src="https://boxofnotes.com/wp-content/uploads/2022/11/Water-Jug-Problem-in-Artificial-Intelligence.jpg" alt="'Water Jug Image'" /></p>
+<p><img src="https://repository-images.githubusercontent.com/158893422/8b6af900-71f2-11eb-8f2b-1e583a3b5c0e" alt="'case-converter'" /></p>
 
-<h2 id="about-water-jug-problem">About Water Jug problem</h2>
+<h2 id="text-cases-in-python">Text cases in Python</h2>
 
-<p>The water jug problem, also known as the “measure problem” or “die hard problem”, is a classic mathematical puzzle that involves two or more water jugs of different sizes and the task of measuring a specific amount of water using only these jugs and a limited number of pouring actions.</p>
+<p>Text cases in Python refer to the different ways in which the capitalization of letters in a string can be modified. There are several standard text cases that are commonly used, including <em>uppercase, lowercase, and title case</em>.</p>
 
-<blockquote>
-  <blockquote>
-    <p>Here’s an example:</p>
-  </blockquote>
-</blockquote>
-
-<p>Suppose you have a <code class="language-plaintext highlighter-rouge">5-liter</code> jug and a <code class="language-plaintext highlighter-rouge">3-liter</code> jug, and you need to measure exactly <code class="language-plaintext highlighter-rouge">4 liters</code> of water.</p>
-
-<p>How can you do it using only these two jugs and a limited number of pouring actions? Let’s figure out!</p>
+<p>Text case manipulation is an important aspect of working with text data in Python, as it allows for the effective processing and formatting of strings in a variety of applications.</p>
 
 <p><br /></p>
-<h3 id="whether-the-goal-is-reachable-or-not">Whether the goal is reachable or not</h3>
 
-<p>From the above example, how one conclude whether <code class="language-plaintext highlighter-rouge">4 liters</code> or <code class="language-plaintext highlighter-rouge">2 liters</code> is measured using <code class="language-plaintext highlighter-rouge">5-liters</code> jug and a <code class="language-plaintext highlighter-rouge">3-liters</code> jug.</p>
-
-<p>Possible conditions for reaching the required aim:</p>
+<h3 id="types-of-text-cases">Types of text cases</h3>
+<p>There are basically five main types of text cases:</p>
 
 <ul>
-  <li>checks whether the desired amount of liquid is zero or less than the combined capacity of <code class="language-plaintext highlighter-rouge">Jug1</code> and <code class="language-plaintext highlighter-rouge">Jug2</code></li>
-  <li>checks whether the desired amount of liquid is a multiple of the greatest common divisor (GCD) of Jug1 and Jug2</li>
+  <li>
+    <p><strong>Uppercase</strong>: In this case, all letters in a string are converted to uppercase letters.</p>
+  </li>
+  <li>
+    <p><strong>Lowercase</strong>: In this case, all letters in a string are converted to lowercase letters.</p>
+  </li>
+  <li>
+    <p><strong>Titlecase</strong>: In this case, the first letter of each word in a string is capitalized, while all other letters are lowercase.</p>
+  </li>
+  <li>
+    <p><strong>Sentence case</strong>: The first letter of the first word in the <strong>sentence</strong> is capitalized while all other letters are in lowercase.</p>
+  </li>
+  <li>
+    <p><strong>Inverse case</strong>: The case of each letter in the string is swapped.</p>
+  </li>
 </ul>
 
-<p>For e.g. Greatest common divisor of 5 and 3 is 1 and 1 is divisible by 3 hence we can measured 3 liter water using 5 and 3 liter jugs.</p>
-
 <p><br /></p>
+
 <blockquote>
-  <p>Keep calm coding begins….</p>
+  <p>Keep calm coding begins…</p>
 </blockquote>
 
-<h2 id="water-jug-and-python">Water Jug and Python</h2>
-<hr />
+<h2 id="built-in-methods">Built-in methods</h2>
 
-<h3 id="problem-defination">Problem defination</h3>
+<p>Python offers a variety of built-in methods for manipulating text case, such as:</p>
 
-<p>This code prompts the user to input three values</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">string</span> <span class="o">=</span> <span class="s">"Speak python"</span>
+<span class="n">string</span><span class="p">.</span><span class="n">upper</span><span class="p">()</span> <span class="c1">#Output: SPEAK PYTHON
+</span><span class="n">string</span><span class="p">.</span><span class="n">lower</span><span class="p">()</span> <span class="c1">#Output: speak python
+</span><span class="n">string</span><span class="p">.</span><span class="n">title</span><span class="p">()</span> <span class="c1">#Output: Speak Python
+</span><span class="n">string</span><span class="p">.</span><span class="n">capitalize</span><span class="p">()</span> <span class="c1">#Output: Speak python
+</span><span class="n">string</span><span class="p">.</span><span class="n">swapcase</span><span class="p">()</span> <span class="c1">#Output: sPEAK PYTHON
+</span></code></pre></div></div>
 
 <ul>
-  <li>the capacity of the first jug (<code class="language-plaintext highlighter-rouge">jug1</code>),</li>
-  <li>the capacity of the second jug (<code class="language-plaintext highlighter-rouge">jug2</code>),</li>
-  <li>and a desired goal amount (<code class="language-plaintext highlighter-rouge">aim</code>).</li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">upper()</code> : Returns a string in all uppercase letters.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">lower()</code> : Returns a string in all lowercase letters.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">capitalize()</code>: Returns a string with the first letter capitalized and the rest in lowercase.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">title()</code>: Returns a string with the first letter of each word capitalized.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">swapcase()</code>: Returns a string with uppercase letters converted to lowercase and vice versa.</p>
+  </li>
 </ul>
 
-<p>The input values are converted to integers using the int() function and stored in their respective variables.</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">jug1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"Capacity of Jug1: "</span><span class="p">))</span>
-<span class="n">jug2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"Capacity of Jug2: "</span><span class="p">))</span>
-<span class="n">aim</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"Your Goal: "</span><span class="p">))</span>
-</code></pre></div></div>
-<p><br /></p>
-
-<h3 id="possibility-check">Possibility check</h3>
-
-<p>Checking <a href="#whether-the-goal-is-reachable-or-not">whether the goal is reachable or not</a>.</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="n">aim</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">jug1</span> <span class="o">+</span> <span class="n">jug2</span> <span class="o">&gt;</span> <span class="n">aim</span><span class="p">)</span> <span class="ow">and</span> <span class="n">aim</span> <span class="o">%</span> <span class="n">gcd</span><span class="p">(</span><span class="n">jug1</span><span class="p">,</span> <span class="n">jug2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="n">waterJugSolver</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="c1">#defined in the next module
-</span><span class="k">else</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">"Not possible!"</span><span class="p">)</span>
-</code></pre></div></div>
-
-<p>If both conditions are true, then the <code class="language-plaintext highlighter-rouge">waterJugSolver()</code> function is called with initial values of <code class="language-plaintext highlighter-rouge">0</code> for both jugs.</p>
-
-<p>If either of the conditions is false, then the code prints <code class="language-plaintext highlighter-rouge">Not possible!</code>, indicating that it is not possible to measure the desired amount of liquid with the given capacities of Jug1 and Jug2.</p>
+<p>Python does not have a built-in method for converting <code class="language-plaintext highlighter-rouge">text to sentence case</code>. However, we can create our own function to do this.</p>
 
 <p><br /></p>
 
-<h2 id="water-jug-solver---driver-code">Water Jug Solver - Driver Code</h2>
+<h3 id="sentence-case---custom-method">Sentence case - Custom Method</h3>
 
-<p>This code defines the function <code class="language-plaintext highlighter-rouge">waterJugSolver()</code> which takes two parameters, <code class="language-plaintext highlighter-rouge">amt1</code> and <code class="language-plaintext highlighter-rouge">amt2</code>, representing the current amount of liquid in Jug1 and Jug2 respectively.</p>
+<p>Sentence case is a style of writing where the first letter of the first word in a sentence is capitalized, while the rest of the words are in lowercase, <em>unless they are proper nouns or acronyms.</em></p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">visited</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="bp">False</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s">"Jug1 </span><span class="se">\t</span><span class="s"> Jug2"</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">waterJugSolver</span><span class="p">(</span><span class="n">amt1</span><span class="p">,</span> <span class="n">amt2</span><span class="p">):</span> 
-    <span class="k">if</span> <span class="p">(</span><span class="n">amt1</span> <span class="o">==</span> <span class="n">aim</span> <span class="ow">and</span> <span class="n">amt2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">amt2</span> <span class="o">==</span> <span class="n">aim</span> <span class="ow">and</span> <span class="n">amt1</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span> <span class="c1">#No. 1.
-</span>        <span class="k">print</span><span class="p">(</span><span class="s">"-"</span><span class="o">*</span><span class="mi">25</span><span class="p">)</span>
-        <span class="k">print</span><span class="p">(</span><span class="n">amt1</span><span class="p">,</span><span class="s">'</span><span class="se">\t</span><span class="s">'</span><span class="p">,</span><span class="n">amt2</span><span class="p">,</span><span class="s">' -&gt; Goal State'</span><span class="p">)</span>
-        <span class="k">print</span><span class="p">(</span><span class="s">"-"</span><span class="o">*</span><span class="mi">25</span><span class="p">)</span>
-        <span class="k">return</span> <span class="bp">True</span>
-    <span class="k">if</span> <span class="n">visited</span><span class="p">[(</span><span class="n">amt1</span><span class="p">,</span><span class="n">amt2</span><span class="p">)]</span> <span class="o">==</span> <span class="bp">False</span><span class="p">:</span> <span class="c1"># No. 2.
-</span>        <span class="k">print</span><span class="p">(</span><span class="n">amt1</span><span class="p">,</span><span class="s">'</span><span class="se">\t</span><span class="s">'</span><span class="p">,</span><span class="n">amt2</span><span class="p">)</span>
-        <span class="n">visited</span><span class="p">[(</span><span class="n">amt1</span><span class="p">,</span> <span class="n">amt2</span><span class="p">)]</span> <span class="o">=</span> <span class="bp">True</span>
+<p>This is a Python function that converts a given string to sentence case.
+<br /></p>
 
-        <span class="k">return</span> <span class="p">(</span><span class="n">waterJugSolver</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">amt2</span><span class="p">)</span> <span class="ow">or</span> <span class="c1"># No. 3
-</span>                <span class="n">waterJugSolver</span><span class="p">(</span><span class="n">amt1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">or</span>
-                <span class="n">waterJugSolver</span><span class="p">(</span><span class="n">jug1</span><span class="p">,</span> <span class="n">amt2</span><span class="p">)</span> <span class="ow">or</span>
-                <span class="n">waterJugSolver</span><span class="p">(</span><span class="n">amt1</span><span class="p">,</span> <span class="n">jug2</span><span class="p">)</span> <span class="ow">or</span>
-                <span class="n">waterJugSolver</span><span class="p">(</span><span class="n">amt1</span> <span class="o">+</span> <span class="nb">min</span><span class="p">(</span><span class="n">amt2</span><span class="p">,</span> <span class="p">(</span><span class="n">jug1</span><span class="o">-</span><span class="n">amt1</span><span class="p">)),</span>
-                <span class="n">amt2</span> <span class="o">-</span> <span class="nb">min</span><span class="p">(</span><span class="n">amt2</span><span class="p">,</span> <span class="p">(</span><span class="n">jug1</span><span class="o">-</span><span class="n">amt1</span><span class="p">)))</span> <span class="ow">or</span>
-                <span class="n">waterJugSolver</span><span class="p">(</span><span class="n">amt1</span> <span class="o">-</span> <span class="nb">min</span><span class="p">(</span><span class="n">amt1</span><span class="p">,</span> <span class="p">(</span><span class="n">jug2</span><span class="o">-</span><span class="n">amt2</span><span class="p">)),</span>
-                <span class="n">amt2</span> <span class="o">+</span> <span class="nb">min</span><span class="p">(</span><span class="n">amt1</span><span class="p">,</span> <span class="p">(</span><span class="n">jug2</span><span class="o">-</span><span class="n">amt2</span><span class="p">))))</span>    
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="bp">False</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">sentencecase</span><span class="p">(</span><span class="n">string</span><span class="p">):</span>
+    <span class="n">split_chr</span> <span class="o">=</span> <span class="p">[</span><span class="s">'!'</span><span class="p">,</span> <span class="s">'?'</span><span class="p">,</span> <span class="s">'.'</span><span class="p">]</span>
+    <span class="n">string</span> <span class="o">=</span> <span class="n">string</span><span class="p">.</span><span class="n">lowercase</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">split_chr</span><span class="p">:</span>
+        <span class="n">after_dec</span> <span class="o">=</span> <span class="n">string</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+        <span class="n">new_str</span> <span class="o">=</span> <span class="s">""</span>
+        <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">after_dec</span><span class="p">)):</span>
+            <span class="k">if</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">after_dec</span><span class="p">[</span><span class="n">a</span><span class="p">])</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">):</span>
+                <span class="n">new_str</span> <span class="o">+=</span> <span class="n">after_dec</span><span class="p">[</span><span class="n">a</span><span class="p">].</span><span class="n">strip</span><span class="p">()[</span><span class="mi">0</span><span class="p">].</span><span class="n">upper</span><span class="p">()</span> <span class="o">+</span> <span class="n">after_dec</span><span class="p">[</span><span class="n">a</span><span class="p">].</span><span class="n">strip</span><span class="p">()[</span><span class="mi">1</span><span class="p">:]</span>
+                <span class="k">if</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">after_dec</span><span class="p">)</span> <span class="o">!=</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+                    <span class="n">new_str</span> <span class="o">+=</span> <span class="n">c</span> <span class="o">+</span> <span class="s">' '</span>
+        <span class="n">string</span> <span class="o">=</span> <span class="n">new_str</span>
+    <span class="k">return</span> <span class="n">string</span>
 </code></pre></div></div>
-<blockquote>
-  <blockquote>
-    <p>No. 1, 2, 3 explanation…</p>
-  </blockquote>
-</blockquote>
 
-<ol>
-  <li>
-    <p>The function checks if the current amounts of liquid in the two jugs are equal to the desired amount of liquid, which is represented by the variable <code class="language-plaintext highlighter-rouge">aim</code>. If they are equal, the function prints the current amounts of liquid and the message “Goal State” and returns <code class="language-plaintext highlighter-rouge">True</code>.</p>
-  </li>
-  <li>
-    <p>If the current amounts of liquid have not reached the desired amount, the function checks if the current state of the two jugs has already been visited before. If the state has not been visited before, it prints the current amounts of liquid and marks the state as visited using a dictionary called <code class="language-plaintext highlighter-rouge">visited</code>.</p>
-  </li>
-  <li>
-    <p>The function then recursively calls itself with different combinations of pouring, filling, and emptying the two jugs.</p>
-    <ul>
-      <li>If a solution is found, the function returns <code class="language-plaintext highlighter-rouge">True</code>.</li>
-      <li>If no solution is found, it returns <code class="language-plaintext highlighter-rouge">False</code>.</li>
-    </ul>
-  </li>
-</ol>
+<p>Here’s how it works:</p>
 
-<p>The function uses a dictionary called <code class="language-plaintext highlighter-rouge">visited</code> to keep track of visited states, so that it does not revisit the same state again.</p>
+<ul>
+  <li>
+    <p>It initializes a list of characters that are used to split the string into sentences. In this case, the list contains the characters <strong>’!’</strong>, <strong>’?’</strong>, and <strong>’.’</strong>.</p>
+  </li>
+  <li>
+    <p>It converts the input <code class="language-plaintext highlighter-rouge">string</code> to <code class="language-plaintext highlighter-rouge">lowercase</code> using the <code class="language-plaintext highlighter-rouge">lower()</code> method, so that all words in the string can be properly capitalized.</p>
+  </li>
+  <li>
+    <p>It then loops through the list of split characters, splitting the string into sentences at each occurrence of a split character.</p>
+  </li>
+  <li>
+    <p>For each sentence, it converts the first letter of the first word to uppercase using the <code class="language-plaintext highlighter-rouge">upper()</code> method, and then <strong>concatenates</strong> the rest of the sentence in lowercase using string <strong>slicing</strong>.</p>
+  </li>
+  <li>
+    <p>It then appends the split character back to the sentence, and adds a space after it for formatting purposes.</p>
+  </li>
+</ul>
+
+<p>Finally, it returns the fully formatted string in sentence case.</p>
+
+<p>Here’s an example of how to use this function:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">string</span> <span class="o">=</span> <span class="s">"hey There! hOW aRe yOU tOdaY? i hOPE yOU'rE dOING wELL."</span>
+<span class="k">print</span><span class="p">(</span><span class="n">sentencecase</span><span class="p">(</span><span class="n">text</span><span class="p">))</span>
+<span class="c1">#Output: Hey there! How are you today? I hope you're doing well.
+</span></code></pre></div></div>
 
 <p><br /></p>
 
-<h2 id="example-testing">Example testing</h2>
+<h3 id="custom-text-case-conversion">Custom Text Case Conversion</h3>
 
-<p>Suppose you have a <code class="language-plaintext highlighter-rouge">5-liter</code> jug and a <code class="language-plaintext highlighter-rouge">4-liter</code> jug, and you need to measure exactly <code class="language-plaintext highlighter-rouge">3 liters</code> of water.</p>
+<p>I have defined a Python class called <code class="language-plaintext highlighter-rouge">string</code> that contains several methods for manipulating text cases.
+<br /></p>
 
-<blockquote>
-  <blockquote>
-    <p>prompt inputs….</p>
-  </blockquote>
-</blockquote>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">string</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">given_string</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">given_string</span> <span class="o">=</span> <span class="n">given_string</span>
+    
+    <span class="k">def</span> <span class="nf">uppercase</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="p">.</span><span class="n">given_string</span><span class="p">.</span><span class="n">upper</span><span class="p">()</span>
+    
+    <span class="k">def</span> <span class="nf">lowercase</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="p">.</span><span class="n">given_string</span><span class="p">.</span><span class="n">lower</span><span class="p">()</span>
+    
+    <span class="k">def</span> <span class="nf">titlecase</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="p">.</span><span class="n">given_string</span><span class="p">.</span><span class="n">title</span><span class="p">()</span>
+    
+    <span class="k">def</span> <span class="nf">capitalcase</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="p">.</span><span class="n">given_string</span><span class="p">.</span><span class="n">capitalize</span><span class="p">()</span>
+    
+    <span class="k">def</span> <span class="nf">swapcase</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="p">.</span><span class="n">given_string</span><span class="p">.</span><span class="n">swapcase</span><span class="p">()</span>
+    
+    <span class="k">def</span> <span class="nf">sentencecase</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">split_chr</span> <span class="o">=</span> <span class="p">[</span><span class="s">'!'</span><span class="p">,</span> <span class="s">'?'</span><span class="p">,</span> <span class="s">'.'</span><span class="p">]</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">given_string</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">lowercase</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">split_chr</span><span class="p">:</span>
+            <span class="n">after_dec</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">given_string</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+            <span class="n">new_str</span> <span class="o">=</span> <span class="s">""</span>
+            <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">after_dec</span><span class="p">)):</span>
+                <span class="k">if</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">after_dec</span><span class="p">[</span><span class="n">a</span><span class="p">])</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">):</span>
+                    <span class="n">new_str</span> <span class="o">+=</span> <span class="n">after_dec</span><span class="p">[</span><span class="n">a</span><span class="p">].</span><span class="n">strip</span><span class="p">()[</span><span class="mi">0</span><span class="p">].</span><span class="n">upper</span><span class="p">()</span> <span class="o">+</span> <span class="n">after_dec</span><span class="p">[</span><span class="n">a</span><span class="p">].</span><span class="n">strip</span><span class="p">()[</span><span class="mi">1</span><span class="p">:]</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">after_dec</span><span class="p">)</span> <span class="o">!=</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+                        <span class="n">new_str</span> <span class="o">+=</span> <span class="n">c</span> <span class="o">+</span> <span class="s">' '</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">given_string</span> <span class="o">=</span> <span class="n">new_str</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="p">.</span><span class="n">given_string</span>
+</code></pre></div></div>
 
-<p><img src="../../../image/water-jug-problem-input.png" alt="'water-jug-problem-input'" /></p>
+<ul>
+  <li>
+    <p>The class is initialized with a given string, and provides methods for converting the string to uppercase, lowercase, title case, capital case, and inverse case.</p>
+  </li>
+  <li>
+    <p>Additionally, there is a method for converting the string to <a href="#sentence-case---custom-method">‘sentence case’</a>.</p>
+  </li>
+</ul>
 
-<blockquote>
-  <blockquote>
-    <p>prompt output….</p>
-  </blockquote>
-</blockquote>
+<p><br /></p>
 
-<p><img src="../../../image/water-jug-problem-solution.png" alt="'water-jug-problem-solution'" /></p>
+<h3 id="example-testing">Example testing</h3>
 
-                
-                <div class="container p-0 my-4 mt-5">
-                    <div class="content-credit">
-                        
-                            Special thanks to 
-                        
-                        
-                            <a href="https://en.wikipedia.org/wiki/Main_Page" class="font-dark">Wikipedia</a>
-                            
-                    </div>
-                </div>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">text</span> <span class="o">=</span> <span class="n">string</span><span class="p">(</span><span class="s">"hey There! hOW aRe yOU tOdaY? i hOPE yOU'rE dOING wELL."</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">text</span><span class="p">.</span><span class="n">uppercase</span><span class="p">()</span>
+<span class="c1">#Output: HEY THERE! HOW ARE YOU TODAY? I HOPE YOU'RE DOING WELL.
+</span>
+<span class="n">text</span><span class="p">.</span><span class="n">sentencecase</span><span class="p">()</span>
+<span class="c1">#Output: Hey there! How are you today? I hope you're doing well.
+</span></code></pre></div></div>
+
+<p><br /></p>
+
                 
                 <hr class="my-4" />
                 <div class="d-flex justify-content-between gap-2 mb-4">
                     
-                    <a class="btn  btn-primary  w-100 text-end" href="/artificial-intelligence/2023/03/04/best-first-search.html" class="px-3">
+                    <a class="btn  btn-primary  w-100 text-end" href="/artificial-intelligence/2023/03/09/tic-tac-toe-human-vs-machine.html" class="px-3">
                         <div class="d-flex justify-content-between gap-2">
                             <i class="bi bi-chevron-double-left"></i>
-                            Best First Search
+                            Tic Tac Toe Human Vs Machine
                         </div>
                     </a>
                     
-                    <a class="btn  btn-primary  w-100 text-end" href="/two-player-game/2023/03/07/hangman-word-game.html" class="px-3">
+                    <a class="btn  opacity-0 disabled d-none d-md-block  w-100 text-end" href="\" class="px-3">
                         <div class="d-flex justify-content-between gap-2">
-                        Hangman Word Game
+                        
                         <i class="bi bi-chevron-double-right"></i>
                         </div>
                     </a>
@@ -500,7 +536,7 @@ searchBtn.addEventListener('click', () => {
 
                     <div class="fs-6 edit-button git-contribute mt-4">
                         <svg aria-hidden="true" focusable="false" role="img" class="octicon mr-1" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom;overflow:visible"><path d="M1.5 3.25a2.25 2.25 0 113 2.122v5.256a2.251 2.251 0 11-1.5 0V5.372A2.25 2.25 0 011.5 3.25zm5.677-.177L9.573.677A.25.25 0 0110 .854V2.5h1A2.5 2.5 0 0113.5 5v5.628a2.251 2.251 0 11-1.5 0V5a1 1 0 00-1-1h-1v1.646a.25.25 0 01-.427.177L7.177 3.427a.25.25 0 010-.354zM3.75 2.5a.75.75 0 100 1.5.75.75 0 000-1.5zm0 9.5a.75.75 0 100 1.5.75.75 0 000-1.5zm8.25.75a.75.75 0 101.5 0 .75.75 0 00-1.5 0z"></path></svg>
-                        <i><a href="https://github.com/speakpython/speakpythonBlog/blob/gh-pages/artificial-intelligence/_posts/2023-03-06-water-jug-problem.md" style="padding-left: 5px;font-family: 'Ubuntu'; font-style: normal;">Make a contribution</a></i>
+                        <i><a href="https://github.com/speakpython/speakpythonBlog/blob/gh-pages/string-formatting/_posts/2023-03-12-string-case-methods.md" style="padding-left: 5px;font-family: 'Ubuntu'; font-style: normal;">Make a contribution</a></i>
                     </div>
 
                 </div>
