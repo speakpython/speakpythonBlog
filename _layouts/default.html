@@ -61,6 +61,10 @@
                                             {{ category | first | split: "-" | array_to_sentence_string: ' ' | capitalize | replace: ",", "" }}</a>
                                     </li>
                                 {% endfor %}
+                                <li>
+                                    <hr class="mb-1">
+                                    <a class="dropdown-item small" href="/all-posts.html">All Categories</a>
+                                </li>
                             </ul>
                         </li>
                     </ul>
