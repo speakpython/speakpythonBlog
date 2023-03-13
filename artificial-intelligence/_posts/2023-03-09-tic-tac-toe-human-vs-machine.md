@@ -68,7 +68,7 @@ def game_grid(value):
 <br/>
 
 ### Possible winning patterns
-The code defines a list called `wining_pattern` which contains sub-lists of all the possible winning combinations in a Tic-Tac-Toe game. 
+The code defines a list called `winning_pattern` which contains sub-lists of all the possible winning combinations in a Tic-Tac-Toe game. 
 <br/>
 
 ```python
@@ -147,7 +147,7 @@ def check_winning():
     return False
 ```
 
-- The function checks if any of the sub-lists in `winning_pattern` is a _subset of moves_, which means the player has achieved a winning combination. If a _winning combination_ is found, the function returns `True`, otherwise it returns `False`.
+- The function checks if any of the sub-lists in `winning_pattern` is a _subset of `players_moves_`, which means the player has achieved a winning combination. If a _winning combination_ is found, the function returns `True`, otherwise it returns `False`.
 
 <br/>
 
