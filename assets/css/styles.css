@@ -65,6 +65,10 @@
   --bs-body-bg: #fff;
 }
 
+::selection{
+  background-color:#7dc6d4;
+}
+
 *,
 *::before,
 *::after {

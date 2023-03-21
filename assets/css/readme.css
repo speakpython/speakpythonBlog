@@ -328,3 +328,14 @@ h2:target, h3:target, h4:target, h5:target{
   }
 }
 
+.report-error{
+  padding: 0.6rem 0rem;
+  font-size: 1rem;
+  vertical-align: center;
+  font-weight: lighter;
+}
+
+.report-error:hover{
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
+}

@@ -23,6 +23,9 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 })
 
+window.oncontextmenu = function () {
+    return false;
+ }
 
 function moveUpDown(){
     const topDownBtn = document.getElementById('top-down-btn');
@@ -33,3 +36,4 @@ function moveUpDown(){
     else
         topDownBtn.href = "#top-header";
 }
+
