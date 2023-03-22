@@ -6,7 +6,7 @@
         <meta name="description" content="Welcome to Python Indeed! Here, we provide comprehensive tutorials on various aspects of Python programming language to help you learn and improve your skills." />
         <meta name="author" content="Speak Python" />
         <meta name="keywords" content="Speak Python, dev3058, Python programming, Python libraries, Python tutorials, Python syntax, Python functions, Python code snippets, Python data structures, Python web development, Python data science, Python machine learning, Python artificial intelligence, Python automation, Python frameworks, Python projects, Python tips and tricks, Python community, Python resources, speakpython.codes, support@speakpython.codes">
-        <title>Converting Hexadecimal To Decimal Numbers - Speak Python</title>
+        <title>Decimal To Hexadecimal Numbers - Speak Python</title>
         <link rel="icon" type="image/x-icon" href="http://localhost:4000/assets/favicon.ico" />
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
@@ -226,26 +226,22 @@ searchBtn.addEventListener('click', () => {
                 <div class="post-heading">
     <div class="subheading fs-6 edit-button">
         <i class="bi bi-github"></i>
-        <i><a href="https://github.com/speakpython/number-system/tree/master/converting-hexadecimal-to-decimal-numbers" style="color: white; padding-left: 5px;">Complete Source</a></i>
+        <i><a href="https://github.com/speakpython/number-system/tree/master/decimal-to-hexadecimal-numbers" style="color: white; padding-left: 5px;">Complete Source</a></i>
     </div>
-    <h2 class="h1">Converting Hexadecimal to Decimal Made Easy!</h2>
+    <h2 class="h1">Mastering Decimal to Hexadecimal Conversion</h2>
     <p class="fst mb-0 code-level"><i class="bi bi-3-square" style="vertical-align: middle;"></i> Junior's Tutorial </p>
     <h2 class="subheading">
         #number-system
         
              
-                #text-case-methods
-            
-        
-             
-                #custom-methods
+                #decimal-to-hex
             
         
     </h2>
     <span class="meta">
         Posted by
         <a href="#postAuthor" role="button">Dev Anand</a>
-        on 21 March 2023
+        on 22 March 2023
     </span>
 </div>
 
@@ -258,24 +254,33 @@ searchBtn.addEventListener('click', () => {
     <div class="container px-3 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
-                <p>If you’re looking to improve your Python skills, learning how to convert hexadecimal to decimal is a great place to start. In this tutorial, we’ll explore the <em>basics of hexadecimal</em> and walk through the steps of converting it to decimal using Python.</p>
+                <p>In this tutorial, we will explore how to convert decimal numbers to hexadecimal using Python.</p>
+
+<p>We will cover two main approaches: using the built-in <code class="language-plaintext highlighter-rouge">hex()</code> function and <em>implementing our own algorithm</em>.</p>
 
 <p><img src="https://www.ionos.ca/digitalguide/fileadmin/DigitalGuide/Teaser/zahlen-t.jpg" alt="'case-converter'" /></p>
 
-<h2 id="hexadecimal-numbers">Hexadecimal Numbers</h2>
+<h2 id="decimal-and-hexadecimal-numbers">Decimal and Hexadecimal Numbers</h2>
 
-<p>Hexadecimal numbers (often shortened to <strong>hex</strong> or <strong>base 16</strong>) are a numbering system that uses <strong>16 digits</strong> to represent numbers, rather than the 10 digits used in the <em>decimal (base 10)</em> system.</p>
+<p>Decimal and hexadecimal are two different numbering systems used to represent numbers in computing and mathematics.</p>
+
+<p><strong>Decimal</strong>, also known as <em>base-10</em>, is the numerical system that most people are familiar with, which <em>uses 10 digits (0-9)</em> to represent values.</p>
 
 <ul>
   <li>
-    <p>The 16 digits used in hexadecimal are<code class="language-plaintext highlighter-rouge"> 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F</code>.</p>
+    <p>Each digit’s position represents a power of 10.</p>
   </li>
   <li>
-    <p>In hexadecimal notation, each digit represents a power of 16, just as each digit in decimal notation represents a power of 10.</p>
+    <p>For example, the number <code class="language-plaintext highlighter-rouge">1234</code> in decimal form represents the value of <code class="language-plaintext highlighter-rouge">1x10^3 + 2x10^2 + 3x10^1 + 4x10^0</code>.</p>
   </li>
 </ul>
 
-<p>These are commonly used in computer programming and digital electronics, to represent binary numbers in a more concise and human-readable format.</p>
+<p><strong>hexadecimal</strong>, also known as <code class="language-plaintext highlighter-rouge">base-16</code>, is a numerical system that uses <code class="language-plaintext highlighter-rouge">16 digits (0-9, A-F)</code> to represent values.</p>
+
+<ul>
+  <li>Each digit’s position represents a power of 16.</li>
+  <li>For example, the number <code class="language-plaintext highlighter-rouge">1A</code> in hexadecimal form represents the value of <code class="language-plaintext highlighter-rouge">1x16^1 + 10x16^0</code>, which is equal to <code class="language-plaintext highlighter-rouge">26</code> in decimal form.</li>
+</ul>
 
 <p><br /></p>
 
@@ -292,56 +297,58 @@ searchBtn.addEventListener('click', () => {
   <p>Keep calm coding begins…</p>
 </blockquote>
 
-<h3 id="int---built-in-function"><em>Int</em> - Built-in function</h3>
+<h3 id="hex---built-in-function"><em>hex</em> - Built-in function</h3>
 
-<p>The <code class="language-plaintext highlighter-rouge">int()</code> is used to convert a value to an integer, and the <code class="language-plaintext highlighter-rouge">base</code> parameter specifies the base of the number being converted, in this case <code class="language-plaintext highlighter-rouge">16</code> for <code class="language-plaintext highlighter-rouge">hexadecimal</code>.</p>
+<p>The <code class="language-plaintext highlighter-rouge">hex()</code> function in Python is used to convert an integer number to its corresponding hexadecimal string representation.</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">int</span><span class="p">(</span><span class="s">'af71'</span><span class="p">,</span> <span class="n">base</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">hex</span><span class="p">(</span><span class="s">'15'</span><span class="p">)</span>
 
-<span class="c1">#Output: 44913
+<span class="c1">#Output: '0xf'
 </span></code></pre></div></div>
-<p>The resulting decimal value of this function call would be <code class="language-plaintext highlighter-rouge">44913</code>.</p>
+<p>The output is a string <code class="language-plaintext highlighter-rouge">0xf</code>, which represents the hexadecimal value of <code class="language-plaintext highlighter-rouge">15</code>. The prefix <code class="language-plaintext highlighter-rouge">0x</code> is added to indicate that the string is in <em>hexadecimal format</em>.</p>
 
 <p><br /></p>
 
-<h3 id="hextodecimal---custom-function">hexToDecimal - Custom function</h3>
+<h3 id="decimaltohex---custom-function">decimalToHex - Custom function</h3>
 
-<p>We have defines two functions <code class="language-plaintext highlighter-rouge">hexToDecimal()</code> and <code class="language-plaintext highlighter-rouge">hexCharToDecimal()</code> that can be used to convert a hexadecimal string to its decimal equivalent in Python.</p>
+<p>We have defines two functions <code class="language-plaintext highlighter-rouge">decimalToHex()</code> and <code class="language-plaintext highlighter-rouge">toHexChar()</code>, which are used to convert a decimal value to its corresponding hexadecimal representation.</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">hexToDecimal</span><span class="p">(</span><span class="nb">hex</span><span class="p">):</span>
-    <span class="n">decimalValue</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="nb">hex</span><span class="p">)):</span>
-        <span class="n">ch</span> <span class="o">=</span> <span class="nb">hex</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-        
-        <span class="k">if</span> <span class="s">'A'</span> <span class="o">&lt;=</span> <span class="n">ch</span> <span class="o">&lt;=</span> <span class="s">'F'</span> <span class="ow">or</span> <span class="s">'0'</span> <span class="o">&lt;=</span> <span class="n">ch</span> <span class="o">&lt;=</span> <span class="s">'9'</span><span class="p">:</span>
-            <span class="n">decimalValue</span> <span class="o">=</span> <span class="n">decimalValue</span> <span class="o">*</span> <span class="mi">16</span> <span class="o">+</span> <span class="n">hexCharToDecimal</span><span class="p">(</span><span class="n">ch</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="bp">None</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">decimalToHex</span><span class="p">(</span><span class="n">decimalValue</span><span class="p">):</span>
+    <span class="nb">hex</span> <span class="o">=</span> <span class="s">""</span>
+    <span class="k">while</span> <span class="n">decimalValue</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">hexValue</span> <span class="o">=</span> <span class="n">decimalValue</span> <span class="o">%</span> <span class="mi">16</span>
+        <span class="nb">hex</span> <span class="o">=</span> <span class="n">toHexChar</span><span class="p">(</span><span class="n">hexValue</span><span class="p">)</span> <span class="o">+</span> <span class="nb">hex</span>
+        <span class="n">decimalValue</span> <span class="o">=</span> <span class="n">decimalValue</span> <span class="o">//</span> <span class="mi">16</span>
     
-    <span class="k">return</span> <span class="n">decimalValue</span>
+    <span class="k">return</span> <span class="nb">hex</span>
 
-<span class="k">def</span> <span class="nf">hexCharToDecimal</span><span class="p">(</span><span class="n">ch</span><span class="p">):</span>
-    <span class="k">if</span> <span class="s">'A'</span> <span class="o">&lt;=</span> <span class="n">ch</span> <span class="o">&lt;=</span> <span class="s">'F'</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">10</span> <span class="o">+</span> <span class="nb">ord</span><span class="p">(</span><span class="n">ch</span><span class="p">)</span> <span class="o">-</span> <span class="nb">ord</span><span class="p">(</span><span class="s">'A'</span><span class="p">)</span>
-    <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">ch</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">toHexChar</span><span class="p">(</span><span class="n">hexValue</span><span class="p">):</span>
+    <span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">hexValue</span> <span class="o">&lt;=</span> <span class="mi">9</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">hexValue</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">chr</span><span class="p">(</span><span class="n">hexValue</span> <span class="o">-</span> <span class="mi">10</span> <span class="o">+</span> <span class="nb">ord</span><span class="p">(</span><span class="s">'A'</span><span class="p">))</span>
 </code></pre></div></div>
 
 <p>Here’s how it works:</p>
 
-<p><code class="language-plaintext highlighter-rouge">hexToDecimal(hex)</code> takes a string <code class="language-plaintext highlighter-rouge">hex</code> representing a hexadecimal number as <em>input</em>, and <em>returns</em> its decimal equivalent.</p>
-
-<ul>
-  <li>It does so by iterating over each character of the input string, and multiplying the decimal value by <code class="language-plaintext highlighter-rouge">16</code> for each new digit encountered, and adding the decimal equivalent of that digit to the total - <code class="language-plaintext highlighter-rouge">decimalValue</code>.</li>
-</ul>
-
-<p><code class="language-plaintext highlighter-rouge">hexCharToDecimal(ch)</code> function takes a single character <code class="language-plaintext highlighter-rouge">ch</code> as <em>input</em>, and <em>returns</em> its decimal equivalent.</p>
+<p><code class="language-plaintext highlighter-rouge">decimalToHex(decimalValue)</code> function takes an input decimal value and iteratively divides it by 16 <code class="language-plaintext highlighter-rouge">to</code> convert it into its corresponding hexadecimal representation.</p>
 
 <ul>
   <li>
-    <p>It does so by checking if the character is in the range <code class="language-plaintext highlighter-rouge">A</code> to <code class="language-plaintext highlighter-rouge">F</code>, and if so, returns its decimal value as <code class="language-plaintext highlighter-rouge">10</code> plus the difference between the <code class="language-plaintext highlighter-rouge">ASCII</code> value of <code class="language-plaintext highlighter-rouge">ch</code> and the <code class="language-plaintext highlighter-rouge">ASCII</code> value of <code class="language-plaintext highlighter-rouge">A</code>.</p>
+    <p>The remainder of each division operation is used to compute the hexadecimal digit using the <code class="language-plaintext highlighter-rouge">toHexChar(hexValue)</code> function.</p>
   </li>
   <li>
-    <p>If the character is not in this range, it is assumed to be a digit in the range <code class="language-plaintext highlighter-rouge">0</code> to <code class="language-plaintext highlighter-rouge">9</code>, and its integer value is returned.</p>
+    <p>The hexadecimal digit is then <em>concatenated</em> to the left of the previously computed digits. This process continues until the decimal value becomes zero.</p>
+  </li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">toHexChar(hexValue)</code> function takes an input integer value between 0 and 15 and returns its corresponding hexadecimal character representation.</p>
+
+<ul>
+  <li>
+    <p>If the input value is between <code class="language-plaintext highlighter-rouge">0</code> and <code class="language-plaintext highlighter-rouge">9</code>, the function returns its <em>string representation</em>.</p>
+  </li>
+  <li>
+    <p>Otherwise, it computes the character representation by subtracting <code class="language-plaintext highlighter-rouge">10</code> from the input value, adding the <code class="language-plaintext highlighter-rouge">ASCII</code> code of the character <code class="language-plaintext highlighter-rouge">A</code> to it, and returning the resulting character.</p>
   </li>
 </ul>
 
@@ -349,37 +356,17 @@ searchBtn.addEventListener('click', () => {
 
 <h3 id="driver-code---function-calling">Driver Code - function calling</h3>
 
-<p>This code provides a way for a user to input a hexadecimal number and convert it to its decimal equivalent using the <code class="language-plaintext highlighter-rouge">hexToDecimal()</code>.</p>
+<p>This code provides a way for a user to input a decimal number and convert it to its hexadecimal equivalent using the <code class="language-plaintext highlighter-rouge">decimalToHex()</code>.</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">hexData</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">'Enter a hex number: '</span><span class="p">).</span><span class="n">strip</span><span class="p">()</span>
-<span class="n">decimal</span> <span class="o">=</span> <span class="n">hexToDecimal</span><span class="p">(</span><span class="n">hexData</span><span class="p">.</span><span class="n">upper</span><span class="p">())</span>
-
-<span class="k">print</span><span class="p">(</span><span class="s">"The decimal value for hex number"</span><span class="p">,</span><span class="n">hexData</span><span class="p">,</span><span class="s">"is"</span><span class="p">,</span><span class="n">decimal</span><span class="p">)</span> <span class="k">if</span> <span class="n">decimal</span> <span class="k">else</span>  <span class="k">print</span><span class="p">(</span><span class="s">"Incorrect hex number."</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">decimalValue</span> <span class="o">=</span> <span class="nb">eval</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"Enter a decimal Value: "</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"The hex number for decimal"</span><span class="p">,</span> <span class="n">decimalValue</span><span class="p">,</span> <span class="s">"is"</span><span class="p">,</span> <span class="n">decimalToHex</span><span class="p">(</span><span class="n">decimalValue</span><span class="p">))</span>
 </code></pre></div></div>
-
-<ul>
-  <li>
-    <p>the code prompts the user to enter a hexadecimal number using the <code class="language-plaintext highlighter-rouge">input()</code>, and stores the input in the variable <code class="language-plaintext highlighter-rouge">hexData</code>.</p>
-  </li>
-  <li>
-    <p>The <code class="language-plaintext highlighter-rouge">strip()</code> function is called on this input to remove any leading or trailing whitespace characters.</p>
-  </li>
-  <li>
-    <p>Next, the <code class="language-plaintext highlighter-rouge">hexData</code> string is converted to uppercase using the <code class="language-plaintext highlighter-rouge">.upper()</code> method to ensure consistency in character case, since <em>hexadecimal digits can be represented in both uppercase and lowercase</em>.</p>
-  </li>
-  <li>
-    <p>Then, the <code class="language-plaintext highlighter-rouge">hexToDecimal()</code> is called with the <code class="language-plaintext highlighter-rouge">hexData</code> string as input, and the resulting decimal value is stored in the variable <code class="language-plaintext highlighter-rouge">decimal</code>.</p>
-  </li>
-  <li>
-    <p>If <code class="language-plaintext highlighter-rouge">decimal</code> is not <code class="language-plaintext highlighter-rouge">None</code>, the code prints the resulting decimal otherwise error message.</p>
-  </li>
-</ul>
 
 <p><br /></p>
 
 <h3 id="example-testing">Example testing</h3>
 
-<p><img src="../../../image/example-testing-hex-to-decimal.png" alt="'example-testing-hex-to-decimal'" /></p>
+<p><img src="../../../image/example-testing-decimal-to-hex.png" alt="'example-testing-decimal-to-hex'" /></p>
 
                 
                 <div class="container p-0 my-4 mt-5">
@@ -396,10 +383,10 @@ searchBtn.addEventListener('click', () => {
                 <hr class="my-4" />
                 <div class="d-flex justify-content-between gap-2 mb-4">
                     
-                    <a class="btn  btn-primary  w-100 text-end" href="/string-formatting/2023/03/12/string-case-manipulation-custom-and-builtin-methods.html" class="px-3">
+                    <a class="btn  btn-primary  w-100 text-end" href="/number-system/2023/03/21/hexadecimal-to-decimal-numbers.html" class="px-3">
                         <div class="d-flex justify-content-between gap-2">
                             <i class="bi bi-chevron-double-left"></i>
-                            String Case Manipulation Custom And Builtin Methods
+                            Hexadecimal To Decimal Numbers
                         </div>
                     </a>
                     
@@ -491,10 +478,10 @@ searchBtn.addEventListener('click', () => {
                     <div class="btn-group gap-3 mt-4">
                         <div class="fs-6 edit-button git-contribute">
                             <svg aria-hidden="true" focusable="false" role="img" class="octicon mr-1" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom;overflow:visible"><path d="M1.5 3.25a2.25 2.25 0 113 2.122v5.256a2.251 2.251 0 11-1.5 0V5.372A2.25 2.25 0 011.5 3.25zm5.677-.177L9.573.677A.25.25 0 0110 .854V2.5h1A2.5 2.5 0 0113.5 5v5.628a2.251 2.251 0 11-1.5 0V5a1 1 0 00-1-1h-1v1.646a.25.25 0 01-.427.177L7.177 3.427a.25.25 0 010-.354zM3.75 2.5a.75.75 0 100 1.5.75.75 0 000-1.5zm0 9.5a.75.75 0 100 1.5.75.75 0 000-1.5zm8.25.75a.75.75 0 101.5 0 .75.75 0 00-1.5 0z"></path></svg>
-                            <a href="https://github.com/speakpython/speakpythonBlog/blob/gh-pages/number-system/_posts/2023-03-21-converting-hexadecimal-to-decimal-numbers.md" style="padding-left: 5px;font-family: 'Ubuntu'; font-style: normal;">Make a contribution</a>
+                            <a href="https://github.com/speakpython/speakpythonBlog/blob/gh-pages/number-system/_posts/2023-03-22-decimal-to-hexadecimal-numbers.md" style="padding-left: 5px;font-family: 'Ubuntu'; font-style: normal;">Make a contribution</a>
                         </div>
                         <div class="report-error">
-                            <a href="mailto:support@speakpython.codes?subject=Reporting Error at - `Converting Hexadecimal To Decimal Numbers`" style="font-family: Arial;font-size: 14px;">Report an error</a>
+                            <a href="mailto:support@speakpython.codes?subject=Reporting Error at - `Decimal To Hexadecimal Numbers`" style="font-family: Arial;font-size: 14px;">Report an error</a>
                         </div>
                     </div>
                 </div>

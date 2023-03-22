@@ -9,11 +9,13 @@ title: All Posts
             <div class="col-md-10 col-lg-8 col-xl-7">
                 <div class="page-heading">
                     <h1>.py Stacks</h1>
+                    <div class="container mt-3">
                     {% for category in site.categories limit: 5 %}
                     <a href="#{{ category | first }}" class="text-decoration-none">
-                        <span class="badge bg-transparent border border-1" style="margin: 0px 4px 4px 0px"># {{ category | first }}</span>
+                        <span class="badge bg-transparent" style="margin: 0px 4px 4px 0px"># {{ category | first }}</span>
                     </a>
                     {% endfor %}
+                    </div>
                 </div>
             </div>
         </div>

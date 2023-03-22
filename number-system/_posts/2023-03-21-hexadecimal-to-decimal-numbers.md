@@ -1,7 +1,7 @@
 ---
 layout: post
 heading: Converting Hexadecimal to Decimal Made Easy!
-keywords: ['text-case-methods', 'custom-methods']
+keywords: ['hex-to-decimal']
 author_id: 'dev3058'
 credits: ['wikipedia']
 level: 3
@@ -12,27 +12,33 @@ If you're looking to improve your Python skills, learning how to convert hexadec
 
 !['case-converter'](https://www.ionos.ca/digitalguide/fileadmin/DigitalGuide/Teaser/zahlen-t.jpg)
 
-## Hexadecimal Numbers
+## Decimal and Hexadecimal Numbers
 
-Hexadecimal numbers (often shortened to __hex__ or __base 16__) are a numbering system that uses __16 digits__ to represent numbers, rather than the 10 digits used in the _decimal (base 10)_ system. 
+Decimal and hexadecimal are two different numbering systems used to represent numbers in computing and mathematics.
 
-- The 16 digits used in hexadecimal are` 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F`. 
+__Decimal__, also known as _base-10_, is the numerical system that most people are familiar with, which _uses 10 digits (0-9)_ to represent values. 
 
-- In hexadecimal notation, each digit represents a power of 16, just as each digit in decimal notation represents a power of 10. 
+- Each digit's position represents a power of 10. 
 
-These are commonly used in computer programming and digital electronics, to represent binary numbers in a more concise and human-readable format.
+- For example, the number `1234` in decimal form represents the value of `1x10^3 + 2x10^2 + 3x10^1 + 4x10^0`.
 
-<br/>
+__hexadecimal__, also known as `base-16`, is a numerical system that uses `16 digits (0-9, A-F)` to represent values. 
+
+- Each digit's position represents a power of 16. 
+- For example, the number `1A` in hexadecimal form represents the value of `1x16^1 + 10x16^0`, which is equal to `26` in decimal form.
+
+<br />
 
 <hr>
 
 _Before starting to write code, it's important to have a basic understanding of how the two numbering systems work._
 
-__Resource link__: [How to Convert from Decimal to Hexadecimal](https://www.wikihow.com/Convert-from-Decimal-to-Hexadecimal).  
+__Resource link__: [How to Convert from Hexadecimal to Decimal](https://www.wikihow.com/Convert-Hexadecimal-to-Binary-or-Decimal).  
 
 <hr>
 
 <br />
+
 >Keep calm coding begins...
 
 ### _Int_ - Built-in function
