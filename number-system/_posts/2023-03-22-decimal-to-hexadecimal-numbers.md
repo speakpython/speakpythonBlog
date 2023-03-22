@@ -98,7 +98,7 @@ Here's how it works:
 This code provides a way for a user to input a decimal number and convert it to its hexadecimal equivalent using the `decimalToHex()`.
 
 ```python
-decimalValue = eval(input("Enter a decimal Value: "))
+decimalValue = int(input("Enter a decimal Value: "))
 print("The hex number for decimal", decimalValue, "is", decimalToHex(decimalValue))
 ```
 
