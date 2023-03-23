@@ -20,26 +20,25 @@
         
     </head>
     <body>
-        <div class="btn-group search-button p-0" role="group" aria-label="Basic example">
-            <button class="btn btn-primary " id="search-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+        <div class="btn-group p-0 search-button" role="group" aria-label="Basic example">
+            <button class="btn btn-primary " id="search-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#searchOffcanvasRight" aria-controls="offcanvasRight">
                 <div class="row">
                     <div class="col-3">
                         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                             <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
                         </svg>
                     </div>
-                    <div class="col-9 d-md-block d-none">
-                        Search
+                    <div class="col-9 d-md-block d-none" style="font-family: 'Ubuntu';font-size: 1rem;">
+                        Search <span class="border border-1 p-1 rounded" style="font-family: Ubuntu;font-size: 10px;margin-left: 5px;vertical-align:2px">F1</span>
                     </div>
                 </div>
             </button>  
             <a class="btn btn-primary active" id="top-down-btn" type="button" href="#top-header" onclick="moveUpDown();">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-down-up" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M11.5 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L11 2.707V14.5a.5.5 0 0 0 .5.5zm-7-14a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V1.5a.5.5 0 0 1 .5-.5z"/>
-                  </svg>
-            </a>  
+                </svg>
+            </a>
         </div>
-            
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
             <div class="container px-4 px-lg-5">
@@ -54,7 +53,7 @@
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/python-training.html">Live Classes</a></li>
                         <li class="nav-item dropdown"><a role="button" class="nav-link px-lg-3 py-3 py-lg-4 dropdown-toggle" data-bs-toggle="dropdown">Code Categories</a>
                             <ul class="dropdown-menu" style="left: -8rem;">
-                                {% for category in site.categories %}
+                                {% for category in site.categories limit: 5 %}
                                     <li>
                                         <a class="dropdown-item" href="/all-posts.html#{{ category | first }}">
                                             <i class="bi bi-bookmarks"></i>
@@ -71,7 +70,7 @@
                 </div>
             </div>
         </nav>
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="searchOffcanvasRight" aria-labelledby="offcanvasRightLabel">
             <div class="offcanvas-header">
             <h6 class="offcanvas-title" id="offcanvasRightLabel">powered by speakpython</h6>
             <button type="button" class="btn btn-primary py-2" data-bs-dismiss="offcanvas" aria-label="Close">

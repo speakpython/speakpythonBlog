@@ -10986,6 +10986,7 @@ header.masthead .site-heading .subheading {
   z-index: 100;
   right: 0;
   margin: 2rem;
+  font-family: 'Ubuntu';
 }
 
 .offcanvas-header{
@@ -11117,4 +11118,11 @@ footer > .container{
 .google-calender iframe{
   width: 100%;
   height: 20rem;
+}
+
+.fn-icon{
+  font-family: 'Ubuntu';
+  font-size: 10px;
+  margin-left: 5px;
+  vertical-align:2px;
 }

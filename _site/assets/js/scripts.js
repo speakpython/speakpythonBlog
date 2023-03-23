@@ -37,3 +37,15 @@ function moveUpDown(){
         topDownBtn.href = "#top-header";
 }
 
+
+$(document).keydown(function(e){
+    if(e.which === 124 ){ // F12 
+        return false;
+    }
+
+    if(e.which === 112){
+        var btn = document.getElementById("search-btn")
+        btn.click();
+        return false;
+    }
+});
