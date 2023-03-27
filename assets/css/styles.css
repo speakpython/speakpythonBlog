@@ -11050,6 +11050,10 @@ footer > .container{
   font-size: 0.85rem;
 }
 
+.offcanvas.offcanvas-end {
+  width: 50%;
+}
+
 @media (max-width: 480px) {
   .search-button{
     margin: 1rem;
@@ -11103,6 +11107,10 @@ footer > .container{
   .bottom-nav{
     font-size: 0.7rem;
     margin-top: 1rem;
+  }
+
+  .offcanvas.offcanvas-end {
+    width: 100%;
   }
 }
 

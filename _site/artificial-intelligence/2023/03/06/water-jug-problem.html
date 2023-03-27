@@ -149,9 +149,12 @@ search.addWidget(
   instantsearch.widgets.searchBox({
     container: '#search-searchbar',
     placeholder: 'Search into posts...',
+    autofocus: true,
     poweredBy: true // This is required if you're on the free Community plan
   })
 );
+
+
 
 search.addWidget(
   instantsearch.widgets.hits({
