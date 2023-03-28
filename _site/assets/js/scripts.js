@@ -49,3 +49,10 @@ $(document).keydown(function(e){
         return false;
     }
 });
+
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+      {pageLanguage: 'en'},
+      'google_translate_element'
+    );
+  }

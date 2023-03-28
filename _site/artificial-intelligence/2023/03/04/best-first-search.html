@@ -78,6 +78,12 @@
                                             Number   system</a>
                                     </li>
                                 
+                                    <li>
+                                        <a class="dropdown-item" href="/all-posts.html#problem-solving">
+                                            <i class="bi bi-bookmarks"></i>
+                                            Problem   solving</a>
+                                    </li>
+                                
                                 <li>
                                     <hr class="mb-1">
                                     <a class="dropdown-item small" href="/all-posts.html">All Categories</a>
@@ -228,7 +234,7 @@ searchBtn.addEventListener('click', () => {
                 <div class="post-heading">
     <div class="subheading fs-6 edit-button">
         <i class="bi bi-github"></i>
-        <i><a href="https://github.com/speakpython/artificial-intelligence/tree/master/best-first-search" target="_blank" style="color: white; padding-left: 5px;">Complete Source</a></i>
+        <a href="https://github.com/speakpython/artificial-intelligence/tree/master/best-first-search" target="_blank" style="color: white; padding-left: 5px;font-style: italic;">SOURCE CODE</a>
     </div>
     <h2 class="h1">Best-first search (BFS)</h2>
     <p class="fst mb-0 code-level"><i class="bi bi-6-square" style="vertical-align: middle;"></i> Intermediate Level </p>
@@ -244,11 +250,17 @@ searchBtn.addEventListener('click', () => {
             
         
     </h2>
-    <span class="meta">
+    <span class="meta border-top pt-3" style="width:fit-content">
         Posted by
         <a href="#postAuthor" role="button">Dev Anand</a>
         on 04 March 2023
     </span>
+    <div class="mt-4 mt-md-3 pt-md-2">
+        <div class="row">
+            <div class="col-2 col-md-1 text-center"><i class="bi bi-translate"></i></div>
+            <div class="col-10 col-md-11 p-0"> <div id="google_translate_element"></div></div>
+        </div>
+    </div>
 </div>
 
             </div>
@@ -324,9 +336,9 @@ searchBtn.addEventListener('click', () => {
     <span class="s">"A"</span><span class="p">:</span> <span class="p">[</span><span class="s">"D"</span><span class="p">,</span> <span class="s">"E"</span><span class="p">,</span> <span class="s">"G"</span><span class="p">],</span>
     <span class="s">"B"</span><span class="p">:</span> <span class="p">[</span><span class="s">"G"</span><span class="p">],</span>
     <span class="s">"C"</span><span class="p">:</span> <span class="p">[</span><span class="s">"G"</span><span class="p">],</span>
-    <span class="s">"D"</span><span class="p">:</span> <span class="p">[</span><span class="s">""</span><span class="p">],</span>
-    <span class="s">"E"</span><span class="p">:</span> <span class="p">[</span><span class="s">""</span><span class="p">],</span>
-    <span class="s">"G"</span><span class="p">:</span> <span class="p">[</span><span class="s">""</span><span class="p">],</span>
+    <span class="s">"D"</span><span class="p">:</span> <span class="p">[],</span>
+    <span class="s">"E"</span><span class="p">:</span> <span class="p">[],</span>
+    <span class="s">"G"</span><span class="p">:</span> <span class="p">[],</span>
 <span class="p">}</span>
 
 <span class="n">heuristic</span> <span class="o">=</span> <span class="p">{</span>
@@ -621,7 +633,7 @@ searchBtn.addEventListener('click', () => {
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>        <!-- Core theme JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
-
-        <script src="http://localhost:4000/assets/js/scripts.js"></script>        
+        <script src="http://localhost:4000/assets/js/scripts.js"></script>   
+        <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>     
     </body>
 </html>

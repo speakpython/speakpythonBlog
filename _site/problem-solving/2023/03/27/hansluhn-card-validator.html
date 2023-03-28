@@ -6,7 +6,7 @@
         <meta name="description" content="Welcome to Python Indeed! Here, we provide comprehensive tutorials on various aspects of Python programming language to help you learn and improve your skills." />
         <meta name="author" content="Speak Python" />
         <meta name="keywords" content="Speak Python, dev3058, Python programming, Python libraries, Python tutorials, Python syntax, Python functions, Python code snippets, Python data structures, Python web development, Python data science, Python machine learning, Python artificial intelligence, Python automation, Python frameworks, Python projects, Python tips and tricks, Python community, Python resources, speakpython.codes, support@speakpython.codes">
-        <title>Hexadecimal To Decimal Numbers - Speak Python</title>
+        <title>Hansluhn Card Validator - Speak Python</title>
         <link rel="icon" type="image/x-icon" href="http://localhost:4000/assets/favicon.ico" />
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
@@ -234,22 +234,22 @@ searchBtn.addEventListener('click', () => {
                 <div class="post-heading">
     <div class="subheading fs-6 edit-button">
         <i class="bi bi-github"></i>
-        <a href="https://github.com/speakpython/number-system/tree/master/hexadecimal-to-decimal-numbers" target="_blank" style="color: white; padding-left: 5px;font-style: italic;">SOURCE CODE</a>
+        <a href="https://github.com/speakpython/problem-solving/tree/master/hansluhn-card-validator" target="_blank" style="color: white; padding-left: 5px;font-style: italic;">SOURCE CODE</a>
     </div>
-    <h2 class="h1">Converting Hexadecimal to Decimal Made Easy!</h2>
-    <p class="fst mb-0 code-level"><i class="bi bi-3-square" style="vertical-align: middle;"></i> Junior's Tutorial </p>
+    <h2 class="h1">Validating Credit and Debit Card Numbers</h2>
+    <p class="fst mb-0 code-level"><i class="bi bi-5-square" style="vertical-align: middle;"></i> Beginner's friendly </p>
     <h2 class="subheading">
-        #number-system
+        #problem-solving
         
              
-                #hex-to-decimal
+                #luhn-algorithm
             
         
     </h2>
     <span class="meta border-top pt-3" style="width:fit-content">
         Posted by
         <a href="#postAuthor" role="button">Dev Anand</a>
-        on 21 March 2023
+        on 27 March 2023
     </span>
     <div class="mt-4 mt-md-3 pt-md-2">
         <div class="row">
@@ -268,162 +268,165 @@ searchBtn.addEventListener('click', () => {
     <div class="container px-3 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
-                <p>If you’re looking to improve your Python skills, learning how to convert hexadecimal to decimal is a great place to start. In this tutorial, we’ll explore the <em>basics of hexadecimal</em> and walk through the steps of converting it to decimal using Python.</p>
+                <p>In this blog post, we’ll be exploring how to validate credit and debit card numbers using Python.</p>
 
-<p><img src="https://www.ionos.ca/digitalguide/fileadmin/DigitalGuide/Teaser/zahlen-t.jpg" alt="'case-converter'" /></p>
+<p>By the end of this post, you’ll have a solid understanding of how the Luhn algorithm works and how to use it in Python to check whether a given card number is valid or not.</p>
 
-<h2 id="decimal-and-hexadecimal-numbers">Decimal and Hexadecimal Numbers</h2>
+<p><img src="https://www.serviceobjects.com/blog/wp-content/uploads/2019/02/Credit-Card-BIN.jpg" alt="'tic-tac-toe-image'" /></p>
 
-<p>Decimal and hexadecimal are two different numbering systems used to represent numbers in computing and mathematics.</p>
+<h2 id="luhn-algorithm">Luhn Algorithm</h2>
 
-<p><strong>Decimal</strong>, also known as <em>base-10</em>, is the numerical system that most people are familiar with, which <em>uses 10 digits (0-9)</em> to represent values.</p>
+<p>It is also known as the <em>mod 10 algorithm</em>, is a <code class="language-plaintext highlighter-rouge">checksum</code> formula used to validate identification numbers, including credit and debit card numbers. It works by performing a series of mathematical operations on the digits of the card number.</p>
+
+<p>To validate a card number using the Luhn algorithm,</p>
 
 <ul>
   <li>
-    <p>Each digit’s position represents a power of 10.</p>
+    <p>we start by doubling every second digit, starting from the second-to-last digit and working towards the beginning of the number</p>
   </li>
   <li>
-    <p>For example, the number <code class="language-plaintext highlighter-rouge">1234</code> in decimal form represents the value of <code class="language-plaintext highlighter-rouge">1x10^3 + 2x10^2 + 3x10^1 + 4x10^0</code>.</p>
+    <p>If <strong>doubling</strong> a digit results in a two-digit number, we add the two digits together to get a single digit.</p>
   </li>
-</ul>
-
-<p><strong>hexadecimal</strong>, also known as <code class="language-plaintext highlighter-rouge">base-16</code>, is a numerical system that uses <code class="language-plaintext highlighter-rouge">16 digits (0-9, A-F)</code> to represent values.</p>
-
-<ul>
-  <li>Each digit’s position represents a power of 16.</li>
-  <li>For example, the number <code class="language-plaintext highlighter-rouge">1A</code> in hexadecimal form represents the value of <code class="language-plaintext highlighter-rouge">1x16^1 + 10x16^0</code>, which is equal to <code class="language-plaintext highlighter-rouge">26</code> in decimal form.</li>
+  <li>
+    <p>Then we <em>sum up all the digits</em> in the resulting number, including the check digit.</p>
+  </li>
+  <li>
+    <p>If the <em>total sum is divisible by 10</em>, the card number is considered valid. Otherwise, it’s <strong>invalid</strong>.</p>
+  </li>
 </ul>
 
 <p><br /></p>
-
-<hr />
-
-<p><em>Before starting to write code, it’s important to have a basic understanding of how the two numbering systems work.</em></p>
-
-<p><strong>Resource link</strong>: <a href="https://www.wikihow.com/Convert-Hexadecimal-to-Binary-or-Decimal">How to Convert from Hexadecimal to Decimal</a>.</p>
-
 <hr />
 
 <p><br /></p>
 
 <blockquote>
-  <p>Keep calm coding begins…</p>
+  <p>Keep calm coding begins….</p>
 </blockquote>
 
-<h3 id="int---built-in-function"><em>Int</em> - Built-in function</h3>
+<h2 id="card-validation-in-python">Card Validation in Python</h2>
+<p>These functions provide a basic implementation of the Luhn algorithm for validating credit and debit card numbers, by computing the sums of the digits in the odd and even positions of the number, and checking whether their sum is divisible by 10.</p>
 
-<p>The <code class="language-plaintext highlighter-rouge">int()</code> is used to convert a value to an integer, and the <code class="language-plaintext highlighter-rouge">base</code> parameter specifies the base of the number being converted, in this case <code class="language-plaintext highlighter-rouge">16</code> for <code class="language-plaintext highlighter-rouge">hexadecimal</code>.</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">int</span><span class="p">(</span><span class="s">'af71'</span><span class="p">,</span> <span class="n">base</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
-
-<span class="c1">#Output: 44913
-</span></code></pre></div></div>
-<p>The resulting decimal value of this function call would be <code class="language-plaintext highlighter-rouge">44913</code>.</p>
-
-<p><br /></p>
-
-<h3 id="hextodecimal---custom-function">hexToDecimal - Custom function</h3>
-
-<p>We have defines two functions <code class="language-plaintext highlighter-rouge">hexToDecimal()</code> and <code class="language-plaintext highlighter-rouge">hexCharToDecimal()</code> that can be used to convert a hexadecimal string to its decimal equivalent in Python.</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">hexToDecimal</span><span class="p">(</span><span class="nb">hex</span><span class="p">):</span>
-    <span class="n">decimalValue</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="nb">hex</span><span class="p">)):</span>
-        <span class="n">ch</span> <span class="o">=</span> <span class="nb">hex</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-        
-        <span class="k">if</span> <span class="s">'A'</span> <span class="o">&lt;=</span> <span class="n">ch</span> <span class="o">&lt;=</span> <span class="s">'F'</span> <span class="ow">or</span> <span class="s">'0'</span> <span class="o">&lt;=</span> <span class="n">ch</span> <span class="o">&lt;=</span> <span class="s">'9'</span><span class="p">:</span>
-            <span class="n">decimalValue</span> <span class="o">=</span> <span class="n">decimalValue</span> <span class="o">*</span> <span class="mi">16</span> <span class="o">+</span> <span class="n">hexCharToDecimal</span><span class="p">(</span><span class="n">ch</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="bp">None</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">getDigit</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">number</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">digitSum</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">digit</span> <span class="ow">in</span> <span class="n">number</span><span class="p">:</span>
+            <span class="n">digitSum</span> <span class="o">+=</span> <span class="nb">int</span><span class="p">(</span><span class="n">digit</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">digitSum</span>
     
-    <span class="k">return</span> <span class="n">decimalValue</span>
+    <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">hexCharToDecimal</span><span class="p">(</span><span class="n">ch</span><span class="p">):</span>
-    <span class="k">if</span> <span class="s">'A'</span> <span class="o">&lt;=</span> <span class="n">ch</span> <span class="o">&lt;=</span> <span class="s">'F'</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">10</span> <span class="o">+</span> <span class="nb">ord</span><span class="p">(</span><span class="n">ch</span><span class="p">)</span> <span class="o">-</span> <span class="nb">ord</span><span class="p">(</span><span class="s">'A'</span><span class="p">)</span>
-    <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">ch</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">sumOfDoubleEvenPlace</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
+    <span class="n">evenDigitSum</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">number</span><span class="p">),</span> <span class="mi">2</span><span class="p">):</span>
+        <span class="n">evenDigitSum</span> <span class="o">+=</span> <span class="n">getDigit</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">number</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">*</span> <span class="mi">2</span><span class="p">))</span>
+        
+    <span class="k">return</span> <span class="n">evenDigitSum</span>
+
+<span class="k">def</span> <span class="nf">sumOfOddPlace</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
+    <span class="n">oddDigitSum</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">number</span><span class="p">),</span> <span class="mi">2</span><span class="p">):</span>
+        <span class="n">oddDigitSum</span> <span class="o">+=</span> <span class="nb">int</span><span class="p">(</span><span class="n">number</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+
+    <span class="k">return</span> <span class="n">oddDigitSum</span>
 </code></pre></div></div>
-
-<p>Here’s how it works:</p>
-
-<p><code class="language-plaintext highlighter-rouge">hexToDecimal(hex)</code> takes a string <code class="language-plaintext highlighter-rouge">hex</code> representing a hexadecimal number as <em>input</em>, and <em>returns</em> its decimal equivalent.</p>
+<p><code class="language-plaintext highlighter-rouge">getDigit(number)</code> computes the sum of the digits in a given number.</p>
 
 <ul>
-  <li>It does so by iterating over each character of the input string, and multiplying the decimal value by <code class="language-plaintext highlighter-rouge">16</code> for each new digit encountered, and adding the decimal equivalent of that digit to the total - <code class="language-plaintext highlighter-rouge">decimalValue</code>.</li>
+  <li>
+    <p>If the number has more than one digit, it iterates over each digit in the number and adds them up, returning the resulting sum.</p>
+  </li>
+  <li>
+    <p>If the number has only one digit, it simply returns that digit as an integer..</p>
+  </li>
 </ul>
 
-<p><code class="language-plaintext highlighter-rouge">hexCharToDecimal(ch)</code> function takes a single character <code class="language-plaintext highlighter-rouge">ch</code> as <em>input</em>, and <em>returns</em> its decimal equivalent.</p>
+<p><code class="language-plaintext highlighter-rouge">sumOfDoubleEvenPlace(number)</code> computes the sum of the digits in the <em>even positions of a card number</em>, after doubling each digit.</p>
 
 <ul>
   <li>
-    <p>It does so by checking if the character is in the range <code class="language-plaintext highlighter-rouge">A</code> to <code class="language-plaintext highlighter-rouge">F</code>, and if so, returns its decimal value as <code class="language-plaintext highlighter-rouge">10</code> plus the difference between the <code class="language-plaintext highlighter-rouge">ASCII</code> value of <code class="language-plaintext highlighter-rouge">ch</code> and the <code class="language-plaintext highlighter-rouge">ASCII</code> value of <code class="language-plaintext highlighter-rouge">A</code>.</p>
+    <p>It does so by iterating over every second digit in the card number, starting from the <em>second-to-last digit (i.e., the second-to-rightmost position)</em>, and multiplying each digit by <code class="language-plaintext highlighter-rouge">2</code>.</p>
   </li>
   <li>
-    <p>If the character is not in this range, it is assumed to be a digit in the range <code class="language-plaintext highlighter-rouge">0</code> to <code class="language-plaintext highlighter-rouge">9</code>, and its integer value is returned.</p>
+    <p>The resulting numbers are then passed to <code class="language-plaintext highlighter-rouge">getDigit()</code> to get the sum of their digits, which are added to <code class="language-plaintext highlighter-rouge">evenDigitSum</code>.</p>
   </li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">sumOfOddPlace(number)</code> computes the sum of the digits in the odd positions of a card number.</p>
+
+<ul>
+  <li>It does so by iterating over every <em>second digit in the card number</em>, starting from the <em>leftmost position</em>, and adding each digit to <code class="language-plaintext highlighter-rouge">oddDigitSum</code>.</li>
 </ul>
 
 <p><br /></p>
 
-<h3 id="driver-code---function-calling">Driver Code - function calling</h3>
+<h3 id="driver-code---isvalidnumber">Driver Code - isValid(number)</h3>
+<p>It checks whether a given card number is valid by using the defined algorithm with some additional conditions.</p>
 
-<p>This code provides a way for a user to input a hexadecimal number and convert it to its decimal equivalent using the <code class="language-plaintext highlighter-rouge">hexToDecimal()</code>.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">isValid</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
+    <span class="k">if</span> <span class="mi">14</span> <span class="o">&lt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">number</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">16</span><span class="p">:</span>
+        <span class="n">number</span> <span class="o">=</span> <span class="n">number</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">sumOfOddPlace</span><span class="p">(</span><span class="n">number</span><span class="p">)</span> <span class="o">+</span> <span class="n">sumOfDoubleEvenPlace</span><span class="p">(</span><span class="n">number</span><span class="p">))</span> <span class="o">%</span> <span class="mi">10</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">True</span>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">hexData</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">'Enter a hex number: '</span><span class="p">).</span><span class="n">strip</span><span class="p">()</span>
-<span class="n">decimal</span> <span class="o">=</span> <span class="n">hexToDecimal</span><span class="p">(</span><span class="n">hexData</span><span class="p">.</span><span class="n">upper</span><span class="p">())</span>
-
-<span class="k">print</span><span class="p">(</span><span class="s">"The decimal value for hex number"</span><span class="p">,</span><span class="n">hexData</span><span class="p">,</span><span class="s">"is"</span><span class="p">,</span><span class="n">decimal</span><span class="p">)</span> <span class="k">if</span> <span class="n">decimal</span> <span class="k">else</span>  <span class="k">print</span><span class="p">(</span><span class="s">"Incorrect hex number."</span><span class="p">)</span>
+    <span class="k">return</span> <span class="bp">False</span>
 </code></pre></div></div>
-
 <ul>
   <li>
-    <p>the code prompts the user to enter a hexadecimal number using the <code class="language-plaintext highlighter-rouge">input()</code>, and stores the input in the variable <code class="language-plaintext highlighter-rouge">hexData</code>.</p>
+    <p>It first checks whether the number has a valid length (i.e., between 14 and 16 digits).</p>
   </li>
   <li>
-    <p>The <code class="language-plaintext highlighter-rouge">strip()</code> function is called on this input to remove any leading or trailing whitespace characters.</p>
+    <p>if the number is valid, it reverses the order of the digits in the number using the <code class="language-plaintext highlighter-rouge">[::-1]</code> syntax, and then computes the sum of the digits in the odd and even positions using <code class="language-plaintext highlighter-rouge">sumOfOddPlace()</code> and <code class="language-plaintext highlighter-rouge">sumOfDoubleEvenPlace()</code>.</p>
   </li>
   <li>
-    <p>Next, the <code class="language-plaintext highlighter-rouge">hexData</code> string is converted to uppercase using the <code class="language-plaintext highlighter-rouge">.upper()</code> method to ensure consistency in character case, since <em>hexadecimal digits can be represented in both uppercase and lowercase</em>.</p>
-  </li>
-  <li>
-    <p>Then, the <code class="language-plaintext highlighter-rouge">hexToDecimal()</code> is called with the <code class="language-plaintext highlighter-rouge">hexData</code> string as input, and the resulting decimal value is stored in the variable <code class="language-plaintext highlighter-rouge">decimal</code>.</p>
-  </li>
-  <li>
-    <p>If <code class="language-plaintext highlighter-rouge">decimal</code> is not <code class="language-plaintext highlighter-rouge">None</code>, the code prints the resulting decimal otherwise error message.</p>
+    <p>If the resulting sum is divisible by <code class="language-plaintext highlighter-rouge">10</code>, the card number is considered <em>valid</em>, and the function returns <code class="language-plaintext highlighter-rouge">True</code>. Otherwise, it returns <code class="language-plaintext highlighter-rouge">False</code>.</p>
   </li>
 </ul>
-
-<p><br /></p>
 
 <h3 id="example-testing">Example testing</h3>
 
-<p><img src="../../../image/example-testing-hex-to-decimal.png" alt="'example-testing-hex-to-decimal'" /></p>
+<p>Please note that given card numbers are just an example and should not be used for any illegal or fraudulent activities.</p>
 
-                
-                <div class="container p-0 my-4 mt-5">
-                    <div class="content-credit">
-                        
-                            Special thanks to 
-                        
-                        
-                            <a href="https://en.wikipedia.org/wiki/Main_Page" class="font-dark">Wikipedia</a>
-                            
-                    </div>
-                </div>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">number</span> <span class="o">=</span> <span class="s">'5105105105105100'</span> <span class="c1">#fictitious Mastercard Card Number
+</span><span class="k">print</span><span class="p">(</span><span class="n">isValid</span><span class="p">(</span><span class="n">number</span><span class="p">))</span>
+
+<span class="c1">#Output: True
+</span></code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">number</span> <span class="o">=</span> <span class="s">'4556567890123456'</span> <span class="c1">#fictitious Visa Card Number
+</span><span class="k">print</span><span class="p">(</span><span class="n">isValid</span><span class="p">(</span><span class="n">number</span><span class="p">))</span>
+
+<span class="c1">#Output: True
+</span></code></pre></div></div>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">number</span> <span class="o">=</span> <span class="s">'4559567990123456'</span> <span class="c1">#fictitious Visa Card Number
+</span><span class="k">print</span><span class="p">(</span><span class="n">isValid</span><span class="p">(</span><span class="n">number</span><span class="p">))</span>
+
+<span class="c1">#Output: False
+</span></code></pre></div></div>
+
+<p><br /></p>
+
+<hr />
+
+<p><strong>Note</strong>: <em>Defined solution, may not cover all possible card number validation scenarios, and may need to be adapted to meet specific requirements or use cases.</em></p>
+<hr />
+
+<p><br /></p>
+
                 
                 <hr class="my-4" />
                 <div class="d-flex justify-content-between gap-2 mb-4">
                     
-                    <a class="btn  btn-primary  w-100 text-end" href="/string-formatting/2023/03/12/string-case-manipulation-custom-and-builtin-methods.html" class="px-3">
+                    <a class="btn  btn-primary  w-100 text-end" href="/number-system/2023/03/22/decimal-to-hexadecimal-numbers.html" class="px-3">
                         <div class="d-flex justify-content-between gap-2">
                             <i class="bi bi-chevron-double-left"></i>
-                            String Case Manipulation Custom And Builtin Methods
+                            Decimal To Hexadecimal Numbers
                         </div>
                     </a>
                     
-                    <a class="btn  btn-primary  w-100 text-end" href="/number-system/2023/03/22/decimal-to-hexadecimal-numbers.html" class="px-3">
+                    <a class="btn  opacity-0 disabled d-none d-md-block  w-100 text-end" href="\" class="px-3">
                         <div class="d-flex justify-content-between gap-2">
-                        Decimal To Hexadecimal Numbers
+                        
                         <i class="bi bi-chevron-double-right"></i>
                         </div>
                     </a>
@@ -509,10 +512,10 @@ searchBtn.addEventListener('click', () => {
                     <div class="btn-group gap-3 mt-4">
                         <div class="fs-6 edit-button git-contribute">
                             <svg aria-hidden="true" focusable="false" role="img" class="octicon mr-1" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom;overflow:visible"><path d="M1.5 3.25a2.25 2.25 0 113 2.122v5.256a2.251 2.251 0 11-1.5 0V5.372A2.25 2.25 0 011.5 3.25zm5.677-.177L9.573.677A.25.25 0 0110 .854V2.5h1A2.5 2.5 0 0113.5 5v5.628a2.251 2.251 0 11-1.5 0V5a1 1 0 00-1-1h-1v1.646a.25.25 0 01-.427.177L7.177 3.427a.25.25 0 010-.354zM3.75 2.5a.75.75 0 100 1.5.75.75 0 000-1.5zm0 9.5a.75.75 0 100 1.5.75.75 0 000-1.5zm8.25.75a.75.75 0 101.5 0 .75.75 0 00-1.5 0z"></path></svg>
-                            <a href="https://github.com/speakpython/speakpythonBlog/blob/gh-pages/number-system/_posts/2023-03-21-hexadecimal-to-decimal-numbers.md" target="_blank" style="padding-left: 5px;font-family: 'Ubuntu'; font-style: normal;">Make a contribution</a>
+                            <a href="https://github.com/speakpython/speakpythonBlog/blob/gh-pages/problem-solving/_posts/2023-03-27-hansluhn-card-validator.md" target="_blank" style="padding-left: 5px;font-family: 'Ubuntu'; font-style: normal;">Make a contribution</a>
                         </div>
                         <div class="report-error">
-                            <a href="mailto:support@speakpython.codes?subject=Reporting Error at - `Hexadecimal To Decimal Numbers`" style="font-family: Arial;font-size: 14px;">Report an error</a>
+                            <a href="mailto:support@speakpython.codes?subject=Reporting Error at - `Hansluhn Card Validator`" style="font-family: Arial;font-size: 14px;">Report an error</a>
                         </div>
                     </div>
                 </div>

@@ -89,6 +89,9 @@ footer ul{
         height: 100%;
         padding: 0;
       }
+      .meta{
+        font-size: 0.9rem !important;
+      }
 }
 
  @keyframes selectionSharerPopover-animation {
@@ -338,4 +341,10 @@ h2:target, h3:target, h4:target, h5:target{
 .report-error:hover{
   text-decoration: underline;
   text-underline-offset: 0.3rem;
+}
+
+@media (min-width: 480px) {
+ .masthead{
+  padding: 10rem 0rem !important;
+ }
 }
