@@ -31,7 +31,7 @@ layout: default
                             Thanks to 
                         {% endif %}
                         {% for credit in page.credits %}
-                            <a href="{{ site.external_link[credit] }}" class="font-dark">{{credit | capitalize}}</a>
+                            <a href="{{ site.external_link[credit] }}" class="font-dark">{{ credit | replace: '-', ' ' | capitalize }}</a>
                         {% endfor %}    
                     </div>
                 </div>

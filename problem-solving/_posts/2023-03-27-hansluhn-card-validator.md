@@ -1,9 +1,9 @@
 ---
 layout: post
 heading:  Validating Credit and Debit Card Numbers
-keywords: ['luhn-algorithm']
+keywords: ['luhn-algorithm', 'checksum-formula']
 author_id: 'dev3058'
-credits: []
+credits: ['yongdaniel-liang']
 level: 5
 published: true
 ---
@@ -133,5 +133,3 @@ print(isValid(number))
 
 __Note__: _Defined solution, may not cover all possible card number validation scenarios, and may need to be adapted to meet specific requirements or use cases._
 <hr />
-
-<br/>
