@@ -143,7 +143,6 @@
     this.copyClipboard = function(e) {
       e.preventDefault();
       var text = self.htmlSelection.replace(/<p[^>]*>/ig,'\n').replace(/<\/p>|  /ig,'').trim();
-      console.log(text.replace(/<[^>]*>/g, ''))
       navigator.clipboard.writeText(text.replace(/<[^>]*>/g, ''));
       self.hide();
       window.getSelection().empty();
@@ -287,7 +286,6 @@ $(':header[id]').each(function() {
   anchor.href = '#' + this.id
   $(this).wrapInner(anchor)
   this.innerHTML += `<span class='small text-dark internal-bookmark' title="Share link"> <i class="bi bi-bookmark"></i></span>`
-  console.log(this)
 });
 
 $('.internal-bookmark').click(function() {
@@ -313,3 +311,17 @@ $('.internal-bookmark').click(function() {
     this.innerHTML = ` <i class="bi bi-bookmark"></i>`;
   }, 3500)
 })
+
+function scrollHandler() {
+  const progressBar = document.querySelector('.progress-bar');
+  const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight
+  var scrolled = (winScroll / height) * 100
+  progressBar.parentElement.style.display = "none";
+  if ((winScroll > document.documentElement.clientHeight)){
+    progressBar.parentElement.style.display = "flex";
+  }
+  progressBar.style.width = `${scrolled}%`;
+    
+}
+window.addEventListener('scroll', scrollHandler);

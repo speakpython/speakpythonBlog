@@ -21,13 +21,16 @@ It is also known as the _mod 10 algorithm_, is a `checksum` formula used to vali
 
 To validate a card number using the Luhn algorithm, 
 
-- we start by doubling every second digit, starting from the second-to-last digit and working towards the beginning of the number
+1. Double every second digit from right to left, if __doubling__ a digit results in a two-digit number, we add the two digits together to get a single digit (for illustration, consider the card number _4388576018402626_):
+!['luhn-card-validator-eg-1'](../../../image/luhn-card-validator-eg-1.png)
 
-- If __doubling__ a digit results in a two-digit number, we add the two digits together to get a single digit.
+2. Now add all single-digit numbers from Step 1 `4 + 4 + 8 + 2 + 3 + 1 + 7 + 8 = 37` 
 
-- Then we _sum up all the digits_ in the resulting number, including the check digit. 
+3. Add all digits in the odd places from right to left in the card number `6 + 6 + 0 + 8 + 0 + 7 + 8 + 3 = 38`
 
-- If the _total sum is divisible by 10_, the card number is considered valid. Otherwise, it's __invalid__.
+4. Sum the results from Steps 2 and 3. `37 + 38 = 75`
+
+If the result from Step 4 is divisible by `10`, the card number is _valid_; otherwise, it is _invalid_. For example, the number _4388576018402626 is invalid_, but the number _4388576018410707 is valid_.
 
 <br/>
 <hr>

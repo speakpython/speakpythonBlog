@@ -267,6 +267,15 @@ searchBtn.addEventListener('click', () => {
         </div>
     </div>
 </header>
+<div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="
+    position: sticky;
+    top: 0;
+    z-index: 100000;
+    height: 0.5rem;
+    display: none;
+">
+  <div class="progress-bar"></div>
+</div>
 <!-- Post Content-->
 <article class="mb-4">
     <div class="container px-3 px-lg-5">
@@ -284,20 +293,23 @@ searchBtn.addEventListener('click', () => {
 
 <p>To validate a card number using the Luhn algorithm,</p>
 
-<ul>
+<ol>
   <li>
-    <p>we start by doubling every second digit, starting from the second-to-last digit and working towards the beginning of the number</p>
+    <p>Double every second digit from right to left, if <strong>doubling</strong> a digit results in a two-digit number, we add the two digits together to get a single digit (for illustration, consider the card number <em>4388576018402626</em>):
+<img src="../../../image/luhn-card-validator-eg-1.png" alt="'luhn-card-validator-eg-1'" /></p>
   </li>
   <li>
-    <p>If <strong>doubling</strong> a digit results in a two-digit number, we add the two digits together to get a single digit.</p>
+    <p>Now add all single-digit numbers from Step 1 <code class="language-plaintext highlighter-rouge">4 + 4 + 8 + 2 + 3 + 1 + 7 + 8 = 37</code></p>
   </li>
   <li>
-    <p>Then we <em>sum up all the digits</em> in the resulting number, including the check digit.</p>
+    <p>Add all digits in the odd places from right to left in the card number <code class="language-plaintext highlighter-rouge">6 + 6 + 0 + 8 + 0 + 7 + 8 + 3 = 38</code></p>
   </li>
   <li>
-    <p>If the <em>total sum is divisible by 10</em>, the card number is considered valid. Otherwise, it’s <strong>invalid</strong>.</p>
+    <p>Sum the results from Steps 2 and 3. <code class="language-plaintext highlighter-rouge">37 + 38 = 75</code></p>
   </li>
-</ul>
+</ol>
+
+<p>If the result from Step 4 is divisible by <code class="language-plaintext highlighter-rouge">10</code>, the card number is <em>valid</em>; otherwise, it is <em>invalid</em>. For example, the number <em>4388576018402626 is invalid</em>, but the number <em>4388576018410707 is valid</em>.</p>
 
 <p><br /></p>
 <hr />
