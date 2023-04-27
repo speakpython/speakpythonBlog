@@ -318,7 +318,7 @@ function scrollHandler() {
   const height = document.documentElement.scrollHeight - document.documentElement.clientHeight
   var scrolled = (winScroll / height) * 100
   progressBar.parentElement.style.display = "none";
-  if ((winScroll > document.documentElement.clientHeight)){
+  if ((winScroll - 100 > document.documentElement.clientHeight)){
     progressBar.parentElement.style.display = "flex";
   }
   progressBar.style.width = `${scrolled}%`;
