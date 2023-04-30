@@ -6,7 +6,7 @@
         <meta name="description" content="Welcome to Python Indeed! Here, we provide comprehensive tutorials on various aspects of Python programming language to help you learn and improve your skills." />
         <meta name="author" content="Speak Python" />
         <meta name="keywords" content="Speak Python, dev3058, Python programming, Python libraries, Python tutorials, Python syntax, Python functions, Python code snippets, Python data structures, Python web development, Python data science, Python machine learning, Python artificial intelligence, Python automation, Python frameworks, Python projects, Python tips and tricks, Python community, Python resources, speakpython.codes, support@speakpython.codes">
-        <title>Hangman Word Game - Speak Python</title>
+        <title>Symbol Balancing - Speak Python</title>
         <link rel="icon" type="image/x-icon" href="http://localhost:4000/assets/favicon.ico" />
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
@@ -234,26 +234,26 @@ searchBtn.addEventListener('click', () => {
                 <div class="post-heading">
     <div class="subheading fs-6 edit-button">
         <i class="bi bi-github"></i>
-        <a href="https://github.com/speakpython/two-player-game/tree/master/hangman-word-game" target="_blank" style="color: white; padding-left: 5px;font-style: italic;">SOURCE CODE</a>
+        <a href="https://github.com/speakpython/problem-solving/tree/master/symbol-balancing" target="_blank" style="color: white; padding-left: 5px;font-style: italic;">SOURCE CODE</a>
     </div>
-    <h2 class="h1">Hangman - classic word game</h2>
+    <h2 class="h1">Balancing Braces and Parentheses</h2>
     <p class="fst mb-0 code-level"><i class="bi bi-4-square" style="vertical-align: middle;"></i> Code for beginners </p>
     <h2 class="subheading">
-        #two-player-game
+        #problem-solving
         
              
-                #problem-solving
+                #stack-push-pop
             
         
              
-                #fun-with-python
+                #balancing-symbols
             
         
     </h2>
     <span class="meta border-top pt-3" style="width:fit-content">
         Posted by
         <a href="#postAuthor" role="button">Dev Anand</a>
-        on 07 March 2023
+        on 29 April 2023
     </span>
     <div class="mt-4 mt-md-3 pt-md-2">
         <div class="row">
@@ -275,21 +275,35 @@ searchBtn.addEventListener('click', () => {
     <div class="container px-3 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
-                <p>Are you interested in creating a fun and interactive game in Python? If so, let’s dive into building a Hangman game!</p>
+                <p>In this blog post, we will explore how to use a stack in Python to balance symbols, and we will walk through a step-by-step guide on how to implement this solution.</p>
 
-<p><img src="https://www.rd.com/wp-content/uploads/2017/08/Here-Is-The-Hardest-Word-To-Guess-in-Hangman-According-To-Science-ft.jpg" alt="'Hangman'" /></p>
+<p><img src="https://miro.medium.com/v2/resize:fit:1400/0*PJ-SPI1RfWY8smKb" alt="'balancing'" /></p>
 
-<h2 id="about-hangman">About Hangman</h2>
-<p>Hangman is a <strong>word guessing game</strong> where one player thinks of a word and the other player(s) try to guess it by suggesting letters.</p>
+<h2 id="symbol-balancing">Symbol Balancing</h2>
 
-<ul>
+<p>Balancing symbols like braces and parentheses in code is a crucial task that every programmer needs to do. Failing to do so can lead to syntax errors, which can be difficult to find and fix.</p>
+
+<p>Luckily, there is an elegant solution to this problem using the stack data structure.</p>
+
+<p><img src="https://miro.medium.com/v2/resize:fit:1400/1*OQCqjov45xVUm3Tfrs-yxw.gif" alt="'balancing-statement'" /></p>
+
+<ol>
   <li>
-    <p>The player(s) have a <em>limited number of guesses</em> and for each incorrect guess, a part of a hanging man is drawn.</p>
+    <p>Define a stack data structure, which is a collection of elements that supports two main operations: <code class="language-plaintext highlighter-rouge">push</code> <em>(adds an element to the top of the stack)</em> and <code class="language-plaintext highlighter-rouge">pop</code> <em>(removes the top element from the stack)</em>.</p>
   </li>
   <li>
-    <p>The game continues until the player(s) either guess the word correctly or the hanging man is fully drawn, in which case the game is lost.</p>
+    <p>Iterate through each symbol in the statement. If the symbol is an opening symbol ( e.g., <code class="language-plaintext highlighter-rouge">{</code>, <code class="language-plaintext highlighter-rouge">(</code>, <code class="language-plaintext highlighter-rouge">[</code> ), push it onto the stack.</p>
   </li>
-</ul>
+  <li>
+    <p>If the symbol is a closing symbol ( e.g., <code class="language-plaintext highlighter-rouge">}</code>, <code class="language-plaintext highlighter-rouge">)</code>, <code class="language-plaintext highlighter-rouge">]</code> ), check if it matches the opening symbol at the top of the stack. If it does, pop the opening symbol from the stack. If it doesn’t, the statement is not balanced, and you can stop iterating.</p>
+  </li>
+  <li>
+    <p>After iterating through all symbols, check if the stack is empty. If it is, the statement is balanced. If it’s not, the statement is not balanced.</p>
+  </li>
+</ol>
+
+<p><br /></p>
+<hr />
 
 <p><br /></p>
 
@@ -297,234 +311,98 @@ searchBtn.addEventListener('click', () => {
   <p>Keep calm coding begins….</p>
 </blockquote>
 
-<h2 id="hangman-in-python">Hangman in Python</h2>
+<h2 id="python-symbol-balancing">Python Symbol Balancing</h2>
+<p>This is a Python program that uses a stack to check if a given string of symbols has a balanced arrangement.</p>
 
-<hr />
-
-<h3 id="puzzle-hint-and-answer">Puzzle hint and answer</h3>
-
-<p>This code sets up the puzzle answer and hint for the Hangman game, which will be used later in the game to generate the puzzle and provide hints to the user.</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">getpass</span> <span class="kn">import</span> <span class="n">getpass</span>
-<span class="kn">import</span> <span class="nn">math</span><span class="p">,</span> <span class="n">random</span>
-
-<span class="n">string</span> <span class="o">=</span> <span class="n">getpass</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">Provide Puzzle Answer (Player 1) : "</span><span class="p">).</span><span class="n">strip</span><span class="p">().</span><span class="n">replace</span><span class="p">(</span><span class="s">" "</span><span class="p">,</span> <span class="s">""</span><span class="p">).</span><span class="n">casefold</span><span class="p">()</span>
-<span class="n">hint</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">'Any Hint : '</span><span class="p">)</span>
-</code></pre></div></div>
-
-<blockquote>
-  <p>notes to the codes…</p>
-</blockquote>
-
-<ul>
-  <li>
-    <p>The code above imports the <code class="language-plaintext highlighter-rouge">getpass</code> function from the <code class="language-plaintext highlighter-rouge">getpass</code> module, which allows the user to input a value without it being displayed on the screen.</p>
-  </li>
-  <li>
-    <p>The next line prompts the user to input a puzzle answer which is then <code class="language-plaintext highlighter-rouge">stripped</code> of any leading or trailing <code class="language-plaintext highlighter-rouge">white spaces</code> and converted to <code class="language-plaintext highlighter-rouge">lowercase</code> letters. This ensures that the puzzle answer is <strong>consistent</strong> and easier to compare with the user’s guesses.</p>
-  </li>
-  <li>
-    <p>Last line prompts the user to input a hint for the puzzle answer, which is stored in the <code class="language-plaintext highlighter-rouge">hint</code> variable. This hint can be displayed to the user during the game to provide additional context for the puzzle answer.</p>
-  </li>
-</ul>
-
-<p><br /></p>
-
-<h3 id="random-and-custom-puzzle-design">Random and Custom Puzzle design</h3>
-
-<p>You can express the two ways of creating a puzzle for the Hangman game in your code</p>
-
-<ul>
-  <li>
-    <p>by providing the user with the <em>option to either input their own word</em> for the game</p>
-  </li>
-  <li>
-    <p>or have the game <em>randomly select a word</em> for them.</p>
-  </li>
-</ul>
-
-<p><br /></p>
-
-<h5 id="random-puzzle-design">Random puzzle design</h5>
-
-<hr />
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">auto_puzzle</span><span class="p">(</span><span class="n">puzzle</span><span class="p">,</span> <span class="n">missing_words</span> <span class="o">=</span> <span class="s">""</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">puzzle</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span><span class="p">)):</span>
-        <span class="n">random_value</span> <span class="o">=</span> <span class="n">puzzle</span><span class="p">[</span><span class="n">math</span><span class="p">.</span><span class="n">floor</span><span class="p">(</span><span class="n">random</span><span class="p">.</span><span class="n">random</span><span class="p">()</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="n">puzzle</span><span class="p">))]</span>
-        <span class="k">if</span> <span class="n">random_value</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">missing_words</span><span class="p">:</span>
-            <span class="n">missing_words</span> <span class="o">+=</span> <span class="n">random_value</span>
-    <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">puzzle</span><span class="p">)):</span>
-        <span class="k">if</span> <span class="n">puzzle</span><span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="ow">in</span> <span class="n">missing_words</span><span class="p">:</span>
-            <span class="n">puzzle</span> <span class="o">=</span> <span class="n">puzzle</span><span class="p">.</span><span class="n">replace</span><span class="p">(</span><span class="n">puzzle</span><span class="p">[</span><span class="n">a</span><span class="p">],</span><span class="s">'_'</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">puzzle</span><span class="p">,</span> <span class="n">missing_words</span>
-</code></pre></div></div>
-
-<p><code class="language-plaintext highlighter-rouge">auto_puzzle</code> that takes in a “puzzle” string and an optional <code class="language-plaintext highlighter-rouge">missing_words</code> string.</p>
-
-<ul>
-  <li>
-    <p>The function first loops through half of the length of the puzzle string and randomly selects a character that is not already in the <code class="language-plaintext highlighter-rouge">missing_words</code> string.</p>
-  </li>
-  <li>
-    <p>Next, the function loops through each character in the puzzle string and replaces any character that is in the <code class="language-plaintext highlighter-rouge">missing_words</code> string with an <strong>underscore</strong>.</p>
-  </li>
-</ul>
-
-<p><br /></p>
-
-<h5 id="custom-puzzle-design">Custom puzzle design</h5>
-<hr />
-
-<p>This function allows the user to manually select characters to be blanked out in the puzzle, and <code class="language-plaintext highlighter-rouge">returns</code> the updated puzzle and missing words to be used in the Hangman game.</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">custom_puzzle</span><span class="p">(</span><span class="n">puzzle</span><span class="p">,</span> <span class="n">missing_words</span> <span class="o">=</span> <span class="s">""</span><span class="p">):</span>
-    <span class="n">num_blanks</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">'How many blanks you prefer? : '</span><span class="p">))</span>
-    <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">missing_words</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">num_blanks</span><span class="p">:</span>
-        <span class="n">blank_char</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">'which character you want to blanked : '</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">blank_char</span> <span class="ow">in</span> <span class="n">puzzle</span><span class="p">:</span>
-            <span class="n">puzzle</span> <span class="o">=</span> <span class="n">puzzle</span><span class="p">.</span><span class="n">replace</span><span class="p">(</span><span class="n">blank_char</span><span class="p">,</span><span class="s">'_'</span><span class="p">)</span>
-            <span class="n">missing_words</span> <span class="o">+=</span> <span class="n">blank_char</span>
-            <span class="k">print</span><span class="p">(</span><span class="n">puzzle</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">print</span><span class="p">(</span><span class="s">'Element not exist in Puzzle'</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">puzzle</span><span class="p">,</span> <span class="n">missing_words</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">"Input: "</span><span class="p">)</span>
+<span class="n">arrangement</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">""</span><span class="p">)</span>
+<span class="n">arrangement</span> <span class="o">=</span> <span class="n">arrangement</span><span class="p">.</span><span class="n">replace</span><span class="p">(</span><span class="s">' '</span><span class="p">,</span> <span class="s">''</span><span class="p">)</span>
 </code></pre></div></div>
 
 <ul>
   <li>
-    <p>The function first prompts the user to input the number of blanks they would like to have in the puzzle by asking for an integer value.</p>
+    <p>The input is taken using the <code class="language-plaintext highlighter-rouge">input()</code> function and stored in the arrangement variable.</p>
   </li>
   <li>
-    <p>It then enters a loop that runs until the number of missing words in the puzzle is equal to the desired number of blanks.</p>
-  </li>
-  <li>
-    <p>Within the loop, the function prompts the user to input a character that they want to blank out.</p>
-  </li>
-  <li>
-    <p>If the character is present in the puzzle string, the function <strong>replaces all instances</strong> of that character with an <strong>underscore</strong> in the puzzle string, adds the character to the <code class="language-plaintext highlighter-rouge">missing_words</code> string, and prints the updated puzzle string to the console.</p>
+    <p>The <code class="language-plaintext highlighter-rouge">replace()</code> function is used to remove any white spaces from the input.</p>
   </li>
 </ul>
 
-<p><br /></p>
-
-<h3 id="validating-guesses">Validating Guesses</h3>
-
-<p>This function allows the user to make guesses for the missing characters in the puzzle and displays the updated puzzle string with correct guesses.</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">check_for_guess</span><span class="p">(</span><span class="n">puzzle</span><span class="p">,</span> <span class="n">string</span><span class="p">,</span> <span class="n">missing_words</span><span class="p">):</span>
-    <span class="n">false_attempt</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">while</span> <span class="n">false_attempt</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">missing_words</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">puzzle</span> <span class="o">==</span> <span class="n">string</span><span class="p">.</span><span class="n">lower</span><span class="p">():</span>
-                <span class="k">break</span>
-        <span class="n">ask</span> <span class="o">=</span> <span class="s">'Remain Attempt : {} | Guess a Word (unique) : '</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">missing_words</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="n">false_attempt</span><span class="p">))</span>
-        <span class="n">guess</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="n">ask</span><span class="p">).</span><span class="n">casefold</span><span class="p">()</span>
-        <span class="k">if</span> <span class="n">guess</span> <span class="ow">in</span> <span class="n">missing_words</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">guess</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-            <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">puzzle</span><span class="p">)):</span>
-                <span class="k">if</span> <span class="n">string</span><span class="p">[</span><span class="n">a</span><span class="p">].</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="n">guess</span><span class="p">:</span>
-                    <span class="n">puzzle</span> <span class="o">=</span> <span class="n">puzzle</span><span class="p">[:</span><span class="n">a</span><span class="p">]</span> <span class="o">+</span> <span class="n">guess</span> <span class="o">+</span> <span class="n">puzzle</span><span class="p">[</span><span class="n">a</span><span class="o">+</span><span class="mi">1</span><span class="p">:]</span>
-            <span class="k">print</span><span class="p">(</span><span class="s">'Keep it on '</span><span class="p">,</span><span class="n">puzzle</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">false_attempt</span> <span class="o">+=</span> <span class="mi">1</span>
-            <span class="k">print</span><span class="p">(</span><span class="s">'Oops! Try again'</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">puzzle</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">symb</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">"{"</span> <span class="p">:</span> <span class="s">"}"</span><span class="p">,</span>
+    <span class="s">"["</span> <span class="p">:</span> <span class="s">"]"</span><span class="p">,</span>
+    <span class="s">"("</span> <span class="p">:</span> <span class="s">")"</span><span class="p">,</span>
+<span class="p">}</span>
+<span class="n">stack</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">inc</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">miss</span> <span class="o">=</span> <span class="bp">None</span>
 </code></pre></div></div>
-
-<p><code class="language-plaintext highlighter-rouge">check_for_guess</code> that takes in three parameters: the <code class="language-plaintext highlighter-rouge">puzzle</code> string, the <code class="language-plaintext highlighter-rouge">string</code> representing the answer, and the <code class="language-plaintext highlighter-rouge">missing_words</code> string that contains the characters that are missing from the puzzle.</p>
-
 <ul>
   <li>
-    <p>Within the loop, the function prompts the user to input a guess for the missing characters in the puzzle. The prompt also displays the number of remaining attempts.</p>
+    <p>A dictionary called <code class="language-plaintext highlighter-rouge">symb</code> is defined to store the opening and closing symbols. The <code class="language-plaintext highlighter-rouge">keys</code> represent the <em>opening symbols</em>, and the <code class="language-plaintext highlighter-rouge">values</code> represent their corresponding <em>closing symbols</em>.</p>
   </li>
   <li>
-    <p>If the <strong>guess</strong> is a single character and is present in the <code class="language-plaintext highlighter-rouge">missing_words</code> string, the function replaces the corresponding underscores in the <code class="language-plaintext highlighter-rouge">puzzle</code> string with the guessed character.</p>
-  </li>
-  <li>
-    <p>It then outputs a message indicating that the guess is correct and displays the updated puzzle string.</p>
-  </li>
-  <li>
-    <p>If the <strong>guess</strong> is not a single character or is not present in the <code class="language-plaintext highlighter-rouge">missing_words</code> string, the function increments the <code class="language-plaintext highlighter-rouge">false_attempt</code> counter and outputs a message indicating that the guess is incorrect.</p>
-  </li>
-  <li>
-    <p>The function continues looping until either the puzzle is solved (i.e., the <code class="language-plaintext highlighter-rouge">puzzle</code> string matches the <code class="language-plaintext highlighter-rouge">string</code> answer), or the user exhausts their attempts.</p>
+    <p>An empty list called stack is initialized to act as the stack.</p>
   </li>
 </ul>
 
-<p><br /></p>
-
-<h3 id="understanding-the-driver-code">Understanding the driver code</h3>
-
-<p>It creates a puzzle for the game based on user input. The code first sets the variable <code class="language-plaintext highlighter-rouge">puzzle</code> equal to the input <code class="language-plaintext highlighter-rouge">string</code> that represents the answer to the puzzle.</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">puzzle</span> <span class="o">=</span> <span class="n">string</span>
-<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">string</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">'Answer should be &gt; 6 characters'</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">arrangement</span><span class="p">:</span>
+	<span class="k">if</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">symb</span><span class="p">:</span>
+	    <span class="n">stack</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+	    <span class="k">print</span><span class="p">(</span><span class="s">"Push"</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="s">" &gt;&gt; "</span><span class="p">,</span><span class="n">stack</span><span class="p">)</span>
+	
+	<span class="n">inc</span> <span class="o">+=</span>  <span class="mi">1</span>
+	
+	<span class="k">if</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">symb</span><span class="p">.</span><span class="n">values</span><span class="p">():</span>
+	    <span class="n">key</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">symb</span> <span class="k">if</span> <span class="n">symb</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">==</span> <span class="n">i</span><span class="p">]</span>
+	    <span class="k">if</span> <span class="n">stack</span> <span class="ow">and</span> <span class="n">key</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">in</span> <span class="n">stack</span><span class="p">:</span>
+	        <span class="n">peak</span> <span class="o">=</span> <span class="n">stack</span><span class="p">.</span><span class="n">pop</span><span class="p">()</span>
+	        <span class="k">if</span> <span class="n">peak</span> <span class="o">==</span> <span class="n">key</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]:</span>
+	            <span class="n">key</span><span class="p">.</span><span class="n">pop</span><span class="p">()</span>
+	            <span class="k">print</span><span class="p">(</span><span class="s">"Pop "</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="s">" &gt;&gt; "</span><span class="p">,</span><span class="n">stack</span><span class="p">)</span>
+	            <span class="k">continue</span>
+	    <span class="n">miss</span> <span class="o">=</span> <span class="n">key</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+	    <span class="k">break</span>
+	    
+<span class="k">if</span> <span class="ow">not</span> <span class="n">stack</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">miss</span> <span class="ow">and</span> <span class="n">inc</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">arrangement</span><span class="p">):</span>
+	<span class="k">print</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">Valid Pattern"</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="n">false_attempt</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">puzzle_type</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">'</span><span class="se">\n</span><span class="s">Do you want system designed puzzle? y/n : '</span><span class="p">)</span>
-    <span class="n">puzzle</span><span class="p">,</span> <span class="n">missing_words</span> <span class="o">=</span> <span class="n">auto_puzzle</span><span class="p">(</span><span class="n">puzzle</span><span class="p">)</span> <span class="k">if</span> <span class="n">puzzle_type</span> <span class="o">==</span> <span class="s">'y'</span> <span class="ow">or</span> <span class="n">puzzle_type</span> <span class="o">==</span> <span class="s">'Y'</span> <span class="k">else</span> <span class="n">custom_puzzle</span><span class="p">(</span><span class="n">puzzle</span><span class="p">)</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">'</span><span class="se">\n\n</span><span class="s">Your Puzzle (Player 2):'</span><span class="p">,</span><span class="n">puzzle</span><span class="p">)</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">'Given hint: '</span><span class="p">,</span><span class="n">hint</span><span class="p">)</span>
-    <span class="n">given_answer</span> <span class="o">=</span> <span class="n">check_for_guess</span><span class="p">(</span><span class="n">puzzle</span><span class="p">,</span> <span class="n">string</span><span class="p">,</span> <span class="n">missing_words</span><span class="p">)</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">'</span><span class="se">\n</span><span class="s">Congratulation you won, Player 1 lost!'</span><span class="p">)</span> <span class="k">if</span> <span class="n">given_answer</span> <span class="o">==</span> <span class="n">string</span><span class="p">.</span><span class="n">lower</span><span class="p">()</span> <span class="k">else</span> <span class="k">print</span><span class="p">(</span><span class="s">'</span><span class="se">\n</span><span class="s">You lost, Player 1 Won'</span><span class="p">)</span>
+	<span class="k">print</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">Invalid Pattern"</span><span class="p">)</span>	
 </code></pre></div></div>
-
 <ul>
   <li>
-    <p>If the answer is at least 6 characters long, the code prompts the user to input whether they want a system-generated puzzle or to create their own puzzle using the <code class="language-plaintext highlighter-rouge">custom_puzzle()</code>.</p>
+    <p>A loop is used to iterate through each symbol in the input string. If the symbol is an opening symbol, it is added to the top of the stack using the <code class="language-plaintext highlighter-rouge">append()</code> function.</p>
   </li>
   <li>
-    <p>The <code class="language-plaintext highlighter-rouge">auto_puzzle()</code> is called with the <code class="language-plaintext highlighter-rouge">puzzle</code> argument if the user wants a system-generated puzzle. Otherwise, the <code class="language-plaintext highlighter-rouge">custom_puzzle()</code>  is called with the <code class="language-plaintext highlighter-rouge">puzzle</code> argument.</p>
+    <p>If the symbol is a closing symbol, the program checks <em>if it matches the opening symbol</em> at the top of the stack using the <code class="language-plaintext highlighter-rouge">pop()</code> function. If the matching opening symbol is found, it is removed from the stack.</p>
   </li>
   <li>
-    <p>The code then displays the updated puzzle string and the hint provided by Player 1.</p>
-  </li>
-  <li>
-    <p>It allows Player 2 to make guesses for the missing characters in the puzzle and displays the updated puzzle string with correct guesses.</p>
+    <p>If the input string is completely processed and the <em>stack is empty</em>, then the pattern is considered <strong>valid</strong>. If the stack is <em>not empty</em> or there is a <em>missing closing symbol</em>, then the pattern is considered <strong>invalid</strong>.</p>
   </li>
 </ul>
 
-<p>Finally, the code checks if the returned <code class="language-plaintext highlighter-rouge">given_answer</code> (which is the final puzzle string with any correct guesses) is equal to the <code class="language-plaintext highlighter-rouge">string</code> answer in lower case.</p>
+<p>Finally, the program prints either “<strong>Valid Pattern</strong>” or “<strong>Invalid Pattern</strong>” based on the stack’s status and the presence of any missing symbols.</p>
 
-<p>If it is, the code prints a message indicating that <strong>Player 2</strong> won and Player 1 lost. Otherwise, it prints a message indicating that Player 2 lost and <strong>Player 1</strong> won.</p>
+<h3 id="example-testing">Example testing</h3>
+<p><img src="../../../image/symb-balancing-test-1.png" alt="'symb-balancing-test-1'" /></p>
 
-<p><br /></p>
-
-<h3 id="lets-play-for-fun">Let’s play for fun</h3>
-
-<hr />
-
-<p><img src="../../../image/hangman-player-1.png" alt="'hangman-player-1'" /></p>
-
-<hr />
-
-<p><img src="../../../image/hangman-player-2.png" alt="'hangman-player-2'" /></p>
-
-<p><br /></p>
-
-<h3 id="conclusion">Conclusion</h3>
-
-<hr />
-
-<p>Building a Hangman game in Python is an excellent exercise for beginner programmers to practice their skills. It’s a fun way to test and improve one’s vocabulary and spelling skills.</p>
-
-<p>Overall, building a Hangman game in Python is an enjoyable and educational experience for any programmer looking to improve their programming abilities.</p>
+<p><img src="../../../image/symb-balancing-test-2.png" alt="'symb-balancing-test-2'" /></p>
 
 
                 
                 <hr class="my-4" />
                 <div class="d-flex justify-content-between gap-2 mb-4">
                     
-                    <a class="btn  btn-primary  w-100 text-end" href="/artificial-intelligence/2023/03/06/water-jug-problem.html" class="px-3" style="word-break:break-all;">
+                    <a class="btn  btn-primary  w-100 text-end" href="/problem-solving/2023/03/27/hansluhn-card-validator.html" class="px-3" style="word-break:break-all;">
                         <div class="d-flex justify-content-between gap-2">
                             <i class="bi bi-chevron-double-left"></i>
-                            Water Jug Problem
+                            Hansluhn Card Validator
                         </div>
                     </a>
                     
-                    <a class="btn  btn-primary  w-100 text-end" href="/artificial-intelligence/2023/03/09/tic-tac-toe-human-vs-machine.html" class="px-3" style="word-break:break-all;">
+                    <a class="btn  opacity-0 disabled d-none d-md-block  w-100 text-end" href="\" class="px-3" style="word-break:break-all;">
                         <div class="d-flex justify-content-between gap-2">
-                        Tic Tac Toe Human Vs Machine
+                        
                         <i class="bi bi-chevron-double-right"></i>
                         </div>
                     </a>
@@ -610,10 +488,10 @@ searchBtn.addEventListener('click', () => {
                     <div class="btn-group gap-3 mt-4">
                         <div class="fs-6 edit-button git-contribute">
                             <svg aria-hidden="true" focusable="false" role="img" class="octicon mr-1" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom;overflow:visible"><path d="M1.5 3.25a2.25 2.25 0 113 2.122v5.256a2.251 2.251 0 11-1.5 0V5.372A2.25 2.25 0 011.5 3.25zm5.677-.177L9.573.677A.25.25 0 0110 .854V2.5h1A2.5 2.5 0 0113.5 5v5.628a2.251 2.251 0 11-1.5 0V5a1 1 0 00-1-1h-1v1.646a.25.25 0 01-.427.177L7.177 3.427a.25.25 0 010-.354zM3.75 2.5a.75.75 0 100 1.5.75.75 0 000-1.5zm0 9.5a.75.75 0 100 1.5.75.75 0 000-1.5zm8.25.75a.75.75 0 101.5 0 .75.75 0 00-1.5 0z"></path></svg>
-                            <a href="https://github.com/speakpython/speakpythonBlog/blob/gh-pages/two-player-game/_posts/2023-03-07-hangman-word-game.md" target="_blank" style="padding-left: 5px;font-family: 'Ubuntu'; font-style: normal;">Make a contribution</a>
+                            <a href="https://github.com/speakpython/speakpythonBlog/blob/gh-pages/problem-solving/_posts/2023-04-29-symbol-balancing.md" target="_blank" style="padding-left: 5px;font-family: 'Ubuntu'; font-style: normal;">Make a contribution</a>
                         </div>
                         <div class="report-error">
-                            <a href="mailto:support@speakpython.codes?subject=Reporting Error at - `Hangman Word Game`" style="font-family: Arial;font-size: 14px;">Report an error</a>
+                            <a href="mailto:support@speakpython.codes?subject=Reporting Error at - `Symbol Balancing`" style="font-family: Arial;font-size: 14px;">Report an error</a>
                         </div>
                     </div>
                 </div>

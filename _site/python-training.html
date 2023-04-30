@@ -241,7 +241,8 @@ searchBtn.addEventListener('click', () => {
     <div class="container px-3 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
-                <p class="mt-1">Are you ready to Master Python? Learn from the Best with Our Live Classes for Beginners and Intermediates!</p>
+                <p class="mt-1">Are you ready to Master Python? Learn from the Best with Our Live Classes for Beginners
+                    and Intermediates!</p>
                 <div class="my-4">
                     <div class="card">
                         <img src="assets/img/speak-python-banner.png" width="100%">
@@ -249,15 +250,52 @@ searchBtn.addEventListener('click', () => {
                     <div class="event-planner">
                         <h2 class="mt-5"><i class="bi bi-bookmarks small"></i> Upcoming events</h2>
                         <hr />
-                        <p>Join our upcoming sessions and seminars to Master the World's Most Popular Programming Language!</p>
+                        <p>Join our upcoming sessions and seminars to Master the World's Most Popular Programming
+                            Language!</p>
                         <div class="google-calender">
-                            <iframe src="https://calendar.google.com/calendar/embed?wkst=1&bgcolor=%23ffffff&ctz=Asia%2FKolkata&showTitle=0&showPrint=0&showTz=1&showCalendars=0&mode=AGENDA&src=OGE0Yjk0MzMzN2UxMDQ3YzZhNjZhNDhhZGI1ZTQxNmY5MjYzY2I2NmFmMTk0MGFmYTQ3ZTZhNWVhMGIxNDMyNkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%230B8043" style="border-width:0" frameborder="0" scrolling="no"></iframe>
+                            <iframe
+                                src="https://calendar.google.com/calendar/embed?wkst=1&bgcolor=%23ffffff&ctz=Asia%2FKolkata&showTitle=0&showPrint=0&showTz=1&showCalendars=0&mode=AGENDA&src=OGE0Yjk0MzMzN2UxMDQ3YzZhNjZhNDhhZGI1ZTQxNmY5MjYzY2I2NmFmMTk0MGFmYTQ3ZTZhNWVhMGIxNDMyNkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%230B8043"
+                                style="border-width:0" frameborder="0" scrolling="no"></iframe>
                         </div>
                     </div>
+                    <div class="accordion mb-5" id="latestEvent">
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button fs-5" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                #Python for Web - starting on 27th May
+            </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show"
+            data-bs-parent="#latestEvent">
+            <div class="accordion-body small fs-6" style="font-family: Ubuntu;">
+                This event is an introduction to Python
+                and web development. You'll learn the basics of Python and then
+                explore how to use it to build web applications. You'll discover
+                the language and the frameworks commonly used in web
+                development, and build a foundation for further exploration.
+                <div class="list-group my-3">
+                    <li class="list-group-item p-3">Interactive and practical based online
+                        classes led by experienced instructors.</li>
+                    <li class="list-group-item p-3">Structured curriculum covering essential
+                        Python topics for web development, including fundamentals of
+                        Python. </li>
+                    <li class="list-group-item p-3">Recorded lectures, assignments, and
+                        quizzes for self-paced learning and assessment</li>
+                </div>
+                <div class="list-group my-3">
+                    <li class="list-group-item p-3 rounded">Free demo classes available, and the
+                        course fees are Rs. 2000.</li>
+                </div>
+                <p class="text-muted m-0 font-italic">Please provide your valid email for the course registration. 👇👇</p>
+            </div>
+        </div>
+    </div>
+</div>
                     <hr />
                     <div class="mt-5 px-1" id="maillist">
-                        <h4 class="maillist-promotion">Never Miss an Educational Opportunity Again</h4>
-                        <form name="speakpython-blog" method="POST" data-netlify="true">
+                        <h4 class="maillist-promotion">Register Now for Upcoming Classes</h4>
+                        <form name="speakpython-blog" method="POST" data-netlify="true" id="formSection">
 <div class="row p-md-1">
     <div class="col-md-9 p-2">
         <input class="w-100" type="email" required name="email" placeholder="Join Our Mailing List for Exclusive Updates" style="width: 100%;max-height:3.5rem;padding: 1.5rem 1rem;font-family: Ubuntu;font-size: 1rem;">
@@ -273,7 +311,6 @@ searchBtn.addEventListener('click', () => {
         </div>
     </div>
 </main>
-
         <!-- Footer-->
         
         <footer class="border-top" id="bottom-footer">
