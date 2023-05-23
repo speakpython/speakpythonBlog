@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.8.1)
+    addressable (2.8.4)
       public_suffix (>= 2.0.2, < 6.0)
     algolia_html_extractor (2.6.4)
       json (~> 2.0)
@@ -10,7 +10,7 @@ GEM
       httpclient (~> 2.8, >= 2.8.3)
       json (>= 1.5.1)
     colorator (1.1.0)
-    concurrent-ruby (1.2.0)
+    concurrent-ruby (1.2.2)
     em-websocket (0.5.3)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0)
@@ -20,7 +20,7 @@ GEM
     forwardable-extended (2.6.0)
     http_parser.rb (0.8.0)
     httpclient (2.8.3)
-    i18n (1.12.0)
+    i18n (1.13.0)
       concurrent-ruby (~> 1.0)
     jekyll (3.9.3)
       addressable (~> 2.4)
@@ -58,11 +58,11 @@ GEM
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     mercenary (0.3.6)
-    nokogiri (1.14.2-x86_64-linux)
+    nokogiri (1.15.1-x86_64-linux)
       racc (~> 1.4)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
-    progressbar (1.11.0)
+    progressbar (1.13.0)
     public_suffix (5.0.1)
     racc (1.6.2)
     rb-fsevent (0.11.2)
@@ -77,7 +77,7 @@ GEM
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
     verbal_expressions (0.1.5)
-    webrick (1.7.0)
+    webrick (1.8.1)
 
 PLATFORMS
   x86_64-linux
