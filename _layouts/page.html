@@ -2,6 +2,23 @@
 layout: default
 ---
 
+<div class="modal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Modal body text goes here.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 <!-- Page Header-->
 <link href="{{ '/assets/css/readme.css' | prepend: site.url }}" rel="stylesheet" />
 <div id="lb-back">
@@ -140,3 +157,19 @@ layout: default
     </div>
 </article>
 <script src="{{ '/assets/js/readme.js' | prepend: site.url }}"></script>
+<script>async function detectAdBlock() {
+    let adBlockEnabled = false
+    const googleAdUrl = 'https://fundingchoicesmessages.google.com/i/pub-4655390962543707?ers=1'
+    try {
+      await fetch(new Request(googleAdUrl)).catch(_ => adBlockEnabled = true)
+    } catch (e) {
+      adBlockEnabled = true
+    } finally {
+      console.log(`AdBlock Enabled: ${adBlockEnabled}`)
+      const modal = document.querySelector(".modal")
+    modal.style.display = 'block';
+    modal.style.backgroundColor = '#808080a1';
+    }
+
+  }
+  detectAdBlock()</script>
