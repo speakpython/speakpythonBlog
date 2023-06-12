@@ -1,7 +1,28 @@
 ---
 layout: default
 ---
-{% include adBlocker.html %}
+
+<div class="modal pt-5" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content p-2">
+        <div class="modal-header">
+          <h5 class="modal-title">Enable Ads and Fuel Our Free Resources!</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" style="font-family: 'Ubuntu';">
+          <p class="m-0">
+            Welcome to Speak Python! By enabling ads, you support us in providing free, high-quality Python resources. 
+            These ads help cover our website's expenses, allowing us to continue delivering valuable content to learners like you. 
+            Please consider enabling ads to support our mission and ensure the sustainability of our platform. Thank you!
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Allow ads</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
 <!-- Page Header-->
 <link href="{{ '/assets/css/readme.css' | prepend: site.url }}" rel="stylesheet" />
 <div id="lb-back">
