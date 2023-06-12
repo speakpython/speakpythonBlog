@@ -591,11 +591,11 @@ searchBtn.addEventListener('click', () => {
       await fetch(new Request(googleAdUrl)).catch(_ => adBlockEnabled = true)
     } catch (e) {
       adBlockEnabled = true
-    } finally {
-      console.log(`AdBlock Enabled: ${adBlockEnabled}`)
       const modal = document.querySelector(".modal")
     modal.style.display = 'block';
     modal.style.backgroundColor = '#808080a1';
+    } finally {
+      console.log(`AdBlock Enabled: ${adBlockEnabled}`)
     }
 
   }
