@@ -62,14 +62,14 @@ layout: default
                 <hr class="my-4" />
                 <div class="d-flex justify-content-between gap-2 mb-4">
                     
-                    <a class="btn {% if page.previous.title %} btn-primary {% else %} opacity-0 disabled d-none d-md-block {% endif %} w-100 text-end" href="{% if page.previous.title %}{{page.previous.url}}{% else %}\{% endif %}" class="px-3" style="word-break:break-all;">
+                    <a class="btn {% if page.previous.title %} btn-primary {% else %} opacity-0 disabled d-none d-md-block {% endif %} w-100 text-end px-3" href="{% if page.previous.title %}{{page.previous.url}}{% else %}\{% endif %}" style="word-break:break-all;">
                         <div class="d-flex justify-content-between gap-2">
                             <i class="bi bi-chevron-double-left"></i>
                             {{ page.previous.title }}
                         </div>
                     </a>
                     
-                    <a class="btn {% if page.next.title %} btn-primary {% else %} opacity-0 disabled d-none d-md-block {% endif %} w-100 text-end" href="{% if page.next.title %}{{page.next.url}}{% else %}\{% endif %}" class="px-3" style="word-break:break-all;">
+                    <a class="btn {% if page.next.title %} btn-primary {% else %} opacity-0 disabled d-none d-md-block {% endif %} w-100 text-end px-3" href="{% if page.next.title %}{{page.next.url}}{% else %}\{% endif %}" style="word-break:break-all;">
                         <div class="d-flex justify-content-between gap-2">
                         {{ page.next.title }}
                         <i class="bi bi-chevron-double-right"></i>
