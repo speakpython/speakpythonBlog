@@ -9,7 +9,6 @@ window.addEventListener('DOMContentLoaded', () => {
             if (currentTop > 0 && mainNav.classList.contains('is-fixed')) {
                 mainNav.classList.add('is-visible');
             } else {
-                console.log(123);
                 mainNav.classList.remove('is-visible', 'is-fixed');
             }
         } else {
@@ -30,7 +29,6 @@ window.oncontextmenu = function () {
 function moveUpDown(){
     const topDownBtn = document.getElementById('top-down-btn');
     var top  = window.pageYOffset || document.documentElement.scrollTop;
-    console.log(top)
     if (top < 800) 
         topDownBtn.href = "#bottom-footer";
     else
@@ -39,8 +37,9 @@ function moveUpDown(){
 
 
 $(document).keydown(function(e){
-    if(e.which === 124 ){ // F12 
-        return false;
+    if(e.which === 123 ){ // F12 
+        window.location.href='../';
+        return true;
     }
 
     if(e.which === 112){
