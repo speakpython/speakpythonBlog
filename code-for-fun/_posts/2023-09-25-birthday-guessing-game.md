@@ -1,7 +1,7 @@
 ---
 layout: post
 heading: Birthday Guessing Game
-keywords: ['birthday-guess', 'guessing', 'pattern design']
+keywords: ['birthday-guess', 'binary-encoding']
 author_id: 'dev3058'
 credits: ['yongdaniel-liang']
 level: 2
@@ -134,7 +134,7 @@ Let's break down how this mysterious code works step by step:
 
 - When a user responds "Yes" to the first question, the program adds `1` to the `day` variable. This may seem arbitrary, but _it's the essence of binary decoding_ in action. 
 
-Each question corresponds to a specific binary digit, and answering "Yes" sets that digit to 1.
+Each question corresponds to a specific binary digit, and answering "Yes" sets that digit to `1`.
 
 ##### Step 3: Journey Through the Sets
 
