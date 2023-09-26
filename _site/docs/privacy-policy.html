@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Welcome to Python Indeed! Here, we provide comprehensive tutorials on various aspects of Python programming language to help you learn and improve your skills." />
+        <meta name="author" content="Speak Python" />
+        <meta name="keywords" content="Speak Python, dev3058, Python programming, Python libraries, Python tutorials, Python syntax, Python functions, Python code snippets, Python data structures, Python web development, Python data science, Python machine learning, Python artificial intelligence, Python automation, Python frameworks, Python projects, Python tips and tricks, Python community, Python resources, speakpython.codes, support@speakpython.codes">
+        <title>Privacy - Speak Python</title>
+        <link rel="icon" type="image/x-icon" href="http://localhost:4000/assets/favicon.ico" />
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Quintessential&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+        <link href="http://localhost:4000/assets/css/styles.css" rel="stylesheet" />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4655390962543707" crossorigin="anonymous"></script>
+        <script src="http://localhost:4000/assets/js/jquery-3.6.3.min.js"></script> 
+        <script src="http://localhost:4000/assets/js/ad.js"></script>   
+    </head>
+    <body>
+        <div class="btn-group p-0 search-button" role="group" aria-label="Basic example">
+            <button class="btn btn-primary " id="search-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#searchOffcanvasRight" aria-controls="offcanvasRight">
+                <div class="row">
+                    <div class="col-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                        </svg>
+                    </div>
+                    <div class="col-9 d-md-block d-none" style="font-family: 'Ubuntu';font-size: 1rem;">
+                        Search <span class="border border-1 p-1 rounded" style="font-family: Ubuntu;font-size: 10px;margin-left: 5px;vertical-align:2px">F1</span>
+                    </div>
+                </div>
+            </button>  
+            <a class="btn btn-primary active" id="top-down-btn" type="button" href="#top-header" onclick="moveUpDown();">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-down-up" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M11.5 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L11 2.707V14.5a.5.5 0 0 0 .5.5zm-7-14a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V1.5a.5.5 0 0 1 .5-.5z"/>
+                </svg>
+            </a>
+        </div>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="/">Speak Python</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/">Home</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/python-training.html">Live Classes</a></li>
+                        <li class="nav-item dropdown"><a role="button" class="nav-link px-lg-3 py-3 py-lg-4 dropdown-toggle" data-bs-toggle="dropdown">Code Categories</a>
+                            <ul class="dropdown-menu" style="left: -8rem;">
+                                
+                                    <li>
+                                        <a class="dropdown-item" href="/all-posts.html#two-player-game">
+                                            <i class="bi bi-bookmarks"></i>
+                                            Two player   game</a>
+                                    </li>
+                                
+                                    <li>
+                                        <a class="dropdown-item" href="/all-posts.html#artificial-intelligence">
+                                            <i class="bi bi-bookmarks"></i>
+                                            Artificial   intelligence</a>
+                                    </li>
+                                
+                                    <li>
+                                        <a class="dropdown-item" href="/all-posts.html#string-formatting">
+                                            <i class="bi bi-bookmarks"></i>
+                                            String   formatting</a>
+                                    </li>
+                                
+                                    <li>
+                                        <a class="dropdown-item" href="/all-posts.html#number-system">
+                                            <i class="bi bi-bookmarks"></i>
+                                            Number   system</a>
+                                    </li>
+                                
+                                    <li>
+                                        <a class="dropdown-item" href="/all-posts.html#problem-solving">
+                                            <i class="bi bi-bookmarks"></i>
+                                            Problem   solving</a>
+                                    </li>
+                                
+                                <li>
+                                    <hr class="mb-1">
+                                    <a class="dropdown-item small" href="/all-posts.html">All Categories</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="searchOffcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+            <h6 class="offcanvas-title" id="offcanvasRightLabel">powered by speakpython</h6>
+            <button type="button" class="btn btn-primary py-2" data-bs-dismiss="offcanvas" aria-label="Close">
+                close
+            </button>
+            </div>
+            <div class="offcanvas-body pt-3">
+                <div class="conatiner">
+                    <div id="search-searchbar"></div>
+                    <div id="search-hits"></div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.6.0/dist/instantsearch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.6.0/dist/instantsearch.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.6.0/dist/instantsearch-theme-algolia.min.css">
+
+<script>
+const search = instantsearch({
+  appId: 'GEH0OW83KH',
+  apiKey: '4104367f37aef2197ceb3f463f984bd0',
+  indexName: 'speak-python-blog'
+});
+
+const hitTemplate = function(hit) {
+  let date = '';
+  if (hit.date) {
+    date = moment.unix(hit.date).format('MMM D, YYYY');
+  }
+
+  let url = `${hit.url}#${hit.anchor}`;
+
+  const title = hit._highlightResult.title.value;
+
+  let breadcrumbs = '';
+  if (hit._highlightResult.headings) {
+    breadcrumbs = hit._highlightResult.headings.map(match => {
+      return `<span class="post-breadcrumb">${match.value}</span>`
+    }).join(' > ')
+  }
+
+  const content = hit._highlightResult.html.value;
+
+  return `
+    <div class="post-item">
+      <span class="post-meta">${date}</span>
+      <h2><a class="post-link" href="${url}">${title}</a></h2>
+      <a href="${url}" class="post-breadcrumbs">${breadcrumbs}</a>
+      <div class="post-snippet">${content}</div>
+    </div>
+    <hr class="my-4" />
+  `;
+}
+
+
+search.addWidget(
+  instantsearch.widgets.searchBox({
+    container: '#search-searchbar',
+    placeholder: 'Search into posts...',
+    autofocus: true,
+    poweredBy: true // This is required if you're on the free Community plan
+  })
+);
+
+
+
+search.addWidget(
+  instantsearch.widgets.hits({
+    container: '#search-hits',
+    templates: {
+      item: hitTemplate
+    }
+  })
+);
+
+const searchBtn = document.getElementById('search-btn');
+searchBtn.addEventListener('click', () => {
+  search.start();
+  console.log("Search is Active")
+
+});
+
+
+</script>
+
+<style>
+.ais-search-box {
+  max-width: 100%;
+  margin-bottom: 15px;
+}
+.post-item {
+  margin-bottom: 30px;
+}
+.post-link .ais-Highlight {
+  color: #111;
+  font-style: normal;
+  text-decoration: underline;
+}
+.post-breadcrumbs {
+  color: #424242;
+  display: block;
+}
+.post-breadcrumb {
+  font-size: 18px;
+  color: #424242;
+}
+.post-breadcrumb .ais-Highlight {
+  font-weight: bold;
+  font-style: normal;
+}
+.post-snippet .ais-Highlight {
+  color: #2a7ae2;
+  font-style: normal;
+  font-weight: bold;
+}
+.post-snippet img {
+  display: none;
+}
+
+#search-searchbar{
+  position: sticky;
+  top: 0;
+}
+</style>
+
+        <!-- Main Content-->
+        <!-- Main Content-->
+<main class="mb-4">
+    <div class="container px-3 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="my-4">
+                    <div class="event-planner">
+                        <h2 class="mt-5"><i class="bi bi-bookmarks small"></i> Privacy Policy</h2>
+                        <hr />
+                        At SpeakPython.codes, we value your trust and are committed to ensuring the security and privacy of your personal information. 
+                        <div class="my-5">
+                            <h4>1. What personal information do we collect?</h4>
+                            <p>We collect the following personal information from our visitors:
+                                <ul>
+                                    <li>IP address: We collect your IP address when you visit our website. We use this information to track website traffic and to improve our website's security.</li>
+                                    <li>Cookies: We use cookies to store your preferences and to track your activity on our website. Cookies are small text files that are stored on your computer by your web browser. You can disable cookies in your web browser settings, but this may prevent you from using some of the features on our website.</li>
+                                    <li>Newsletter subscription: If you subscribe to our newsletter, we will collect your email address. We use this information to send you our newsletter with updates about our website and blog.</li>
+                                </ul>
+                            </p>
+                            <h4>2. How do we use your personal information?</h4>
+                            <p>We use your personal information for the following purposes:
+                                <ul>
+                                    <li>To improve our website and to provide you with a better user experience.</li>
+                                    <li>To send you our newsletter, if you have subscribed.</li>
+                                    <li>To track website traffic and to improve our website's security.</li>
+                                </ul>
+                            </p>
+                            <h4>3. Do we share your personal information with third parties?</h4>
+                            <p>We share your personal information with the following third parties:
+                                <ul>
+                                    <li>Google Ads: We use Google Ads to display advertisements on our website. Google Ads may collect your IP address and other information about your browsing activity.</li>
+                                    <li>Email marketing service provider: We use an email marketing service provider to send out our newsletter. We share your email address with our email marketing service provider so that they can send you our newsletter.</li>
+                                </ul>
+                            </p>
+                            <h4>4. How do we protect your personal information?</h4>
+                            <p>We use a variety of security measures to protect your personal information from unauthorized access, use, or disclosure. These security measures include encryption, firewalls, and access controls.</p>
+                            <h4>5. Your choices</h4>
+                            <p>You have the following choices regarding the collection and use of your personal information:
+                                <ul>
+                                    <li>You can choose to disable cookies in your web browser settings.</li>
+                                    <li>You can unsubscribe from our newsletter at any time by clicking on the unsubscribe link in any of our newsletters.</li>
+                                </ul>
+                            </p>
+                            <h4>6. Contact us</h4>
+                            <p>If you have any questions about this privacy policy, please contact us at support@speakpython.codes</p>
+                            <h4>7. Changes to this privacy policy</h4>
+                            <p>We may update this privacy policy from time to time. If we make any changes to this privacy policy, we will post the updated privacy policy on our website.</p>
+                            <h4>8. Proprietary content and copyrighted photos</h4>
+                            <p>All of the code on the Speakpython.codes website is proprietary content. We also use some copyrighted photos on our website. We have permission from the copyright holders to use these photos.</p>
+                            <h4>9. Ownership</h4>
+                            <p>The complete Speakpython.codes website and its content is the sole owner Speakpython.</p>
+                        </div>
+                    </div>
+                    <!-- <div class="accordion mb-5" id="latestEvent">
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button fs-5" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                #Python for Web - starting on 27th May
+            </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show"
+            data-bs-parent="#latestEvent">
+            <div class="accordion-body small fs-6" style="font-family: Ubuntu;">
+                This event is an introduction to Python
+                and web development. You'll learn the basics of Python and then
+                explore how to use it to build web applications. You'll discover
+                the language and the frameworks commonly used in web
+                development, and build a foundation for further exploration.
+                <div class="list-group my-3">
+                    <li class="list-group-item p-3">Interactive and practical based online
+                        classes led by experienced instructors.</li>
+                    <li class="list-group-item p-3">Structured curriculum covering essential
+                        Python topics for web development, including fundamentals of
+                        Python. </li>
+                    <li class="list-group-item p-3">Recorded lectures, assignments, and
+                        quizzes for self-paced learning and assessment</li>
+                </div>
+                <div class="list-group my-3">
+                    <li class="list-group-item p-3 rounded">Free demo classes available, and the
+                        course fees are Rs. 2000.</li>
+                </div>
+                <div class="row my-3">
+                    <div class="col-md-6 my-3">
+                        <a class="btn btn-outline-primary w-100" type="button">Course Curriculum</a>
+                    </div>
+                    <div class="col-md-6 my-md-3">
+                        <a class="btn btn-outline-warning w-100" type="button" href="mailto:support@speakpython.codes?subject=Having questions about Python for Web Classes">Help & Support</a>
+                    </div>
+                </div>
+                <p class="text-muted m-0 font-italic">Please provide your valid email for the course registration. 👇👇</p>
+            </div>
+        </div>
+    </div>
+</div> -->
+                    <hr />
+                    <div class="mt-5 px-1" id="maillist">
+                        <h4 class="maillist-promotion">Stay Informed: Subscribe to All Updates</h4>
+                        <form name="speakpython-blog" method="POST" data-netlify="true" id="formSection">
+<div class="row p-md-1">
+    <div class="col-md-9 p-2">
+        <input class="w-100" type="email" required name="email" placeholder="Join Our Mailing List for Exclusive Updates" style="width: 100%;max-height:3.5rem;padding: 1.5rem 1rem;font-family: Ubuntu;font-size: 1rem;">
+    </div>
+    <div class="col-md-3 p-2">
+        <button class="btn btn-primary w-100" type="submit">Subscribe</button>
+    </div>
+</div>
+</form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+        <!-- Footer-->
+        
+        <footer class="border-top" id="bottom-footer">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <ul class="list-inline text-center">
+                            <li class="list-inline-item">
+                                <a href="https://www.instagram.com/speakpython/" target="_blank">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://github.com/sponsors/speakpython?o=esb" target="_blank">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="far fa-heart fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://github.com/speakpython" target="_blank">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="small text-center text-muted fst-italic">Copyright &copy; speakpython.codes 2023</div>
+                        <div class="row bottom-nav fw-bold">
+                            <div class="col-3"><a href="#">About us</a></div>
+                            <div class="col-3"><a href="#">Policy</a></div>
+                            <div class="col-3"><a href="#">Authors</a></div>
+                            <div class="col-3"><a href="#">Support</a></div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>        <!-- Core theme JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+        <script src="http://localhost:4000/assets/js/scripts.js"></script>   
+        <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>   
+    </body>
+</html>
