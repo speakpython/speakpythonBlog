@@ -98,6 +98,13 @@ A lower heuristic value indicates that the node is closer to the goal node. In t
 
 <br/>
 
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-fb+5w+4e-db+86"
+     data-ad-client="ca-pub-4655390962543707"
+     data-ad-slot="5226911603"></ins>
+     
 ### Required library
 
 We will use only two predefined methods of `heapq`,

@@ -24,6 +24,14 @@ Suppose you have a `5-liter` jug and a `3-liter` jug, and you need to measure ex
 How can you do it using only these two jugs and a limited number of pouring actions? Let's figure out!
 
 <br/>
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-fb+5w+4e-db+86"
+     data-ad-client="ca-pub-4655390962543707"
+     data-ad-slot="5226911603"></ins>
+
 ### Whether the goal is reachable or not 
 
 From the above example, how one conclude whether `4 liters` or `2 liters` is measured using `5-liters` jug and a `3-liters` jug.
@@ -86,7 +94,13 @@ If either of the conditions is false, then the code prints `Not possible!`, indi
 
 <br/>
 
-
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-fb+5w+4e-db+86"
+     data-ad-client="ca-pub-4655390962543707"
+     data-ad-slot="5226911603"></ins>
+     
 ## Water Jug Solver - Driver Code
 
 This code defines the function `waterJugSolver()` which takes two parameters, `amt1` and `amt2`, representing the current amount of liquid in Jug1 and Jug2 respectively.

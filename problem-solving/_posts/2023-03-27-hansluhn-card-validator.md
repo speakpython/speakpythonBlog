@@ -87,6 +87,13 @@ def sumOfOddPlace(number):
 
 <br/>
 
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-fb+5w+4e-db+86"
+     data-ad-client="ca-pub-4655390962543707"
+     data-ad-slot="5226911603"></ins>
+
 ### Driver Code - isValid(number)
 It checks whether a given card number is valid by using the defined algorithm with some additional conditions.
 

@@ -113,6 +113,13 @@ print(sentencecase(text))
 
 <br/>
 
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-fb+5w+4e-db+86"
+     data-ad-client="ca-pub-4655390962543707"
+     data-ad-slot="5226911603"></ins>
+
 ### Custom Text Case Conversion 
 
 I have defined a Python class called `string` that contains several methods for manipulating text cases.

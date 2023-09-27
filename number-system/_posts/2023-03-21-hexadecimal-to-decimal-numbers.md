@@ -53,6 +53,12 @@ int('af71', base=16)
 The resulting decimal value of this function call would be `44913`.
 
 <br/>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-fb+5w+4e-db+86"
+     data-ad-client="ca-pub-4655390962543707"
+     data-ad-slot="5226911603"></ins>
 
 ### hexToDecimal - Custom function
 
@@ -92,6 +98,13 @@ Here's how it works:
 
 <br/>
 
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-fb+5w+4e-db+86"
+     data-ad-client="ca-pub-4655390962543707"
+     data-ad-slot="5226911603"></ins>
+     
 ### Driver Code - function calling
 
 This code provides a way for a user to input a hexadecimal number and convert it to its decimal equivalent using the `hexToDecimal()`.

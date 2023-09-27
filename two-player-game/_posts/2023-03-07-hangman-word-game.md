@@ -59,6 +59,13 @@ You can express the two ways of creating a puzzle for the Hangman game in your c
 
 <br/>
 
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-fb+5w+4e-db+86"
+     data-ad-client="ca-pub-4655390962543707"
+     data-ad-slot="5226911603"></ins>
+
 ##### Random puzzle design
 
 <hr>
@@ -148,6 +155,13 @@ def check_for_guess(puzzle, string, missing_words):
 - The function continues looping until either the puzzle is solved (i.e., the `puzzle` string matches the `string` answer), or the user exhausts their attempts.
 
 <br/>
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-fb+5w+4e-db+86"
+     data-ad-client="ca-pub-4655390962543707"
+     data-ad-slot="5226911603"></ins>
 
 ### Understanding the driver code
 

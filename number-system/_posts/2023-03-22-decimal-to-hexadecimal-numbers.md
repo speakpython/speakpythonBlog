@@ -56,6 +56,13 @@ The output is a string `0xf`, which represents the hexadecimal value of `15`. Th
 
 <br/>
 
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-fb+5w+4e-db+86"
+     data-ad-client="ca-pub-4655390962543707"
+     data-ad-slot="5226911603"></ins>
+
 ### decimalToHex - Custom function
 
 We have defines two functions `decimalToHex()` and `toHexChar()`, which are used to convert a decimal value to its corresponding hexadecimal representation.
@@ -92,6 +99,13 @@ Here's how it works:
 - Otherwise, it computes the character representation by subtracting `10` from the input value, adding the `ASCII` code of the character `A` to it, and returning the resulting character.
 
 <br/>
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-fb+5w+4e-db+86"
+     data-ad-client="ca-pub-4655390962543707"
+     data-ad-slot="5226911603"></ins>
 
 ### Driver Code - function calling
 

@@ -69,6 +69,13 @@ def game_grid(value):
 
 <br/>
 
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-fb+5w+4e-db+86"
+     data-ad-client="ca-pub-4655390962543707"
+     data-ad-slot="5226911603"></ins>
+
 ### Possible winning patterns
 The code defines a list called `wining_pattern` which contains sub-lists of all the possible winning combinations in a Tic-Tac-Toe game. 
 <br/>
@@ -122,6 +129,13 @@ def check_wining(moves):
 - The function checks if any of the sub-lists in `wining_pattern` is a _subset of moves_, which means the player has achieved a winning combination. If a _winning combination_ is found, the function returns `True`, otherwise it returns `False`.
 
 <br/>
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-fb+5w+4e-db+86"
+     data-ad-client="ca-pub-4655390962543707"
+     data-ad-slot="5226911603"></ins>
 
 ### Driver code [🧠 Brain]
 Our `main()` function consists all the required logics,

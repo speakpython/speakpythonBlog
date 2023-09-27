@@ -136,6 +136,13 @@ Let's break down how this mysterious code works step by step:
 
 Each question corresponds to a specific binary digit, and answering "Yes" sets that digit to `1`.
 
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-fb+5w+4e-db+86"
+     data-ad-client="ca-pub-4655390962543707"
+     data-ad-slot="5226911603"></ins>
+
 ##### Step 3: Journey Through the Sets
 
 - The program continues by asking a series of questions, moving through "Set2," "Set3," "Set4," and finally "Set5." For each "Yes" answer, the day variable is incremented by a __power of 2 (1, 2, 4, 8, and 16, respectively)__. 
