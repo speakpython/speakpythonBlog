@@ -67,6 +67,13 @@ def game_grid(value):
 
 <br/>
 
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-fb+5w+4e-db+86"
+     data-ad-client="ca-pub-4655390962543707"
+     data-ad-slot="5226911603"></ins>
+
 ### Possible winning patterns
 The code defines a list called `winning_pattern` which contains sub-lists of all the possible winning combinations in a Tic-Tac-Toe game. 
 <br/>
@@ -172,6 +179,13 @@ def initial_move():
 - If the center position is not available, the function randomly chooses _one of the four corner positions_ (positions __1, 3, 7, or 9__).
 
 <br/>
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-fb+5w+4e-db+86"
+     data-ad-client="ca-pub-4655390962543707"
+     data-ad-slot="5226911603"></ins>
 
 ### AI Smart move 🤓
 
