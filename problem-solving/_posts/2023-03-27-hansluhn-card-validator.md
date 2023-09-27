@@ -2,7 +2,7 @@
 layout: post
 heading:  Validating Credit and Debit Card Numbers
 keywords: ['luhn-algorithm', 'checksum-formula']
-author_id: 'dev3058'
+author_id: 'webriddler'
 credits: ['yongdaniel-liang']
 level: 5
 published: true
@@ -12,7 +12,7 @@ In this blog post, we'll be exploring how to validate credit and debit card numb
 
 By the end of this post, you'll have a solid understanding of how the Luhn algorithm works and how to use it in Python to check whether a given card number is valid or not. 
 
-!['tic-tac-toe-image'](https://www.serviceobjects.com/blog/wp-content/uploads/2019/02/Credit-Card-BIN.jpg)
+!['tic-tac-toe-image'](../../../image/card-banner.jpg)
 
 
 ## Luhn Algorithm

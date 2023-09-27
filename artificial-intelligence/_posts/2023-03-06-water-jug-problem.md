@@ -2,7 +2,7 @@
 layout: post
 heading: Water Jug Problem
 keywords: ['problem-solving']
-author_id: 'dev3058'
+author_id: 'webriddler'
 credits: ['wikipedia']
 level: 6
 published: true
@@ -10,7 +10,7 @@ published: true
 
 Let's start learning about the `water jug` problem with a practical implementation!
 
-!['Water Jug Image'](https://boxofnotes.com/wp-content/uploads/2022/11/Water-Jug-Problem-in-Artificial-Intelligence.jpg)
+!['Water Jug Image'](../../../image/water-jug-banner.webp)
 
 
 ## About Water Jug problem

@@ -2,7 +2,7 @@
 layout: post
 heading:  Balancing Braces and Parentheses
 keywords: ['stack-push-pop', 'balancing-symbols']
-author_id: 'dev3058'
+author_id: 'webriddler'
 credits: []
 level: 4
 published: true
@@ -11,7 +11,7 @@ published: true
 In this blog post, we will explore how to use a stack in Python to balance symbols, and we will walk through a step-by-step guide on how to implement this solution. 
 
 
-!['balancing'](https://miro.medium.com/v2/resize:fit:1400/0*PJ-SPI1RfWY8smKb)
+!['balancing'](../../../image/symbol-balancing.jpg)
 
 
 ## Symbol Balancing
@@ -20,7 +20,7 @@ Balancing symbols like braces and parentheses in code is a crucial task that eve
 
 Luckily, there is an elegant solution to this problem using the stack data structure.
 
-!['balancing-statement'](https://miro.medium.com/v2/resize:fit:1400/1*OQCqjov45xVUm3Tfrs-yxw.gif)
+!['balancing-statement'](../../../image/balancing-braces-gif.gif)
 
 1. Define a stack data structure, which is a collection of elements that supports two main operations: `push` _(adds an element to the top of the stack)_ and `pop` _(removes the top element from the stack)_.
 

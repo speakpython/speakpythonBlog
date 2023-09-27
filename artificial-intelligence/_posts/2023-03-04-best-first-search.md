@@ -2,7 +2,7 @@
 layout: post
 heading: Best-first search (BFS)
 keywords: ['search-algorithm', 'problem-solving']
-author_id: 'dev3058'
+author_id: 'webriddler'
 credits: ['wikipedia']
 level: 6
 published: true
@@ -10,7 +10,7 @@ published: true
 
 Implementing basic approaches of Best-first search (Informed Search) by using `heapq` module of python.
 
-!['bfs-image'](https://www.fnr.lu/wp-content/uploads/2020/01/1_3u0f1sqBMUS-kLmVhs40kw.jpeg)
+!['bfs-image'](../../../image/bfs-banner.jpeg)
 
 ## Best-first Search (BFS)
 

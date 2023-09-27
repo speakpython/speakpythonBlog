@@ -2,7 +2,7 @@
 layout: post
 heading: Tic-tac-toe, Human vs Machine (AI)
 keywords: ['problem-solving', 'fun-with-python']
-author_id: 'dev3058'
+author_id: 'webriddler'
 credits: []
 level: 6
 published: true
@@ -12,7 +12,7 @@ Ultimate challenge of human intelligence against artificial intelligence!
 
 Today, we will witness a battle of wits between a human and an `AI opponent` in one of the simplest yet most beloved games of all time: Tic-Tac-Toe.
 
-!['tic-tac-toe-image'](https://i.ytimg.com/vi/w5Oftm3l2uQ/maxresdefault.jpg)
+!['tic-tac-toe-image'](../../../image/tic-tac-toe-banner.jpg)
 
 
 ## Tic-tac-toe and AI

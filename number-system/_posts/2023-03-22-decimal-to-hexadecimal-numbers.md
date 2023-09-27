@@ -2,7 +2,7 @@
 layout: post
 heading: Mastering Decimal to Hexadecimal Conversion
 keywords: ['decimal-to-hex']
-author_id: 'dev3058'
+author_id: 'webriddler'
 credits: ['wikipedia']
 level: 3
 published: true
@@ -13,7 +13,7 @@ In this tutorial, we will explore how to convert decimal numbers to hexadecimal 
 We will cover two main approaches: using the built-in `hex()` function and _implementing our own algorithm_.
 
 
-!['case-converter'](https://www.ionos.ca/digitalguide/fileadmin/DigitalGuide/Teaser/zahlen-t.jpg)
+!['case-converter'](../../../image/hexadeciaml-banner.jpg)
 
 ## Decimal and Hexadecimal Numbers
 

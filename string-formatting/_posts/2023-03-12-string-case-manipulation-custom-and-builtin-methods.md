@@ -2,7 +2,7 @@
 layout: post
 heading: Text Case Manipulation Built-in and Custom
 keywords: ['text-case-methods', 'custom-methods']
-author_id: 'dev3058'
+author_id: 'webriddler'
 credits: []
 level: 4
 published: true
@@ -10,7 +10,7 @@ published: true
 
 Today, we'll explore how to add new text case manipulation methods, as well as how to use the built-in methods in Python for maximum efficiency.
 
-!['case-converter'](https://repository-images.githubusercontent.com/158893422/8b6af900-71f2-11eb-8f2b-1e583a3b5c0e)
+!['case-converter'](../../../image/string-case-banner.jpeg)
 
 ## Text cases in Python
 

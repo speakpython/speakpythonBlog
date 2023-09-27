@@ -2,7 +2,7 @@
 layout: post
 heading: Converting Hexadecimal to Decimal Made Easy!
 keywords: ['hex-to-decimal']
-author_id: 'dev3058'
+author_id: 'webriddler'
 credits: ['wikipedia']
 level: 3
 published: true
@@ -10,7 +10,7 @@ published: true
 
 If you're looking to improve your Python skills, learning how to convert hexadecimal to decimal is a great place to start. In this tutorial, we'll explore the _basics of hexadecimal_ and walk through the steps of converting it to decimal using Python.
 
-!['case-converter'](https://www.ionos.ca/digitalguide/fileadmin/DigitalGuide/Teaser/zahlen-t.jpg)
+!['case-converter'](../../../image/deciaml-banner.jpg)
 
 ## Decimal and Hexadecimal Numbers
 

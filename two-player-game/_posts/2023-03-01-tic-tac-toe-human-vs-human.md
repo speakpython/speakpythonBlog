@@ -2,7 +2,7 @@
 layout: post
 heading: Tic-tac-toe, Human vs Human
 keywords: ['problem-solving', 'fun-with-python']
-author_id: 'dev3058'
+author_id: 'webriddler'
 credits: ['wikipedia']
 level: 5
 published: true
@@ -10,7 +10,7 @@ published: true
 
 Create a complete `three-by-three` Tic-Tac-Toe, two player game using basics of python. The game requires basic programming concepts such as variables, conditionals, loops, and functions.
 
-!['tic-tac-toe-image'](https://www.rd.com/wp-content/uploads/2019/10/tic-tac-toe-scaled.jpg)
+!['tic-tac-toe-image'](../../../image/tic-tac-toe-banner.jpg)
 
 
 ## What is Tic-tac-toe

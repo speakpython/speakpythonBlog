@@ -1,8 +1,8 @@
 ---
 layout: post
 heading: Birthday Guessing Game
-keywords: ['birthday-guess', 'binary-encoding']
-author_id: 'dev3058'
+keywords: ['birthday-guess', 'binary-encoding', 'fun-with-python']
+author_id: 'webriddler'
 credits: ['yongdaniel-liang']
 level: 2
 published: true
