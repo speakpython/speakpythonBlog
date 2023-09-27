@@ -289,7 +289,7 @@ $(':header[id]').each(function() {
 });
 
 $('.internal-bookmark').click(function() {
-  navigator.clipboard.writeText(this.parentNode.href);
+  navigator.clipboard.writeText(this.parentNode.firstChild.href);
   this.innerHTML = 
   `<span class="small text-dark internal-bookmark" title="Share link" style="
     display: inline-block;

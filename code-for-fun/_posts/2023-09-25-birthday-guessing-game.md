@@ -14,7 +14,7 @@ Let's embark on this digital journey and learn how to perform some Python sorcer
 
 !['case-converter'](../../../image/birthday.jpg)
 
-## Simple Steps 🎂 
+## Simple Steps
 
 We are unveiling the secrets of a Python program that uses binary encoding to decipher birthdays, the code snippet you see below does just that. 
 
